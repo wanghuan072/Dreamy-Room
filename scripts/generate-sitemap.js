@@ -2,7 +2,7 @@
 const fs = require('fs')
 const path = require('path')
 
-const SITE_URL = 'https://your-domain.com' // TODO: 替换为你的正式域名
+const SITE_URL = 'https://dreamy-room.net' // TODO: 替换为你的正式域名
 
 // 静态页面
 const staticRoutes = [

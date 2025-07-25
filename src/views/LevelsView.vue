@@ -32,7 +32,7 @@ onMounted(() => {
       description: 'Browse all Dreamy Room level walkthroughs, solutions, and tips.',
       type: 'website',
       url,
-      image: 'https://your-domain.com/og-image.jpg',
+      image: 'https://dreamy-room.net/og-image.jpg',
     },
     twitter: {
       card: 'summary_large_image',
