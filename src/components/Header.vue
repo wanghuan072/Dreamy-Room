@@ -2,14 +2,7 @@
   <header class="header" :class="{ 'menu-open': showMobileMenu }">
     <div class="header-container">
       <div class="logo-section">
-        <div class="logo-icon">
-          <div class="box"></div>
-          <div class="items">
-            <div class="item item1"></div>
-            <div class="item item2"></div>
-            <div class="item item3"></div>
-          </div>
-        </div>
+        <img src="/images/logo.png" alt="Dreamy Room" class="logo-icon" />
         <span class="site-title">Dreamy Room</span>
       </div>
       <nav class="navigation" v-if="!showMobileMenu">
