@@ -1,0 +1,15 @@
+/* Dreamy Room Color Palette */
+
+:root {
+  --primary-pink: #FF69B4;
+  --primary-purple: #9370DB;
+  --primary-cyan: #00CED1;
+  --primary-brown: #8B4513;
+  --bg-light-pink: #FFB6C1;
+  --bg-light-purple: #E6E6FA;
+  --bg-light-green: #98FB98;
+  --text-dark: #2D1B69;
+  --text-gray: #4A4A4A;
+  --text-light-gray: #666666;
+  --text-white: #FFFFFF;
+}

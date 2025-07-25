@@ -1,0 +1,26 @@
+# robots.txt for Dreamy Room
+# 允许所有主流搜索引擎抓取主站内容
+User-agent: *
+Allow: /
+
+# 禁止抓取常见无用或敏感目录（如有）
+Disallow: /node_modules/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /admin/
+Disallow: /api/
+Disallow: /cgi-bin/
+Disallow: /test/
+Disallow: /drafts/
+
+# 禁止抓取URL参数（如有）
+Disallow: /*?*
+
+# 指定站点地图
+Sitemap: https://your-domain.com/sitemap.xml
+
+# 针对Googlebot/Bingbot等可单独定制（如有需要）
+# User-agent: Googlebot
+# Allow: /
+# User-agent: Bingbot
+# Allow: / 
