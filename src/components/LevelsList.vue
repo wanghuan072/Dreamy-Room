@@ -42,8 +42,16 @@ const levelTabs = ref([
   { label: 'Level 81-100', file: 'levels-81-100.js', range: [81, 100], active: false },
 ])
 
+const levelModules = {
+  'levels-1-20.js': () => import('../data/levels/levels-1-20.js'),
+  'levels-21-40.js': () => import('../data/levels/levels-21-40.js'),
+  'levels-41-60.js': () => import('../data/levels/levels-41-60.js'),
+  'levels-61-80.js': () => import('../data/levels/levels-61-80.js'),
+  'levels-81-100.js': () => import('../data/levels/levels-81-100.js'),
+}
+
 async function loadLevels(tab) {
-  const module = await import(`../data/levels/${tab.file}`)
+  const module = await levelModules[tab.file]()
   // 兼容不同导出名
   const levelsArr = module.default || Object.values(module)[0]
   displayedLevels.value = levelsArr
