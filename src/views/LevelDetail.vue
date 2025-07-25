@@ -126,12 +126,20 @@ function getLevelFile(addressBar) {
   return null
 }
 
+const levelModules = {
+  'levels-1-20.js': () => import('../data/levels/levels-1-20.js'),
+  'levels-21-40.js': () => import('../data/levels/levels-21-40.js'),
+  'levels-41-60.js': () => import('../data/levels/levels-41-60.js'),
+  'levels-61-80.js': () => import('../data/levels/levels-61-80.js'),
+  'levels-81-100.js': () => import('../data/levels/levels-81-100.js'),
+}
+
 async function findLevel(addressBar) {
   const fileName = getLevelFile(addressBar)
   if (!fileName) return null
 
   try {
-    const mod = await import(`/src/data/levels/${fileName}`)
+    const mod = await levelModules[fileName]()
     const arr = Object.values(mod)[0]
     return arr.find((l) => l.addressBar === addressBar) || null
   } catch (error) {
