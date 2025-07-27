@@ -29,11 +29,7 @@
     <div class="url-list" v-if="sitemapData">
       <h3>URL列表</h3>
       <div class="filters">
-        <input 
-          v-model="searchQuery" 
-          placeholder="搜索URL..." 
-          class="search-input"
-        >
+        <input v-model="searchQuery" placeholder="搜索URL..." class="search-input">
         <select v-model="priorityFilter" class="filter-select">
           <option value="">所有优先级</option>
           <option value="1.0">1.0 (最高)</option>
@@ -92,7 +88,176 @@
 
 <script setup>
 import { ref, computed, onMounted } from 'vue'
-import { generateSitemapJSON } from '@/services/sitemapService.js'
+// 直接在组件中实现站点地图生成逻辑，避免路径别名问题
+import { blogPosts } from '@/data/blog.js'
+
+// 动态导入所有关卡数据
+async function getAllLevels() {
+  const levelModules = [
+    () => import('@/data/levels/levels-1-20.js'),
+    () => import('@/data/levels/levels-21-40.js'),
+    () => import('@/data/levels/levels-41-60.js'),
+    () => import('@/data/levels/levels-61-80.js'),
+    () => import('@/data/levels/levels-81-100.js')
+  ]
+
+  const allLevels = []
+
+  for (const moduleLoader of levelModules) {
+    try {
+      const module = await moduleLoader()
+      const levels = Object.values(module)[0]
+      if (Array.isArray(levels)) {
+        allLevels.push(...levels)
+      }
+    } catch (error) {
+      console.warn('Failed to load level module:', error)
+    }
+  }
+
+  return allLevels
+}
+
+// 站点地图配置
+const SITE_CONFIG = {
+  baseUrl: 'https://dreamy-room.net',
+  defaultChangefreq: 'monthly',
+  defaultPriority: '0.5'
+}
+
+// 静态页面配置
+const STATIC_PAGES = [
+  {
+    path: '/',
+    changefreq: 'daily',
+    priority: '1.0',
+    title: 'Dreamy Room - Home'
+  },
+  {
+    path: '/levels',
+    changefreq: 'daily',
+    priority: '0.9',
+    title: 'All Level Walkthroughs'
+  },
+  {
+    path: '/download',
+    changefreq: 'monthly',
+    priority: '0.8',
+    title: 'Download Game'
+  },
+  {
+    path: '/blog',
+    changefreq: 'daily',
+    priority: '0.8',
+    title: 'Blog'
+  },
+  {
+    path: '/about-us',
+    changefreq: 'monthly',
+    priority: '0.5',
+    title: 'About Us'
+  },
+  {
+    path: '/contact-us',
+    changefreq: 'monthly',
+    priority: '0.5',
+    title: 'Contact Us'
+  },
+  {
+    path: '/privacy-policy',
+    changefreq: 'yearly',
+    priority: '0.3',
+    title: 'Privacy Policy'
+  },
+  {
+    path: '/terms-of-service',
+    changefreq: 'yearly',
+    priority: '0.3',
+    title: 'Terms of Service'
+  },
+  {
+    path: '/copyright',
+    changefreq: 'yearly',
+    priority: '0.3',
+    title: 'Copyright Notice'
+  }
+]
+
+// 生成站点地图URL条目
+function createSitemapEntry(url, lastmod, changefreq, priority) {
+  const entry = {
+    loc: url,
+    lastmod: lastmod || new Date().toISOString().split('T')[0],
+    changefreq: changefreq || SITE_CONFIG.defaultChangefreq,
+    priority: priority || SITE_CONFIG.defaultPriority
+  }
+  return entry
+}
+
+// 获取所有站点地图条目
+async function getAllSitemapEntries() {
+  const entries = []
+  const currentDate = new Date().toISOString().split('T')[0]
+
+  // 添加静态页面
+  STATIC_PAGES.forEach(page => {
+    entries.push(createSitemapEntry(
+      `${SITE_CONFIG.baseUrl}${page.path}`,
+      currentDate,
+      page.changefreq,
+      page.priority
+    ))
+  })
+
+  // 添加关卡页面
+  try {
+    const levels = await getAllLevels()
+    levels.forEach(level => {
+      if (level.addressBar) {
+        entries.push(createSitemapEntry(
+          `${SITE_CONFIG.baseUrl}/levels/${level.addressBar}`,
+          level.publishDate || currentDate,
+          'monthly',
+          '0.7'
+        ))
+      }
+    })
+  } catch (error) {
+    console.error('Error loading levels for sitemap:', error)
+  }
+
+  // 添加博客页面
+  blogPosts.forEach(post => {
+    let blogUrl
+    if (post.addressBar.startsWith('http')) {
+      blogUrl = post.addressBar
+    } else if (post.addressBar.startsWith('/')) {
+      blogUrl = `${SITE_CONFIG.baseUrl}${post.addressBar}`
+    } else {
+      blogUrl = `${SITE_CONFIG.baseUrl}/blog/${post.addressBar}`
+    }
+
+    entries.push(createSitemapEntry(
+      blogUrl,
+      post.publishDate || currentDate,
+      'monthly',
+      '0.7'
+    ))
+  })
+
+  return entries
+}
+
+// 生成JSON格式的站点地图
+async function generateSitemapJSON() {
+  const entries = await getAllSitemapEntries()
+  return {
+    generated: new Date().toISOString(),
+    totalUrls: entries.length,
+    baseUrl: SITE_CONFIG.baseUrl,
+    urls: entries
+  }
+}
 
 const sitemapData = ref(null)
 const loading = ref(false)
@@ -102,28 +267,28 @@ const priorityFilter = ref('')
 
 const filteredUrls = computed(() => {
   if (!sitemapData.value?.urls) return []
-  
+
   let urls = sitemapData.value.urls
-  
+
   // 搜索过滤
   if (searchQuery.value) {
-    urls = urls.filter(url => 
+    urls = urls.filter(url =>
       url.loc.toLowerCase().includes(searchQuery.value.toLowerCase())
     )
   }
-  
+
   // 优先级过滤
   if (priorityFilter.value) {
     urls = urls.filter(url => url.priority === priorityFilter.value)
   }
-  
+
   return urls
 })
 
 async function refreshSitemap() {
   loading.value = true
   error.value = null
-  
+
   try {
     sitemapData.value = await generateSitemapJSON()
   } catch (err) {
@@ -212,7 +377,9 @@ onMounted(() => {
   gap: 10px;
 }
 
-.btn-primary, .btn-secondary, .btn-test {
+.btn-primary,
+.btn-secondary,
+.btn-test {
   padding: 8px 16px;
   border: none;
   border-radius: 4px;
@@ -293,7 +460,8 @@ onMounted(() => {
   margin-bottom: 20px;
 }
 
-.search-input, .filter-select {
+.search-input,
+.filter-select {
   padding: 8px 12px;
   border: 1px solid #ddd;
   border-radius: 4px;
@@ -344,21 +512,48 @@ onMounted(() => {
   text-decoration: underline;
 }
 
-.freq-badge, .priority-badge {
+.freq-badge,
+.priority-badge {
   padding: 2px 8px;
   border-radius: 12px;
   font-size: 12px;
   font-weight: 500;
 }
 
-.freq-daily { background-color: #d4edda; color: #155724; }
-.freq-monthly { background-color: #d1ecf1; color: #0c5460; }
-.freq-yearly { background-color: #f8d7da; color: #721c24; }
+.freq-daily {
+  background-color: #d4edda;
+  color: #155724;
+}
 
-.priority-badge.high { background-color: #d4edda; color: #155724; }
-.priority-badge.medium { background-color: #fff3cd; color: #856404; }
-.priority-badge.normal { background-color: #d1ecf1; color: #0c5460; }
-.priority-badge.low { background-color: #f8d7da; color: #721c24; }
+.freq-monthly {
+  background-color: #d1ecf1;
+  color: #0c5460;
+}
+
+.freq-yearly {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.priority-badge.high {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.priority-badge.medium {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.priority-badge.normal {
+  background-color: #d1ecf1;
+  color: #0c5460;
+}
+
+.priority-badge.low {
+  background-color: #f8d7da;
+  color: #721c24;
+}
 
 .error-message {
   margin-top: 20px;

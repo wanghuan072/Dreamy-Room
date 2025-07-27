@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>路由测试页面</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .test-section {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .test-link {
+            display: inline-block;
+            padding: 10px 15px;
+            margin: 5px;
+            background-color: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .test-link:hover {
+            background-color: #5a67d8;
+        }
+        .api-link {
+            background-color: #48bb78;
+        }
+        .api-link:hover {
+            background-color: #38a169;
+        }
+        h1, h2 {
+            color: #2d3748;
+        }
+        .status {
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            margin-left: 10px;
+        }
+        .status.working { background-color: #c6f6d5; color: #22543d; }
+        .status.broken { background-color: #fed7d7; color: #742a2a; }
+    </style>
+</head>
+<body>
+    <h1>🧪 Dreamy Room 路由测试</h1>
+    
+    <div class="test-section">
+        <h2>📄 主要页面路由</h2>
+        <a href="/" class="test-link">首页</a>
+        <a href="/levels" class="test-link">关卡页面</a>
+        <a href="/download" class="test-link">下载页面</a>
+        <a href="/blog" class="test-link">博客页面</a>
+        <a href="/about-us" class="test-link">关于我们</a>
+        <a href="/contact-us" class="test-link">联系我们</a>
+    </div>
+
+    <div class="test-section">
+        <h2>⚖️ 法律页面路由</h2>
+        <a href="/privacy-policy" class="test-link">隐私政策</a>
+        <a href="/terms-of-service" class="test-link">服务条款</a>
+        <a href="/copyright" class="test-link">版权声明</a>
+    </div>
+
+    <div class="test-section">
+        <h2>🗺️ 站点地图管理</h2>
+        <a href="/admin/sitemap" class="test-link">站点地图管理页面</a>
+        <span class="status working">应该正常工作</span>
+    </div>
+
+    <div class="test-section">
+        <h2>🔌 API 端点测试</h2>
+        <a href="/api/sitemap" class="test-link api-link" target="_blank">XML 站点地图</a>
+        <a href="/api/sitemap-json" class="test-link api-link" target="_blank">JSON 站点地图</a>
+    </div>
+
+    <div class="test-section">
+        <h2>📝 详情页面示例</h2>
+        <a href="/levels/level-1" class="test-link">关卡1详情</a>
+        <a href="/blog/dreamy-room-introduction" class="test-link">博客详情</a>
+    </div>
+
+    <div class="test-section">
+        <h2>❌ 404 测试</h2>
+        <a href="/non-existent-page" class="test-link">不存在的页面</a>
+        <span class="status working">应该显示404页面</span>
+    </div>
+
+    <script>
+        // 简单的路由状态检查
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('🧪 路由测试页面已加载');
+            console.log('📍 当前路径:', window.location.pathname);
+            
+            // 检查是否是SPA应用
+            if (document.querySelector('#app')) {
+                console.log('✅ Vue应用容器已找到');
+            } else {
+                console.log('❌ Vue应用容器未找到');
+            }
+        });
+    </script>
+</body>
+</html>
