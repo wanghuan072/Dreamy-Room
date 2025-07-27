@@ -10,104 +10,163 @@
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #f5f5f5;
         }
-        .test-section {
-            background: white;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        .route-test {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
         }
-        .test-link {
+        .route-test a {
             display: inline-block;
-            padding: 10px 15px;
-            margin: 5px;
-            background-color: #667eea;
+            padding: 8px 16px;
+            background-color: #007bff;
             color: white;
             text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
+            border-radius: 4px;
+            margin-right: 10px;
         }
-        .test-link:hover {
-            background-color: #5a67d8;
-        }
-        .api-link {
-            background-color: #48bb78;
-        }
-        .api-link:hover {
-            background-color: #38a169;
-        }
-        h1, h2 {
-            color: #2d3748;
+        .route-test a:hover {
+            background-color: #0056b3;
         }
         .status {
-            padding: 5px 10px;
+            display: inline-block;
+            padding: 4px 8px;
             border-radius: 4px;
             font-size: 12px;
             margin-left: 10px;
         }
-        .status.working { background-color: #c6f6d5; color: #22543d; }
-        .status.broken { background-color: #fed7d7; color: #742a2a; }
+        .status.unknown {
+            background-color: #f8f9fa;
+            color: #6c757d;
+        }
+        .status.working {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .status.broken {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
     </style>
 </head>
 <body>
-    <h1>🧪 Dreamy Room 路由测试</h1>
-    
-    <div class="test-section">
-        <h2>📄 主要页面路由</h2>
-        <a href="/" class="test-link">首页</a>
-        <a href="/levels" class="test-link">关卡页面</a>
-        <a href="/download" class="test-link">下载页面</a>
-        <a href="/blog" class="test-link">博客页面</a>
-        <a href="/about-us" class="test-link">关于我们</a>
-        <a href="/contact-us" class="test-link">联系我们</a>
+    <h1>🧪 路由测试页面</h1>
+    <p>点击下面的链接测试各个路由是否正常工作：</p>
+
+    <div class="route-test">
+        <strong>首页:</strong>
+        <a href="/" target="_blank">测试首页</a>
+        <span class="status unknown" id="status-home">未测试</span>
     </div>
 
-    <div class="test-section">
-        <h2>⚖️ 法律页面路由</h2>
-        <a href="/privacy-policy" class="test-link">隐私政策</a>
-        <a href="/terms-of-service" class="test-link">服务条款</a>
-        <a href="/copyright" class="test-link">版权声明</a>
+    <div class="route-test">
+        <strong>关卡页面:</strong>
+        <a href="/levels" target="_blank">测试关卡页面</a>
+        <span class="status unknown" id="status-levels">未测试</span>
     </div>
 
-    <div class="test-section">
-        <h2>🗺️ 站点地图管理</h2>
-        <a href="/admin/sitemap" class="test-link">站点地图管理页面</a>
-        <span class="status working">应该正常工作</span>
+    <div class="route-test">
+        <strong>下载页面:</strong>
+        <a href="/download" target="_blank">测试下载页面</a>
+        <span class="status unknown" id="status-download">未测试</span>
     </div>
 
-    <div class="test-section">
-        <h2>🔌 API 端点测试</h2>
-        <a href="/api/sitemap" class="test-link api-link" target="_blank">XML 站点地图</a>
-        <a href="/api/sitemap-json" class="test-link api-link" target="_blank">JSON 站点地图</a>
+    <div class="route-test">
+        <strong>博客页面:</strong>
+        <a href="/blog" target="_blank">测试博客页面</a>
+        <span class="status unknown" id="status-blog">未测试</span>
     </div>
 
-    <div class="test-section">
-        <h2>📝 详情页面示例</h2>
-        <a href="/levels/level-1" class="test-link">关卡1详情</a>
-        <a href="/blog/dreamy-room-introduction" class="test-link">博客详情</a>
+    <div class="route-test">
+        <strong>站点地图管理:</strong>
+        <a href="/admin/sitemap" target="_blank">测试站点地图管理</a>
+        <span class="status unknown" id="status-sitemap">未测试</span>
+        <button onclick="testRoute('/admin/sitemap', 'status-sitemap')" style="margin-left: 10px;">自动测试</button>
     </div>
 
-    <div class="test-section">
-        <h2>❌ 404 测试</h2>
-        <a href="/non-existent-page" class="test-link">不存在的页面</a>
-        <span class="status working">应该显示404页面</span>
+    <div class="route-test">
+        <strong>关于我们:</strong>
+        <a href="/about-us" target="_blank">测试关于我们</a>
+        <span class="status unknown" id="status-about">未测试</span>
     </div>
+
+    <div class="route-test">
+        <strong>联系我们:</strong>
+        <a href="/contact-us" target="_blank">测试联系我们</a>
+        <span class="status unknown" id="status-contact">未测试</span>
+    </div>
+
+    <hr>
+
+    <h2>🔗 API 端点测试</h2>
+
+    <div class="route-test">
+        <strong>XML 站点地图:</strong>
+        <a href="/api/sitemap" target="_blank">查看 XML</a>
+        <button onclick="testAPI('/api/sitemap', 'status-xml')">测试 API</button>
+        <span class="status unknown" id="status-xml">未测试</span>
+    </div>
+
+    <div class="route-test">
+        <strong>JSON 站点地图:</strong>
+        <a href="/api/sitemap-json" target="_blank">查看 JSON</a>
+        <button onclick="testAPI('/api/sitemap-json', 'status-json')">测试 API</button>
+        <span class="status unknown" id="status-json">未测试</span>
+    </div>
+
+    <hr>
+
+    <h2>📊 测试结果</h2>
+    <div id="test-results"></div>
 
     <script>
-        // 简单的路由状态检查
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log('🧪 路由测试页面已加载');
-            console.log('📍 当前路径:', window.location.pathname);
-            
-            // 检查是否是SPA应用
-            if (document.querySelector('#app')) {
-                console.log('✅ Vue应用容器已找到');
-            } else {
-                console.log('❌ Vue应用容器未找到');
+        async function testRoute(url, statusId) {
+            const statusEl = document.getElementById(statusId);
+            statusEl.textContent = '测试中...';
+            statusEl.className = 'status unknown';
+
+            try {
+                const response = await fetch(url);
+                if (response.ok) {
+                    statusEl.textContent = '正常';
+                    statusEl.className = 'status working';
+                } else {
+                    statusEl.textContent = `错误 ${response.status}`;
+                    statusEl.className = 'status broken';
+                }
+            } catch (error) {
+                statusEl.textContent = '连接失败';
+                statusEl.className = 'status broken';
             }
-        });
+        }
+
+        async function testAPI(url, statusId) {
+            const statusEl = document.getElementById(statusId);
+            statusEl.textContent = '测试中...';
+            statusEl.className = 'status unknown';
+
+            try {
+                const response = await fetch(url);
+                if (response.ok) {
+                    const contentType = response.headers.get('content-type');
+                    statusEl.textContent = `正常 (${contentType})`;
+                    statusEl.className = 'status working';
+                } else {
+                    statusEl.textContent = `错误 ${response.status}`;
+                    statusEl.className = 'status broken';
+                }
+            } catch (error) {
+                statusEl.textContent = '连接失败';
+                statusEl.className = 'status broken';
+            }
+        }
+
+        // 自动测试所有API
+        setTimeout(() => {
+            testAPI('/api/sitemap-json', 'status-json');
+            testAPI('/api/sitemap', 'status-xml');
+        }, 1000);
     </script>
 </body>
 </html>

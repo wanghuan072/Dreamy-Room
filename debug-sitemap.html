@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            max-width: 1000px;
+            max-width: 800px;
             margin: 0 auto;
             padding: 20px;
             background-color: #f5f5f5;
@@ -15,215 +15,178 @@
         .debug-section {
             background: white;
             padding: 20px;
-            margin-bottom: 20px;
             border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .debug-section h2 {
-            color: #2d3748;
+            color: #333;
             margin-top: 0;
-            border-bottom: 2px solid #667eea;
-            padding-bottom: 10px;
         }
-        .test-btn {
+        .test-link {
             display: inline-block;
             padding: 10px 15px;
-            margin: 5px;
-            background-color: #667eea;
+            background-color: #007bff;
             color: white;
             text-decoration: none;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
+            border-radius: 4px;
+            margin: 5px;
             transition: background-color 0.3s;
         }
-        .test-btn:hover {
-            background-color: #5a67d8;
+        .test-link:hover {
+            background-color: #0056b3;
         }
-        .test-btn.success {
-            background-color: #48bb78;
+        .test-link.api {
+            background-color: #28a745;
         }
-        .test-btn.error {
-            background-color: #f56565;
+        .test-link.api:hover {
+            background-color: #1e7e34;
         }
-        .result-box {
-            background-color: #f7fafc;
-            border: 1px solid #e2e8f0;
+        .status {
+            padding: 10px;
             border-radius: 4px;
-            padding: 15px;
             margin: 10px 0;
-            font-family: 'Courier New', monospace;
-            white-space: pre-wrap;
-            max-height: 300px;
-            overflow-y: auto;
         }
-        .status-indicator {
-            display: inline-block;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            margin-right: 8px;
+        .status.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
         }
-        .status-success { background-color: #48bb78; }
-        .status-error { background-color: #f56565; }
-        .status-warning { background-color: #ed8936; }
-        .status-info { background-color: #4299e1; }
+        .status.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .status.loading {
+            background-color: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+        pre {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 4px;
+            overflow-x: auto;
+            font-size: 14px;
+        }
     </style>
 </head>
 <body>
-    <h1>🔧 站点地图系统调试</h1>
-    
+    <h1>🔍 站点地图系统调试</h1>
+
     <div class="debug-section">
-        <h2>🌐 路由测试</h2>
+        <h2>路由测试</h2>
         <p>测试各个路由是否正常工作：</p>
-        <a href="/admin/sitemap" class="test-btn" target="_blank">站点地图管理页面</a>
-        <a href="/" class="test-btn" target="_blank">首页</a>
-        <a href="/levels" class="test-btn" target="_blank">关卡页面</a>
-        <div id="route-status"></div>
+        <a href="/" class="test-link">首页</a>
+        <a href="/levels" class="test-link">关卡页面</a>
+        <a href="/blog" class="test-link">博客页面</a>
+        <a href="/admin/sitemap" class="test-link">站点地图管理</a>
     </div>
 
     <div class="debug-section">
-        <h2>🔌 API 端点测试</h2>
+        <h2>API 端点测试</h2>
         <p>测试站点地图API是否正常响应：</p>
-        <button class="test-btn" onclick="testAPI('/api/sitemap', 'xml')">测试 XML API</button>
-        <button class="test-btn" onclick="testAPI('/api/sitemap-json', 'json')">测试 JSON API</button>
+        <button onclick="testAPI('/api/sitemap', 'xml')" class="test-link api">测试 XML API</button>
+        <button onclick="testAPI('/api/sitemap-json', 'json')" class="test-link api">测试 JSON API</button>
+        
         <div id="api-results"></div>
     </div>
 
     <div class="debug-section">
-        <h2>📊 站点地图数据预览</h2>
-        <button class="test-btn" onclick="loadSitemapData()">加载站点地图数据</button>
-        <div id="sitemap-preview"></div>
+        <h2>当前环境信息</h2>
+        <pre id="env-info"></pre>
     </div>
 
     <div class="debug-section">
-        <h2>🔍 系统信息</h2>
-        <div id="system-info">
-            <p><span class="status-indicator status-info"></span>当前URL: <code id="current-url"></code></p>
-            <p><span class="status-indicator status-info"></span>用户代理: <code id="user-agent"></code></p>
-            <p><span class="status-indicator status-info"></span>时间戳: <code id="timestamp"></code></p>
-        </div>
-    </div>
-
-    <div class="debug-section">
-        <h2>📝 调试日志</h2>
-        <button class="test-btn" onclick="clearLog()">清空日志</button>
-        <div id="debug-log" class="result-box">等待调试信息...</div>
+        <h2>路由历史</h2>
+        <div id="route-history"></div>
     </div>
 
     <script>
-        // 初始化系统信息
-        document.getElementById('current-url').textContent = window.location.href;
-        document.getElementById('user-agent').textContent = navigator.userAgent;
-        document.getElementById('timestamp').textContent = new Date().toISOString();
+        // 显示环境信息
+        document.getElementById('env-info').textContent = JSON.stringify({
+            userAgent: navigator.userAgent,
+            location: window.location.href,
+            timestamp: new Date().toISOString(),
+            referrer: document.referrer
+        }, null, 2);
 
-        let logContainer = document.getElementById('debug-log');
-        
-        function log(message, type = 'info') {
-            const timestamp = new Date().toLocaleTimeString();
-            const logEntry = `[${timestamp}] ${type.toUpperCase()}: ${message}\n`;
-            logContainer.textContent += logEntry;
-            logContainer.scrollTop = logContainer.scrollHeight;
-            console.log(logEntry);
+        // 记录路由历史
+        let routeHistory = [];
+        function addToHistory(action, url) {
+            routeHistory.push({
+                action,
+                url,
+                timestamp: new Date().toISOString()
+            });
+            updateHistoryDisplay();
         }
 
-        function clearLog() {
-            logContainer.textContent = '日志已清空...\n';
+        function updateHistoryDisplay() {
+            const historyDiv = document.getElementById('route-history');
+            historyDiv.innerHTML = routeHistory.map(entry => 
+                `<div style="margin: 5px 0; padding: 5px; background: #f8f9fa; border-radius: 3px;">
+                    <strong>${entry.action}:</strong> ${entry.url} 
+                    <small style="color: #666;">(${new Date(entry.timestamp).toLocaleTimeString()})</small>
+                </div>`
+            ).join('');
         }
 
+        // 监听页面加载
+        addToHistory('页面加载', window.location.href);
+
+        // API测试函数
         async function testAPI(endpoint, type) {
-            log(`开始测试 ${endpoint}`);
-            const resultsContainer = document.getElementById('api-results');
-            
+            const resultsDiv = document.getElementById('api-results');
+            resultsDiv.innerHTML = `<div class="status loading">正在测试 ${endpoint}...</div>`;
+
             try {
                 const response = await fetch(endpoint);
                 const contentType = response.headers.get('content-type');
                 
-                log(`响应状态: ${response.status} ${response.statusText}`);
-                log(`内容类型: ${contentType}`);
-                
                 if (!response.ok) {
                     throw new Error(`HTTP ${response.status}: ${response.statusText}`);
                 }
-                
-                const data = type === 'json' ? await response.json() : await response.text();
-                
-                const resultDiv = document.createElement('div');
-                resultDiv.innerHTML = `
-                    <h3><span class="status-indicator status-success"></span>${endpoint} - 成功</h3>
-                    <p>状态: ${response.status}, 类型: ${contentType}</p>
-                    <div class="result-box">${type === 'json' ? JSON.stringify(data, null, 2) : data.substring(0, 500) + '...'}</div>
-                `;
-                
-                resultsContainer.appendChild(resultDiv);
-                log(`${endpoint} 测试成功`);
-                
-            } catch (error) {
-                const resultDiv = document.createElement('div');
-                resultDiv.innerHTML = `
-                    <h3><span class="status-indicator status-error"></span>${endpoint} - 失败</h3>
-                    <div class="result-box">错误: ${error.message}</div>
-                `;
-                
-                resultsContainer.appendChild(resultDiv);
-                log(`${endpoint} 测试失败: ${error.message}`, 'error');
-            }
-        }
 
-        async function loadSitemapData() {
-            log('开始加载站点地图数据');
-            const previewContainer = document.getElementById('sitemap-preview');
-            
-            try {
-                const response = await fetch('/api/sitemap-json');
-                if (!response.ok) {
-                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                let content;
+                if (type === 'json') {
+                    content = await response.json();
+                    content = JSON.stringify(content, null, 2);
+                } else {
+                    content = await response.text();
                 }
-                
-                const data = await response.json();
-                
-                const previewDiv = document.createElement('div');
-                previewDiv.innerHTML = `
-                    <h3><span class="status-indicator status-success"></span>站点地图数据加载成功</h3>
-                    <p>总URL数量: ${data.totalUrls}</p>
-                    <p>生成时间: ${new Date(data.generated).toLocaleString()}</p>
-                    <p>基础URL: ${data.baseUrl}</p>
-                    <h4>前10个URL:</h4>
-                    <div class="result-box">${data.urls.slice(0, 10).map(url => `${url.loc} (优先级: ${url.priority})`).join('\n')}</div>
+
+                resultsDiv.innerHTML = `
+                    <div class="status success">✅ ${endpoint} 测试成功</div>
+                    <p><strong>Content-Type:</strong> ${contentType}</p>
+                    <p><strong>响应大小:</strong> ${content.length} 字符</p>
+                    <details>
+                        <summary>查看响应内容</summary>
+                        <pre>${content.substring(0, 1000)}${content.length > 1000 ? '...\n\n[内容已截断]' : ''}</pre>
+                    </details>
                 `;
-                
-                previewContainer.appendChild(previewDiv);
-                log(`站点地图数据加载成功，包含 ${data.totalUrls} 个URL`);
-                
+
+                addToHistory('API测试成功', endpoint);
             } catch (error) {
-                const previewDiv = document.createElement('div');
-                previewDiv.innerHTML = `
-                    <h3><span class="status-indicator status-error"></span>站点地图数据加载失败</h3>
-                    <div class="result-box">错误: ${error.message}</div>
+                resultsDiv.innerHTML = `
+                    <div class="status error">❌ ${endpoint} 测试失败</div>
+                    <p><strong>错误信息:</strong> ${error.message}</p>
                 `;
-                
-                previewContainer.appendChild(previewDiv);
-                log(`站点地图数据加载失败: ${error.message}`, 'error');
+                addToHistory('API测试失败', `${endpoint} - ${error.message}`);
             }
         }
 
-        // 页面加载完成后的初始化
-        document.addEventListener('DOMContentLoaded', function() {
-            log('调试页面已加载');
-            
-            // 检查Vue应用
-            if (document.querySelector('#app')) {
-                log('检测到Vue应用容器');
-            } else {
-                log('未检测到Vue应用容器', 'warning');
+        // 监听链接点击
+        document.addEventListener('click', function(e) {
+            if (e.target.tagName === 'A' && e.target.href) {
+                addToHistory('链接点击', e.target.href);
             }
-            
-            // 自动测试API
-            setTimeout(() => {
-                log('开始自动API测试');
-                testAPI('/api/sitemap-json', 'json');
-            }, 1000);
         });
+
+        // 自动测试API
+        setTimeout(() => {
+            testAPI('/api/sitemap-json', 'json');
+        }, 1000);
     </script>
 </body>
 </html>

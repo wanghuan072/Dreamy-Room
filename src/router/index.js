@@ -126,6 +126,16 @@ const router = createRouter({
       }
     },
     {
+      path: '/test/sitemap',
+      name: 'test-sitemap',
+      component: () => import('../views/TestSitemapView.vue'),
+      meta: {
+        title: 'Dreamy Room - Test Sitemap',
+        description: 'Test sitemap functionality.',
+        keywords: 'dreamy room, test, sitemap'
+      }
+    },
+    {
       path: '/:pathMatch(.*)*',
       name: 'notfound',
       component: () => import('../views/NotFound.vue'),
