@@ -125,16 +125,7 @@ const router = createRouter({
         keywords: 'dreamy room, sitemap, admin, management'
       }
     },
-    {
-      path: '/test/sitemap',
-      name: 'test-sitemap',
-      component: () => import('../views/TestSitemapView.vue'),
-      meta: {
-        title: 'Dreamy Room - Test Sitemap',
-        description: 'Test sitemap functionality.',
-        keywords: 'dreamy room, test, sitemap'
-      }
-    },
+
     {
       path: '/simple-test',
       name: 'simple-test',

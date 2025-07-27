@@ -9,8 +9,7 @@
     "preview": "vite preview",
     "lint": "eslint . --fix",
     "format": "prettier --write src/",
-    "sitemap": "node scripts/generate-sitemap.js",
-    "test:sitemap": "node scripts/test-sitemap.js"
+    "sitemap": "node scripts/generate-sitemap.js"
   },
   "dependencies": {
     "pinia": "^3.0.3",
