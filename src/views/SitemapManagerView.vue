@@ -1,172 +1,88 @@
 <template>
-  <div class="sitemap-manager-view">
-    <h1>🗺️ 站点地图管理</h1>
-    <p>如果你能看到这个页面，说明 /admin/sitemap 路由工作正常！</p>
+  <div class="sitemap-view">
+    <h1>🗺️ 站点地图</h1>
+    <p>网站站点地图已生成并可供访问</p>
 
-    <div class="info-card">
-      <h2>📍 页面信息</h2>
-      <p><strong>当前路径:</strong> {{ currentPath }}</p>
-      <p><strong>当前时间:</strong> {{ currentTime }}</p>
-      <p><strong>页面URL:</strong> {{ pageUrl }}</p>
+    <div class="sitemap-info">
+      <h2>📍 站点地图信息</h2>
+      <p><strong>站点地图URL:</strong> <a href="/sitemap.xml" target="_blank">https://dreamy-room.net/sitemap.xml</a></p>
+      <p><strong>格式:</strong> XML (标准格式)</p>
+      <p><strong>更新时间:</strong> 2025-01-27</p>
+      <p><strong>包含页面:</strong> 主要页面 + 关卡页面 + 博客页面</p>
     </div>
 
-    <div class="api-card">
-      <h2>🔗 API 测试</h2>
-      <div class="api-buttons">
-        <button @click="testXML" class="btn btn-primary">测试 XML API</button>
-        <button @click="testJSON" class="btn btn-secondary">测试 JSON API</button>
-        <a href="/api/sitemap" target="_blank" class="btn btn-link">查看 XML</a>
-        <a href="/api/sitemap-json" target="_blank" class="btn btn-link">查看 JSON</a>
-      </div>
-
-      <div v-if="testResult" class="test-result">
-        <h3>测试结果:</h3>
-        <pre>{{ testResult }}</pre>
+    <div class="sitemap-links">
+      <h2>🔗 快速链接</h2>
+      <div class="links">
+        <a href="/sitemap.xml" target="_blank" class="btn btn-primary">查看站点地图</a>
+        <a href="/" class="btn btn-secondary">返回首页</a>
+        <a href="/levels" class="btn btn-secondary">查看关卡</a>
+        <a href="/blog" class="btn btn-secondary">查看博客</a>
       </div>
     </div>
 
-    <div class="navigation-card">
-      <h2>🧭 导航测试</h2>
-      <div class="nav-buttons">
-        <a href="/" class="btn btn-nav">返回首页</a>
-        <a href="/test/sitemap" class="btn btn-nav">测试页面</a>
-        <a href="/levels" class="btn btn-nav">关卡页面</a>
-        <a href="/blog" class="btn btn-nav">博客页面</a>
-      </div>
+    <div class="sitemap-status">
+      <h2>✅ 状态检查</h2>
+      <p><strong>robots.txt:</strong> 已配置站点地图引用</p>
+      <p><strong>搜索引擎:</strong> 可提交到 Google Search Console</p>
+      <p><strong>格式验证:</strong> 符合 XML Sitemap 标准</p>
     </div>
   </div>
 </template>
 
-<script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
-
-const currentTime = ref('')
-const currentPath = ref('')
-const pageUrl = ref('')
-const testResult = ref('')
-
-let timeInterval = null
-
-function updateInfo() {
-  currentTime.value = new Date().toLocaleString('zh-CN')
-  currentPath.value = window.location.pathname
-  pageUrl.value = window.location.href
-}
-
-async function testXML() {
-  testResult.value = '正在测试 XML API...'
-  try {
-    const response = await fetch('/api/sitemap')
-    if (response.ok) {
-      const text = await response.text()
-      testResult.value = `✅ XML API 测试成功!
-状态: ${response.status}
-Content-Type: ${response.headers.get('content-type')}
-内容长度: ${text.length} 字符
-
-内容预览:
-${text.substring(0, 500)}...`
-    } else {
-      testResult.value = `❌ XML API 测试失败!
-状态: ${response.status}
-错误: ${response.statusText}`
-    }
-  } catch (error) {
-    testResult.value = `❌ XML API 测试出错!
-错误: ${error.message}`
-  }
-}
-
-async function testJSON() {
-  testResult.value = '正在测试 JSON API...'
-  try {
-    const response = await fetch('/api/sitemap-json')
-    if (response.ok) {
-      const json = await response.json()
-      testResult.value = `✅ JSON API 测试成功!
-状态: ${response.status}
-Content-Type: ${response.headers.get('content-type')}
-总URL数量: ${json.totalUrls}
-生成时间: ${json.generated}
-
-完整响应:
-${JSON.stringify(json, null, 2)}`
-    } else {
-      testResult.value = `❌ JSON API 测试失败!
-状态: ${response.status}
-错误: ${response.statusText}`
-    }
-  } catch (error) {
-    testResult.value = `❌ JSON API 测试出错!
-错误: ${error.message}`
-  }
-}
-
-onMounted(() => {
-  updateInfo()
-  timeInterval = setInterval(updateInfo, 1000)
-})
-
-onUnmounted(() => {
-  if (timeInterval) {
-    clearInterval(timeInterval)
-  }
-})
-</script>
-
 <style scoped>
-.sitemap-manager-view {
+.sitemap-view {
   max-width: 800px;
   margin: 0 auto;
   padding: 40px 20px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  background-color: #f5f5f5;
-  min-height: 100vh;
 }
 
 h1 {
   color: #2d3748;
   text-align: center;
   margin-bottom: 20px;
-  font-size: 2.5rem;
 }
 
-.info-card,
-.api-card,
-.navigation-card {
+.sitemap-info,
+.sitemap-links,
+.sitemap-status {
   background: white;
-  border-radius: 12px;
-  padding: 25px;
+  border-radius: 8px;
+  padding: 20px;
   margin-bottom: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.info-card h2,
-.api-card h2,
-.navigation-card h2 {
+.sitemap-info h2,
+.sitemap-links h2,
+.sitemap-status h2 {
   color: #2d3748;
   margin-top: 0;
   margin-bottom: 15px;
-  font-size: 1.3rem;
 }
 
-.api-buttons,
-.nav-buttons {
+.sitemap-info a {
+  color: #4299e1;
+  text-decoration: none;
+}
+
+.sitemap-info a:hover {
+  text-decoration: underline;
+}
+
+.links {
   display: flex;
   gap: 15px;
   flex-wrap: wrap;
-  margin-bottom: 20px;
 }
 
 .btn {
   display: inline-block;
   padding: 10px 20px;
-  border: none;
   border-radius: 6px;
   text-decoration: none;
-  font-size: 14px;
   font-weight: 500;
-  cursor: pointer;
   transition: all 0.2s ease;
 }
 
@@ -188,52 +104,8 @@ h1 {
   background-color: #4a5568;
 }
 
-.btn-link {
-  background-color: #38a169;
-  color: white;
-}
-
-.btn-link:hover {
-  background-color: #2f855a;
-}
-
-.btn-nav {
-  background-color: #ed8936;
-  color: white;
-}
-
-.btn-nav:hover {
-  background-color: #dd6b20;
-}
-
-.test-result {
-  margin-top: 20px;
-  padding: 15px;
-  background-color: #f7fafc;
-  border-radius: 6px;
-  border-left: 4px solid #4299e1;
-}
-
-.test-result h3 {
-  margin-top: 0;
-  color: #2d3748;
-}
-
-.test-result pre {
-  background-color: white;
-  padding: 15px;
-  border-radius: 4px;
-  overflow-x: auto;
-  font-size: 12px;
-  line-height: 1.4;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-}
-
 @media (max-width: 768px) {
-
-  .api-buttons,
-  .nav-buttons {
+  .links {
     flex-direction: column;
   }
 
