@@ -116,6 +116,16 @@ const router = createRouter({
       }
     },
     {
+      path: '/admin/sitemap',
+      name: 'sitemap-manager',
+      component: () => import('../views/SitemapManagerView.vue'),
+      meta: {
+        title: 'Dreamy Room - Sitemap Manager',
+        description: 'Manage and monitor the website sitemap.',
+        keywords: 'dreamy room, sitemap, admin, management'
+      }
+    },
+    {
       path: '/:pathMatch(.*)*',
       name: 'notfound',
       component: () => import('../views/NotFound.vue'),

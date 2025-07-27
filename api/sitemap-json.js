@@ -158,40 +158,31 @@ async function getAllSitemapEntries() {
   return entries
 }
 
-// 生成XML格式的站点地图
-async function generateSitemapXML() {
+// 生成JSON格式的站点地图
+async function generateSitemapJSON() {
   const entries = await getAllSitemapEntries()
-  
-  const xmlHeader = '<?xml version="1.0" encoding="UTF-8"?>'
-  const urlsetOpen = '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
-  const urlsetClose = '</urlset>'
-  
-  const urls = entries.map(entry => {
-    return `  <url>
-    <loc>${entry.loc}</loc>
-    <lastmod>${entry.lastmod}</lastmod>
-    <changefreq>${entry.changefreq}</changefreq>
-    <priority>${entry.priority}</priority>
-  </url>`
-  }).join('\n')
-  
-  return `${xmlHeader}\n${urlsetOpen}\n${urls}\n${urlsetClose}`
+  return {
+    generated: new Date().toISOString(),
+    totalUrls: entries.length,
+    baseUrl: SITE_CONFIG.baseUrl,
+    urls: entries
+  }
 }
 
 export default async function handler(req, res) {
   try {
-    // 设置缓存头（缓存1小时）
-    res.setHeader('Cache-Control', 'public, max-age=3600, s-maxage=3600')
-    res.setHeader('Content-Type', 'application/xml; charset=utf-8')
+    // 设置缓存头（缓存30分钟）
+    res.setHeader('Cache-Control', 'public, max-age=1800, s-maxage=1800')
+    res.setHeader('Content-Type', 'application/json; charset=utf-8')
     
-    // 生成站点地图XML
-    const sitemapXML = await generateSitemapXML()
+    // 生成站点地图JSON
+    const sitemapJSON = await generateSitemapJSON()
     
-    res.status(200).send(sitemapXML)
+    res.status(200).json(sitemapJSON)
   } catch (error) {
-    console.error('Error generating sitemap:', error)
+    console.error('Error generating sitemap JSON:', error)
     res.status(500).json({ 
-      error: 'Failed to generate sitemap',
+      error: 'Failed to generate sitemap JSON',
       message: error.message 
     })
   }

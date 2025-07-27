@@ -1,4 +1,10 @@
-// 临时修复路径别名问题 - 直接导入数据
+import { fileURLToPath } from 'url'
+import { dirname, join } from 'path'
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
+
+// 临时修复路径别名问题
 import { blogPosts } from '../src/data/blog.js'
 
 // 动态导入所有关卡数据
@@ -178,21 +184,79 @@ async function generateSitemapXML() {
   return `${xmlHeader}\n${urlsetOpen}\n${urls}\n${urlsetClose}`
 }
 
-export default async function handler(req, res) {
-  try {
-    // 设置缓存头（缓存1小时）
-    res.setHeader('Cache-Control', 'public, max-age=3600, s-maxage=3600')
-    res.setHeader('Content-Type', 'application/xml; charset=utf-8')
-    
-    // 生成站点地图XML
-    const sitemapXML = await generateSitemapXML()
-    
-    res.status(200).send(sitemapXML)
-  } catch (error) {
-    console.error('Error generating sitemap:', error)
-    res.status(500).json({ 
-      error: 'Failed to generate sitemap',
-      message: error.message 
-    })
+// 生成JSON格式的站点地图
+async function generateSitemapJSON() {
+  const entries = await getAllSitemapEntries()
+  return {
+    generated: new Date().toISOString(),
+    totalUrls: entries.length,
+    baseUrl: SITE_CONFIG.baseUrl,
+    urls: entries
   }
 }
+
+async function testSitemap() {
+  console.log('🚀 Testing Sitemap Generation...\n')
+  
+  try {
+    // 测试JSON格式
+    console.log('📊 Generating JSON sitemap...')
+    const jsonSitemap = await generateSitemapJSON()
+    console.log(`✅ JSON sitemap generated successfully!`)
+    console.log(`   - Total URLs: ${jsonSitemap.totalUrls}`)
+    console.log(`   - Base URL: ${jsonSitemap.baseUrl}`)
+    console.log(`   - Generated at: ${jsonSitemap.generated}`)
+    
+    // 显示URL分类统计
+    const urlsByPriority = {}
+    const urlsByChangefreq = {}
+    
+    jsonSitemap.urls.forEach(url => {
+      urlsByPriority[url.priority] = (urlsByPriority[url.priority] || 0) + 1
+      urlsByChangefreq[url.changefreq] = (urlsByChangefreq[url.changefreq] || 0) + 1
+    })
+    
+    console.log('\n📈 URL Statistics:')
+    console.log('   Priority distribution:')
+    Object.entries(urlsByPriority)
+      .sort(([a], [b]) => parseFloat(b) - parseFloat(a))
+      .forEach(([priority, count]) => {
+        console.log(`     ${priority}: ${count} URLs`)
+      })
+    
+    console.log('   Change frequency distribution:')
+    Object.entries(urlsByChangefreq).forEach(([freq, count]) => {
+      console.log(`     ${freq}: ${count} URLs`)
+    })
+    
+    // 测试XML格式
+    console.log('\n🔧 Generating XML sitemap...')
+    const xmlSitemap = await generateSitemapXML()
+    console.log(`✅ XML sitemap generated successfully!`)
+    console.log(`   - Size: ${(xmlSitemap.length / 1024).toFixed(2)} KB`)
+    
+    // 验证XML格式
+    if (xmlSitemap.includes('<?xml version="1.0" encoding="UTF-8"?>') && 
+        xmlSitemap.includes('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">')) {
+      console.log('✅ XML format validation passed')
+    } else {
+      console.log('❌ XML format validation failed')
+    }
+    
+    // 显示前5个URL作为示例
+    console.log('\n📋 Sample URLs (first 5):')
+    jsonSitemap.urls.slice(0, 5).forEach((url, index) => {
+      console.log(`   ${index + 1}. ${url.loc}`)
+      console.log(`      Priority: ${url.priority}, Changefreq: ${url.changefreq}`)
+    })
+    
+    console.log('\n🎉 Sitemap test completed successfully!')
+    
+  } catch (error) {
+    console.error('❌ Sitemap test failed:', error)
+    process.exit(1)
+  }
+}
+
+// 运行测试
+testSitemap()

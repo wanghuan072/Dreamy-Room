@@ -1,14 +1,13 @@
-// 临时修复路径别名问题 - 直接导入数据
-import { blogPosts } from '../src/data/blog.js'
+import { blogPosts } from '@/data/blog.js'
 
 // 动态导入所有关卡数据
 async function getAllLevels() {
   const levelModules = [
-    () => import('../src/data/levels/levels-1-20.js'),
-    () => import('../src/data/levels/levels-21-40.js'),
-    () => import('../src/data/levels/levels-41-60.js'),
-    () => import('../src/data/levels/levels-61-80.js'),
-    () => import('../src/data/levels/levels-81-100.js')
+    () => import('@/data/levels/levels-1-20.js'),
+    () => import('@/data/levels/levels-21-40.js'),
+    () => import('@/data/levels/levels-41-60.js'),
+    () => import('@/data/levels/levels-61-80.js'),
+    () => import('@/data/levels/levels-81-100.js')
   ]
 
   const allLevels = []
@@ -16,7 +15,7 @@ async function getAllLevels() {
   for (const moduleLoader of levelModules) {
     try {
       const module = await moduleLoader()
-      const levels = Object.values(module)[0]
+      const levels = Object.values(module)[0] // 获取导出的数组
       if (Array.isArray(levels)) {
         allLevels.push(...levels)
       }
@@ -105,7 +104,7 @@ function createSitemapEntry(url, lastmod, changefreq, priority) {
 }
 
 // 获取所有站点地图条目
-async function getAllSitemapEntries() {
+export async function getAllSitemapEntries() {
   const entries = []
   const currentDate = new Date().toISOString().split('T')[0]
 
@@ -159,7 +158,7 @@ async function getAllSitemapEntries() {
 }
 
 // 生成XML格式的站点地图
-async function generateSitemapXML() {
+export async function generateSitemapXML() {
   const entries = await getAllSitemapEntries()
   
   const xmlHeader = '<?xml version="1.0" encoding="UTF-8"?>'
@@ -178,21 +177,13 @@ async function generateSitemapXML() {
   return `${xmlHeader}\n${urlsetOpen}\n${urls}\n${urlsetClose}`
 }
 
-export default async function handler(req, res) {
-  try {
-    // 设置缓存头（缓存1小时）
-    res.setHeader('Cache-Control', 'public, max-age=3600, s-maxage=3600')
-    res.setHeader('Content-Type', 'application/xml; charset=utf-8')
-    
-    // 生成站点地图XML
-    const sitemapXML = await generateSitemapXML()
-    
-    res.status(200).send(sitemapXML)
-  } catch (error) {
-    console.error('Error generating sitemap:', error)
-    res.status(500).json({ 
-      error: 'Failed to generate sitemap',
-      message: error.message 
-    })
+// 生成JSON格式的站点地图（用于调试和API）
+export async function generateSitemapJSON() {
+  const entries = await getAllSitemapEntries()
+  return {
+    generated: new Date().toISOString(),
+    totalUrls: entries.length,
+    baseUrl: SITE_CONFIG.baseUrl,
+    urls: entries
   }
 }
