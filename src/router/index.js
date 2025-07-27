@@ -136,9 +136,19 @@ const router = createRouter({
       }
     },
     {
+      path: '/simple-test',
+      name: 'simple-test',
+      component: () => import('../views/SimpleTestView.vue'),
+      meta: {
+        title: 'Simple Test',
+        description: 'Simple test page.',
+        keywords: 'test'
+      }
+    },
+    {
       path: '/:pathMatch(.*)*',
       name: 'notfound',
-      component: () => import('../views/NotFound.vue'),
+      component: () => import('../views/SimpleNotFound.vue'),
       meta: {
         title: '404 - Page Not Found',
         description: 'Sorry, the page you are looking for does not exist.',

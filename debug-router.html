@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>路由调试工具</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .debug-section {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .debug-section h2 {
+            color: #333;
+            margin-top: 0;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+        }
+        .route-item {
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .route-path {
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            color: #007bff;
+        }
+        .route-name {
+            color: #666;
+            font-size: 0.9em;
+        }
+        .test-btn {
+            padding: 5px 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        .test-btn:hover {
+            background-color: #218838;
+        }
+        .status {
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-size: 12px;
+            margin-left: 10px;
+        }
+        .status.success {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .status.error {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        .status.testing {
+            background-color: #d1ecf1;
+            color: #0c5460;
+        }
+        .current-info {
+            background-color: #e9ecef;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+        .current-info h3 {
+            margin-top: 0;
+            color: #495057;
+        }
+        .info-item {
+            margin: 8px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+        }
+        .info-label {
+            font-weight: bold;
+            color: #6c757d;
+        }
+        .console-output {
+            background-color: #2d3748;
+            color: #e2e8f0;
+            padding: 15px;
+            border-radius: 6px;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            max-height: 300px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔍 Vue Router 调试工具</h1>
+
+    <div class="current-info">
+        <h3>当前页面信息</h3>
+        <div class="info-item">
+            <span class="info-label">URL:</span> <span id="current-url"></span>
+        </div>
+        <div class="info-item">
+            <span class="info-label">路径:</span> <span id="current-path"></span>
+        </div>
+        <div class="info-item">
+            <span class="info-label">Hash:</span> <span id="current-hash"></span>
+        </div>
+        <div class="info-item">
+            <span class="info-label">Search:</span> <span id="current-search"></span>
+        </div>
+        <div class="info-item">
+            <span class="info-label">时间:</span> <span id="current-time"></span>
+        </div>
+    </div>
+
+    <div class="debug-section">
+        <h2>📋 路由列表测试</h2>
+        <p>点击测试按钮检查每个路由是否正常工作：</p>
+        <div id="routes-list"></div>
+    </div>
+
+    <div class="debug-section">
+        <h2>🚨 问题诊断</h2>
+        <button onclick="runDiagnostics()" style="padding: 10px 20px; background: #dc3545; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 15px;">
+            运行诊断
+        </button>
+        <div id="diagnostics-output" class="console-output"></div>
+    </div>
+
+    <div class="debug-section">
+        <h2>📝 控制台日志</h2>
+        <button onclick="clearConsole()" style="padding: 5px 10px; background: #6c757d; color: white; border: none; border-radius: 3px; cursor: pointer; margin-bottom: 10px;">
+            清空日志
+        </button>
+        <div id="console-log" class="console-output"></div>
+    </div>
+
+    <script>
+        // 定义所有路由
+        const routes = [
+            { path: '/', name: 'home', component: 'HomeView.vue' },
+            { path: '/levels', name: 'levels', component: 'LevelsView.vue' },
+            { path: '/download', name: 'download', component: 'DownloadView.vue' },
+            { path: '/blog', name: 'blog', component: 'BlogView.vue' },
+            { path: '/blog/:addressBar', name: 'blog-detail', component: 'BlogDetailView.vue' },
+            { path: '/levels/:addressBar', name: 'level-detail', component: 'LevelDetail.vue' },
+            { path: '/privacy-policy', name: 'privacy-policy', component: 'PrivacyPolicyView.vue' },
+            { path: '/terms-of-service', name: 'terms-of-service', component: 'TermsOfServiceView.vue' },
+            { path: '/copyright', name: 'copyright', component: 'CopyrightView.vue' },
+            { path: '/about-us', name: 'about-us', component: 'AboutUsView.vue' },
+            { path: '/contact-us', name: 'contact-us', component: 'ContactUsView.vue' },
+            { path: '/admin/sitemap', name: 'sitemap-manager', component: 'SitemapManagerView.vue' },
+            { path: '/test/sitemap', name: 'test-sitemap', component: 'TestSitemapView.vue' },
+            { path: '/:pathMatch(.*)*', name: 'notfound', component: 'NotFound.vue' }
+        ];
+
+        let consoleLog = [];
+
+        function log(message, type = 'info') {
+            const timestamp = new Date().toLocaleTimeString();
+            const logEntry = `[${timestamp}] ${type.toUpperCase()}: ${message}`;
+            consoleLog.push(logEntry);
+            updateConsoleDisplay();
+        }
+
+        function updateConsoleDisplay() {
+            document.getElementById('console-log').textContent = consoleLog.join('\n');
+        }
+
+        function clearConsole() {
+            consoleLog = [];
+            updateConsoleDisplay();
+        }
+
+        function updateCurrentInfo() {
+            document.getElementById('current-url').textContent = window.location.href;
+            document.getElementById('current-path').textContent = window.location.pathname;
+            document.getElementById('current-hash').textContent = window.location.hash || '(无)';
+            document.getElementById('current-search').textContent = window.location.search || '(无)';
+            document.getElementById('current-time').textContent = new Date().toLocaleString();
+        }
+
+        function renderRoutes() {
+            const container = document.getElementById('routes-list');
+            container.innerHTML = routes.map((route, index) => `
+                <div class="route-item">
+                    <div>
+                        <span class="route-path">${route.path}</span>
+                        <span class="route-name">(${route.name})</span>
+                    </div>
+                    <div>
+                        <button class="test-btn" onclick="testRoute('${route.path}', ${index})">
+                            测试
+                        </button>
+                        <span id="status-${index}" class="status" style="display: none;"></span>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        async function testRoute(path, index) {
+            const statusEl = document.getElementById(`status-${index}`);
+            statusEl.style.display = 'inline-block';
+            statusEl.className = 'status testing';
+            statusEl.textContent = '测试中...';
+
+            log(`开始测试路由: ${path}`);
+
+            try {
+                // 对于动态路由，使用示例路径
+                let testPath = path;
+                if (path.includes(':addressBar')) {
+                    testPath = path.replace(':addressBar', 'test-example');
+                }
+                if (path.includes('pathMatch')) {
+                    testPath = '/non-existent-page';
+                }
+
+                const response = await fetch(testPath);
+                
+                if (response.ok) {
+                    const text = await response.text();
+                    const isNotFound = text.includes('404') || text.includes('Page Not Found');
+                    
+                    if (isNotFound && !path.includes('pathMatch')) {
+                        statusEl.className = 'status error';
+                        statusEl.textContent = '跳转到404';
+                        log(`路由 ${path} 跳转到了404页面`, 'error');
+                    } else {
+                        statusEl.className = 'status success';
+                        statusEl.textContent = '正常';
+                        log(`路由 ${path} 测试成功`, 'success');
+                    }
+                } else {
+                    statusEl.className = 'status error';
+                    statusEl.textContent = `错误 ${response.status}`;
+                    log(`路由 ${path} 返回错误: ${response.status}`, 'error');
+                }
+            } catch (error) {
+                statusEl.className = 'status error';
+                statusEl.textContent = '连接失败';
+                log(`路由 ${path} 测试失败: ${error.message}`, 'error');
+            }
+        }
+
+        async function runDiagnostics() {
+            const output = document.getElementById('diagnostics-output');
+            output.textContent = '正在运行诊断...\n';
+
+            const diagnostics = [];
+
+            // 检查基本信息
+            diagnostics.push('=== 基本信息 ===');
+            diagnostics.push(`当前URL: ${window.location.href}`);
+            diagnostics.push(`用户代理: ${navigator.userAgent}`);
+            diagnostics.push(`时间: ${new Date().toISOString()}`);
+            diagnostics.push('');
+
+            // 检查关键路由
+            diagnostics.push('=== 关键路由测试 ===');
+            const keyRoutes = ['/admin/sitemap', '/test/sitemap', '/'];
+            
+            for (const route of keyRoutes) {
+                try {
+                    const response = await fetch(route);
+                    const text = await response.text();
+                    const isNotFound = text.includes('404') || text.includes('Page Not Found');
+                    
+                    diagnostics.push(`${route}: ${response.status} ${isNotFound ? '(跳转到404)' : '(正常)'}`);
+                } catch (error) {
+                    diagnostics.push(`${route}: 错误 - ${error.message}`);
+                }
+            }
+
+            diagnostics.push('');
+
+            // 检查API端点
+            diagnostics.push('=== API端点测试 ===');
+            const apiRoutes = ['/api/sitemap', '/api/sitemap-json'];
+            
+            for (const route of apiRoutes) {
+                try {
+                    const response = await fetch(route);
+                    const contentType = response.headers.get('content-type');
+                    diagnostics.push(`${route}: ${response.status} (${contentType})`);
+                } catch (error) {
+                    diagnostics.push(`${route}: 错误 - ${error.message}`);
+                }
+            }
+
+            diagnostics.push('');
+            diagnostics.push('=== 诊断完成 ===');
+            diagnostics.push('如果 /admin/sitemap 显示"跳转到404"，说明路由配置或组件加载有问题');
+            diagnostics.push('请检查:');
+            diagnostics.push('1. src/views/SitemapManagerView.vue 文件是否存在');
+            diagnostics.push('2. 组件中的导入是否有错误');
+            diagnostics.push('3. 路由配置是否正确');
+
+            output.textContent = diagnostics.join('\n');
+        }
+
+        // 初始化
+        updateCurrentInfo();
+        renderRoutes();
+        setInterval(updateCurrentInfo, 1000);
+
+        // 自动运行诊断
+        setTimeout(runDiagnostics, 1000);
+
+        log('路由调试工具已启动');
+    </script>
+</body>
+</html>
