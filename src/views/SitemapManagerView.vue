@@ -1,66 +1,37 @@
 <template>
   <div class="sitemap-manager-view">
-    <div class="container">
-      <h1>🗺️ 站点地图管理</h1>
-      <p class="subtitle">管理和监控网站站点地图</p>
+    <h1>🗺️ 站点地图管理</h1>
+    <p>如果你能看到这个页面，说明 /admin/sitemap 路由工作正常！</p>
 
-      <div class="status-card">
-        <h2>✅ 页面状态</h2>
-        <p><strong>路由状态:</strong> 正常工作</p>
-        <p><strong>当前路径:</strong> {{ currentPath }}</p>
-        <p><strong>当前时间:</strong> {{ currentTime }}</p>
+    <div class="info-card">
+      <h2>📍 页面信息</h2>
+      <p><strong>当前路径:</strong> {{ currentPath }}</p>
+      <p><strong>当前时间:</strong> {{ currentTime }}</p>
+      <p><strong>页面URL:</strong> {{ pageUrl }}</p>
+    </div>
+
+    <div class="api-card">
+      <h2>🔗 API 测试</h2>
+      <div class="api-buttons">
+        <button @click="testXML" class="btn btn-primary">测试 XML API</button>
+        <button @click="testJSON" class="btn btn-secondary">测试 JSON API</button>
+        <a href="/api/sitemap" target="_blank" class="btn btn-link">查看 XML</a>
+        <a href="/api/sitemap-json" target="_blank" class="btn btn-link">查看 JSON</a>
       </div>
 
-      <div class="api-section">
-        <h2>🔗 API 端点</h2>
-        <div class="api-links">
-          <div class="api-card">
-            <h3>XML 站点地图</h3>
-            <p>标准XML格式，用于搜索引擎</p>
-            <div class="api-actions">
-              <a href="/api/sitemap" target="_blank" class="btn btn-primary">查看 XML</a>
-              <button @click="testAPI('/api/sitemap')" class="btn btn-secondary">测试 API</button>
-            </div>
-            <div class="api-status" :class="xmlStatus.class">{{ xmlStatus.message }}</div>
-          </div>
-
-          <div class="api-card">
-            <h3>JSON 站点地图</h3>
-            <p>JSON格式，用于调试和管理</p>
-            <div class="api-actions">
-              <a href="/api/sitemap-json" target="_blank" class="btn btn-primary">查看 JSON</a>
-              <button @click="testAPI('/api/sitemap-json')" class="btn btn-secondary">测试 API</button>
-            </div>
-            <div class="api-status" :class="jsonStatus.class">{{ jsonStatus.message }}</div>
-          </div>
-        </div>
+      <div v-if="testResult" class="test-result">
+        <h3>测试结果:</h3>
+        <pre>{{ testResult }}</pre>
       </div>
+    </div>
 
-      <div class="tools-section">
-        <h2>🛠️ 管理工具</h2>
-        <div class="tools">
-          <button @click="downloadXML" class="btn btn-download">下载 XML</button>
-          <button @click="downloadJSON" class="btn btn-download">下载 JSON</button>
-          <button @click="refreshAll" class="btn btn-refresh">刷新状态</button>
-        </div>
-      </div>
-
-      <div class="info-section">
-        <h2>📊 系统信息</h2>
-        <div class="info-grid">
-          <div class="info-item">
-            <span class="label">用户代理:</span>
-            <span class="value">{{ userAgent }}</span>
-          </div>
-          <div class="info-item">
-            <span class="label">页面URL:</span>
-            <span class="value">{{ pageUrl }}</span>
-          </div>
-          <div class="info-item">
-            <span class="label">时间戳:</span>
-            <span class="value">{{ timestamp }}</span>
-          </div>
-        </div>
+    <div class="navigation-card">
+      <h2>🧭 导航测试</h2>
+      <div class="nav-buttons">
+        <a href="/" class="btn btn-nav">返回首页</a>
+        <a href="/test/sitemap" class="btn btn-nav">测试页面</a>
+        <a href="/levels" class="btn btn-nav">关卡页面</a>
+        <a href="/blog" class="btn btn-nav">博客页面</a>
       </div>
     </div>
   </div>
@@ -71,111 +42,69 @@ import { ref, onMounted, onUnmounted } from 'vue'
 
 const currentTime = ref('')
 const currentPath = ref('')
-const userAgent = ref('')
 const pageUrl = ref('')
-const timestamp = ref('')
-
-const xmlStatus = ref({ message: '未测试', class: 'unknown' })
-const jsonStatus = ref({ message: '未测试', class: 'unknown' })
+const testResult = ref('')
 
 let timeInterval = null
 
-function updateTime() {
-  currentTime.value = new Date().toLocaleString('zh-CN')
-  timestamp.value = new Date().toISOString()
-}
-
 function updateInfo() {
+  currentTime.value = new Date().toLocaleString('zh-CN')
   currentPath.value = window.location.pathname
-  userAgent.value = navigator.userAgent.substring(0, 100) + '...'
   pageUrl.value = window.location.href
 }
 
-async function testAPI(endpoint) {
-  const isXML = endpoint.includes('sitemap') && !endpoint.includes('json')
-  const statusRef = isXML ? xmlStatus : jsonStatus
-
-  statusRef.value = { message: '测试中...', class: 'testing' }
-
-  try {
-    const response = await fetch(endpoint)
-    if (response.ok) {
-      const contentType = response.headers.get('content-type') || 'unknown'
-      statusRef.value = {
-        message: `正常 (${contentType.split(';')[0]})`,
-        class: 'success'
-      }
-    } else {
-      statusRef.value = {
-        message: `错误 ${response.status}`,
-        class: 'error'
-      }
-    }
-  } catch (error) {
-    statusRef.value = {
-      message: `连接失败: ${error.message}`,
-      class: 'error'
-    }
-  }
-}
-
-async function downloadXML() {
+async function testXML() {
+  testResult.value = '正在测试 XML API...'
   try {
     const response = await fetch('/api/sitemap')
     if (response.ok) {
-      const xml = await response.text()
-      downloadFile(xml, 'sitemap.xml', 'application/xml')
+      const text = await response.text()
+      testResult.value = `✅ XML API 测试成功!
+状态: ${response.status}
+Content-Type: ${response.headers.get('content-type')}
+内容长度: ${text.length} 字符
+
+内容预览:
+${text.substring(0, 500)}...`
     } else {
-      alert('下载失败: ' + response.status)
+      testResult.value = `❌ XML API 测试失败!
+状态: ${response.status}
+错误: ${response.statusText}`
     }
   } catch (error) {
-    alert('下载失败: ' + error.message)
+    testResult.value = `❌ XML API 测试出错!
+错误: ${error.message}`
   }
 }
 
-async function downloadJSON() {
+async function testJSON() {
+  testResult.value = '正在测试 JSON API...'
   try {
     const response = await fetch('/api/sitemap-json')
     if (response.ok) {
-      const json = await response.text()
-      downloadFile(json, 'sitemap.json', 'application/json')
+      const json = await response.json()
+      testResult.value = `✅ JSON API 测试成功!
+状态: ${response.status}
+Content-Type: ${response.headers.get('content-type')}
+总URL数量: ${json.totalUrls}
+生成时间: ${json.generated}
+
+完整响应:
+${JSON.stringify(json, null, 2)}`
     } else {
-      alert('下载失败: ' + response.status)
+      testResult.value = `❌ JSON API 测试失败!
+状态: ${response.status}
+错误: ${response.statusText}`
     }
   } catch (error) {
-    alert('下载失败: ' + error.message)
+    testResult.value = `❌ JSON API 测试出错!
+错误: ${error.message}`
   }
 }
 
-function downloadFile(content, filename, mimeType) {
-  const blob = new Blob([content], { type: mimeType })
-  const url = URL.createObjectURL(blob)
-  const a = document.createElement('a')
-  a.href = url
-  a.download = filename
-  document.body.appendChild(a)
-  a.click()
-  document.body.removeChild(a)
-  URL.revokeObjectURL(url)
-}
-
-function refreshAll() {
-  updateTime()
-  updateInfo()
-  testAPI('/api/sitemap')
-  testAPI('/api/sitemap-json')
-}
-
 onMounted(() => {
-  updateTime()
   updateInfo()
-  timeInterval = setInterval(updateTime, 1000)
-
-  // 自动测试API
-  setTimeout(() => {
-    testAPI('/api/sitemap')
-    testAPI('/api/sitemap-json')
-  }, 1000)
+  timeInterval = setInterval(updateInfo, 1000)
 })
 
 onUnmounted(() => {
@@ -186,83 +115,25 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
-.sitemap-manager {
+.sitemap-manager-view {
   max-width: 800px;
   margin: 0 auto;
   padding: 40px 20px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #f5f5f5;
+  min-height: 100vh;
 }
 
 h1 {
   color: #2d3748;
   text-align: center;
   margin-bottom: 20px;
-}
-
-.links {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  margin: 30px 0;
-}
-
-.links a {
-  padding: 10px 20px;
-  background-color: #667eea;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-.links a:hover {
-  background-color: #5a67d8;
-}
-
-.info {
-  background-color: #f7fafc;
-  padding: 20px;
-  border-radius: 8px;
-  margin-top: 30px;
-}
-
-.info h2 {
-  color: #2d3748;
-  margin-top: 0;
-}
-
-.info p {
-  color: #4a5568;
-  margin: 10px 0;
-}
-</style><style
-tyle scoped>
-.sitemap-manager-view {
-  min-height: 100vh;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  padding: 20px;
-}
-
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-h1 {
-  text-align: center;
-  color: #2d3748;
   font-size: 2.5rem;
-  margin-bottom: 10px;
 }
 
-.subtitle {
-  text-align: center;
-  color: #4a5568;
-  font-size: 1.1rem;
-  margin-bottom: 30px;
-}
-
-.status-card, .api-section, .tools-section, .info-section {
+.info-card,
+.api-card,
+.navigation-card {
   background: white;
   border-radius: 12px;
   padding: 25px;
@@ -270,79 +141,26 @@ h1 {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.status-card h2, .api-section h2, .tools-section h2, .info-section h2 {
+.info-card h2,
+.api-card h2,
+.navigation-card h2 {
   color: #2d3748;
   margin-top: 0;
   margin-bottom: 15px;
   font-size: 1.3rem;
 }
 
-.api-links {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-}
-
-.api-card {
-  border: 2px solid #e2e8f0;
-  border-radius: 8px;
-  padding: 20px;
-  transition: all 0.3s ease;
-}
-
-.api-card:hover {
-  border-color: #4299e1;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(66, 153, 225, 0.15);
-}
-
-.api-card h3 {
-  color: #2d3748;
-  margin-top: 0;
-  margin-bottom: 8px;
-}
-
-.api-card p {
-  color: #718096;
-  margin-bottom: 15px;
-}
-
-.api-actions {
+.api-buttons,
+.nav-buttons {
   display: flex;
-  gap: 10px;
-  margin-bottom: 10px;
-}
-
-.api-status {
-  padding: 5px 10px;
-  border-radius: 4px;
-  font-size: 0.9rem;
-  font-weight: 500;
-}
-
-.api-status.unknown {
-  background-color: #f7fafc;
-  color: #4a5568;
-}
-
-.api-status.testing {
-  background-color: #ebf8ff;
-  color: #2b6cb0;
-}
-
-.api-status.success {
-  background-color: #f0fff4;
-  color: #22543d;
-}
-
-.api-status.error {
-  background-color: #fed7d7;
-  color: #c53030;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 
 .btn {
   display: inline-block;
-  padding: 8px 16px;
+  padding: 10px 20px;
   border: none;
   border-radius: 6px;
   text-decoration: none;
@@ -370,69 +188,55 @@ h1 {
   background-color: #4a5568;
 }
 
-.btn-download {
+.btn-link {
   background-color: #38a169;
   color: white;
 }
 
-.btn-download:hover {
+.btn-link:hover {
   background-color: #2f855a;
 }
 
-.btn-refresh {
+.btn-nav {
   background-color: #ed8936;
   color: white;
 }
 
-.btn-refresh:hover {
+.btn-nav:hover {
   background-color: #dd6b20;
 }
 
-.tools {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-
-.info-grid {
-  display: grid;
-  gap: 15px;
-}
-
-.info-item {
-  display: flex;
-  align-items: center;
-  padding: 10px;
+.test-result {
+  margin-top: 20px;
+  padding: 15px;
   background-color: #f7fafc;
   border-radius: 6px;
+  border-left: 4px solid #4299e1;
 }
 
-.info-item .label {
-  font-weight: 600;
+.test-result h3 {
+  margin-top: 0;
   color: #2d3748;
-  min-width: 100px;
-  margin-right: 15px;
 }
 
-.info-item .value {
-  color: #4a5568;
-  word-break: break-all;
-  flex: 1;
+.test-result pre {
+  background-color: white;
+  padding: 15px;
+  border-radius: 4px;
+  overflow-x: auto;
+  font-size: 12px;
+  line-height: 1.4;
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
 
 @media (max-width: 768px) {
-  .api-links {
-    grid-template-columns: 1fr;
-  }
-  
-  .api-actions {
+
+  .api-buttons,
+  .nav-buttons {
     flex-direction: column;
   }
-  
-  .tools {
-    flex-direction: column;
-  }
-  
+
   .btn {
     text-align: center;
   }
