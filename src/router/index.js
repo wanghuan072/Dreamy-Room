@@ -8,9 +8,9 @@ const router = createRouter({
       name: 'home',
       component: () => import('../views/HomeView.vue'),
       meta: {
-        title: 'Dreamy Room - Home',
-        description: 'Dreamy Room walkthroughs, downloads, features and latest news.',
-        keywords: 'Dreamy Room, walkthrough, home, levels, download, features, news'
+        title: 'Dreamy Room – Game Level Videos & Walkthroughs',
+        description: 'Explore Dreamy Room game levels with detailed walkthrough videos. Learn tips, tricks, and strategies to complete every stage with ease and fun.',
+        keywords: 'Dreamy Room, game walkthrough, level videos, gameplay guide, game tips, puzzle solutions'
       }
     },
     {
@@ -18,9 +18,9 @@ const router = createRouter({
       name: 'levels',
       component: () => import('../views/LevelsView.vue'),
       meta: {
-        title: 'Dreamy Room - All Level Walkthroughs',
-        description: 'All Dreamy Room level walkthroughs and tips. Quickly find solutions for every level.',
-        keywords: 'Dreamy Room, levels, walkthrough, solution, tips, guide'
+        title: 'Dreamy Room Levels List – All Stage Walkthrough Videos',
+        description: 'Browse the complete list of Dreamy Room levels. Watch walkthrough videos, explore puzzle solutions, and master every stage of the game.',
+        keywords: 'Dreamy Room levels, stage list, walkthrough videos, game stages, puzzle guide, level solutions'
       }
     },
     {
@@ -28,9 +28,9 @@ const router = createRouter({
       name: 'download',
       component: () => import('../views/DownloadView.vue'),
       meta: {
-        title: 'Dreamy Room - Download',
-        description: 'Download Dreamy Room for iOS and Android. System requirements and download stats.',
-        keywords: 'Dreamy Room, download, install, iOS, Android, requirements'
+        title: 'Download Dreamy Room – Play the Creative Puzzle Game',
+        description: 'Download Dreamy Room now and enjoy creative puzzle-solving fun. Build, explore, and master levels in this relaxing and addictive game experience.',
+        keywords: 'Dreamy Room download, puzzle game download, free game download, creative puzzle, relaxing gameplay'
       }
     },
     {
@@ -38,9 +38,9 @@ const router = createRouter({
       name: 'blog',
       component: () => import('../views/BlogView.vue'),
       meta: {
-        title: 'Dreamy Room - Blog',
-        description: 'Official Dreamy Room blog: news, tips, developer stories and player sharing.',
-        keywords: 'Dreamy Room, blog, news, tips, stories, player'
+        title: 'Dreamy Room Blog – Tips, Updates & Game Insights',
+        description: 'Read the Dreamy Room blog for tips, updates, guides, and insights. Discover strategies, game news, and creative ideas to enhance your gameplay experience.',
+        keywords: 'Dreamy Room blog, game tips, updates, guides, gameplay insights, puzzle strategies, game news'
       }
     },
     {

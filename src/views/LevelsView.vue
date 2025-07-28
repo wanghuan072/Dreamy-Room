@@ -21,31 +21,31 @@ import { onMounted } from 'vue'
 import { setSEO } from '@/utils/seo.js'
 
 onMounted(() => {
-  const url = window.location.origin + '/levels'
-  setSEO({
-    title: 'Dreamy Room Level Walkthroughs',
-    description:
-      'Browse all Dreamy Room level walkthroughs, solutions, and tips. Find guides for every level in the relaxing puzzle game Dreamy Room.',
-    keywords: 'Dreamy Room, level walkthrough, puzzle solution, game guide, relaxing',
-    og: {
-      title: 'Dreamy Room Level Walkthroughs',
-      description: 'Browse all Dreamy Room level walkthroughs, solutions, and tips.',
-      type: 'website',
-      url,
-      image: 'https://dreamy-room.net/og-image.jpg',
-    },
-    twitter: {
-      card: 'summary_large_image',
-    },
-    canonical: url,
-    jsonld: {
-      '@context': 'https://schema.org',
-      '@type': 'CollectionPage',
-      name: 'Dreamy Room Level Walkthroughs',
-      url,
-      description: 'Browse all Dreamy Room level walkthroughs, solutions, and tips.',
-    },
-  })
+  // const url = window.location.origin + '/levels'
+  // setSEO({
+  //   title: 'Dreamy Room Level Walkthroughs',
+  //   description:
+  //     'Browse all Dreamy Room level walkthroughs, solutions, and tips. Find guides for every level in the relaxing puzzle game Dreamy Room.',
+  //   keywords: 'Dreamy Room, level walkthrough, puzzle solution, game guide, relaxing',
+  //   og: {
+  //     title: 'Dreamy Room Level Walkthroughs',
+  //     description: 'Browse all Dreamy Room level walkthroughs, solutions, and tips.',
+  //     type: 'website',
+  //     url,
+  //     image: 'https://dreamy-room.net/og-image.jpg',
+  //   },
+  //   twitter: {
+  //     card: 'summary_large_image',
+  //   },
+  //   canonical: url,
+  //   jsonld: {
+  //     '@context': 'https://schema.org',
+  //     '@type': 'CollectionPage',
+  //     name: 'Dreamy Room Level Walkthroughs',
+  //     url,
+  //     description: 'Browse all Dreamy Room level walkthroughs, solutions, and tips.',
+  //   },
+  // })
 })
 </script>
 
@@ -78,24 +78,29 @@ onMounted(() => {
   .container {
     padding: 0 10px;
   }
+
   .page-title {
     font-size: 2rem;
     margin-bottom: 28px;
   }
+
   .main-content {
     padding: 40px 0;
   }
 }
+
 @media (max-width: 768px) {
   .container {
     padding: 0 6px;
   }
+
   .page-title {
     font-size: 1.2rem;
     margin-bottom: 14px;
   }
+
   .main-content {
     padding: 12px 0;
   }
 }
-</style> 
+</style>
