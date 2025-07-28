@@ -127,18 +127,11 @@
                 Start your dreamy room journey and unlock the secrets of all levels
               </p>
               <div class="download-btns">
-                <a
-                  class="download-btn appstore"
-                  href="https://apps.apple.com/us/app/dreamy-room/id6742221896"
-                  target="_blank"
-                  ><span class="btn-ico">🍑</span> App Store</a
-                >
-                <a
-                  class="download-btn googleplay"
-                  href="https://play.google.com/store/apps/details?id=com.abi.dream.unpacking"
-                  target="_blank"
-                  ><span class="btn-ico">🤖</span> Google Play</a
-                >
+                <a class="download-btn appstore" href="https://apps.apple.com/us/app/dreamy-room/id6742221896"
+                  target="_blank"><span class="btn-ico">🍑</span> App Store</a>
+                <a class="download-btn googleplay"
+                  href="https://play.google.com/store/apps/details?id=com.abi.dream.unpacking" target="_blank"><span
+                    class="btn-ico">🤖</span> Google Play</a>
               </div>
             </div>
             <div class="download-phone">
@@ -317,8 +310,8 @@
   <!-- Footer Component -->
   <Footer />
 </template>
-  
-  <script setup>
+
+<script setup>
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
 import LevelsList from '@/components/LevelsList.vue'
@@ -694,6 +687,8 @@ import SearchLevel from '@/components/SearchLevel.vue'
 .levels-section {
   background: linear-gradient(135deg, #e6e6fa 0%, #f3e8ff 100%);
   padding: 60px 0;
+  min-height: 600px;
+  contain: layout style paint;
 }
 
 .section-subtitle {
@@ -838,7 +833,8 @@ import SearchLevel from '@/components/SearchLevel.vue'
 }
 
 .download-phone .phone-frame {
-  transform: rotate(0deg); /* Ensure it's upright for download section */
+  transform: rotate(0deg);
+  /* Ensure it's upright for download section */
 }
 
 /* Game Features Section */
@@ -1055,43 +1051,53 @@ import SearchLevel from '@/components/SearchLevel.vue'
     align-items: center;
     gap: 32px;
   }
+
   .hero-content {
     width: 100%;
   }
+
   .hero-header {
     margin-bottom: 1rem;
   }
+
   .hero-image {
     height: 400px;
     flex: none;
     margin: 0 auto;
   }
+
   .phone-frame {
     width: 220px;
     height: 440px;
   }
+
   .download-main {
     flex-direction: column;
     gap: 32px;
   }
+
   .download-info {
     width: 100%;
     min-width: 0;
   }
+
   .download-phone {
     height: 400px;
     flex: none;
     margin: 0 auto;
   }
+
   .phone-frame {
     width: 220px;
     height: 440px;
   }
+
   .features-grid,
   .faq-grid,
   .tips-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .game-features {
     gap: 20px;
   }
@@ -1101,6 +1107,7 @@ import SearchLevel from '@/components/SearchLevel.vue'
   .hero-flex {
     gap: 1rem;
   }
+
   .hero-section,
   .levels-section,
   .game-intro,
@@ -1110,144 +1117,183 @@ import SearchLevel from '@/components/SearchLevel.vue'
   .tips-section {
     padding: 1rem 0;
   }
+
+  .levels-section {
+    min-height: 400px;
+  }
+
   .hero-title {
     font-size: 1.4rem;
     margin-bottom: 1rem;
   }
+
   .hero-description {
     font-size: 0.8rem;
     margin-bottom: 1rem;
   }
+
   .logo-text {
     font-size: 1rem;
   }
+
   .hero-stats {
     /* flex-direction: column; */
     gap: 10px;
     margin-bottom: 1rem;
   }
+
   .stat-item {
     padding: 0.5rem;
     gap: 0.5rem;
   }
+
   .stat-icon {
     font-size: 1rem;
   }
+
   .stat-number {
     font-size: 1rem;
   }
+
   .stat-label {
     font-size: 0.8rem;
   }
+
   .intro-text p {
     font-size: 0.8rem;
     margin-bottom: 1rem;
   }
+
   .search-input {
     font-size: 0.8rem;
     padding: 0.5rem;
     width: 100%;
   }
+
   .search-input-group {
     flex-direction: column;
     gap: 8px;
   }
+
   .search-section {
     margin-bottom: 1rem;
   }
+
   .search-button {
     font-size: 0.8rem;
     padding: 0.5rem;
     width: 100%;
   }
+
   .action-btn {
     font-size: 0.8rem;
     padding: 0.5rem;
     width: 100%;
   }
+
   .action-buttons {
     flex-direction: column;
     gap: 1rem;
     margin-bottom: 20px;
   }
+
   .download-desc {
     font-size: 0.8rem;
     margin-bottom: 1rem;
   }
+
   .download-btn {
     font-size: 0.8rem;
     padding: 0.5rem;
     width: 100%;
   }
+
   .features-desc {
     font-size: 0.8rem;
     margin-bottom: 1rem;
   }
+
   .play-directly {
     flex-direction: column;
     gap: 8px;
     max-width: 100%;
     padding: 12px;
   }
+
   .hero-image,
   .download-phone {
     height: 220px;
   }
+
   .phone-frame {
     width: 120px;
     height: 220px;
     border-width: 3px;
     border-radius: 10px;
   }
+
   .phone-frame img {
     border-radius: 10px;
   }
+
   .section-title {
     font-size: 1.2rem;
     margin-bottom: 1rem;
   }
+
   .tips-grid {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
+
   .features-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
   }
+
   .feature-card {
     border-radius: 10px;
     padding: 1rem;
     gap: 0.5rem;
   }
+
   .feature-name {
     font-size: 1rem;
   }
+
   .feature-desc {
     font-size: 0.8rem;
   }
+
   .game-features {
     flex-direction: column;
     gap: 10px;
   }
+
   .feature {
     padding: 12px;
   }
+
   .download-main {
     flex-direction: column;
     gap: 16px;
   }
+
   .download-btns {
     flex-direction: column;
     gap: 10px;
   }
+
   .faq-desc {
     font-size: 0.8rem;
     margin-bottom: 1rem;
   }
+
   .faq-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
   }
+
   .faq-card {
     border-radius: 10px;
     padding: 1rem;
