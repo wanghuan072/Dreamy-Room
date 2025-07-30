@@ -81,6 +81,9 @@ async function loadLevels(tab) {
 function selectTab(tab) {
   levelTabs.value.forEach((t) => (t.active = false))
   tab.active = true
+  // 保存选中的 tab 索引到 localStorage
+  const tabIndex = levelTabs.value.findIndex(t => t.label === tab.label)
+  localStorage.setItem('dreamy-room-active-tab', tabIndex.toString())
   loadLevels(tab)
 }
 
@@ -95,6 +98,24 @@ function onImageError(levelId) {
 // goToDetail 方法已移除
 
 onMounted(() => {
+  // 从 localStorage 读取之前保存的 tab 索引
+  const savedTabIndex = localStorage.getItem('dreamy-room-active-tab')
+
+  if (savedTabIndex !== null) {
+    const tabIndex = parseInt(savedTabIndex)
+    // 确保索引有效
+    if (tabIndex >= 0 && tabIndex < levelTabs.value.length) {
+      // 重置所有 tab 状态
+      levelTabs.value.forEach((t) => (t.active = false))
+      // 设置保存的 tab 为激活状态
+      levelTabs.value[tabIndex].active = true
+      // 加载对应的关卡数据
+      loadLevels(levelTabs.value[tabIndex])
+      return
+    }
+  }
+
+  // 如果没有保存的状态或索引无效，使用默认的第一个 tab
   const activeTab = levelTabs.value.find((tab) => tab.active)
   if (activeTab) loadLevels(activeTab)
 })

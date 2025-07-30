@@ -23,7 +23,10 @@ export const levels1_20 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 1 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 1 Solution Walkthrough</h2>
+      <p>Dreamy Room Level 1 Walkthroughs & Guide teaches you how to arrange every piece of furniture and decoration—from the pink bed with bunny ears to cloud wall décor—to build a cozy, balanced pink-themed room. With step-by-step placement tips and small design tricks, you’ll easily create a whimsical and functional dream space in Level 1.</p>
+    `,
   },
 
   {
@@ -56,7 +59,12 @@ export const levels1_20 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 2 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 2 Solution Walkthrough</h2>
+      <p>
+        Dreamy Room Level 2 Walkthroughs & Guide takes you through transforming a bare bathroom into a cozy, functional oasis. From placing the bathtub and toilet to adding playful décor like a rubber duck and pink curtains, this step-by-step guide shows how to create a balanced, welcoming space with ease.
+      </p>
+    `,
   },
 
   {
@@ -89,7 +97,12 @@ export const levels1_20 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 3 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 3 Solution Walkthrough</h2>
+      <p>
+        Dreamy Room Level 3 Walkthroughs & Guide helps you build a professional yet cozy office space from scratch. Learn how to position the main desk, executive chair, and bookshelf, add personal touches like plants and framed pictures, and use final details such as rugs and blinds to complete a balanced, welcoming workspace.
+      </p>
+    `,
   },
 
   {
@@ -122,7 +135,12 @@ export const levels1_20 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 4 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 4 Solution Walkthrough</h2>
+      <p>
+        Dreamy Room Level 4 Walkthroughs & Guide takes you through building a warm, fully equipped kitchen. From positioning the fridge and overhead cabinets to arranging utensils, tableware, and even a pink bunny decoration, this guide shows how every detail—from curtains to floor mats—comes together to create a lively, functional cooking space.
+      </p>
+    `,
   },
 
   {
@@ -155,7 +173,12 @@ export const levels1_20 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 5 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 5 Solution Walkthrough</h2>
+      <p>
+        Dreamy Room Level 5 Walkthroughs & Guide leads you through designing a serene and inviting living space. From installing a large glass door with blue curtains to arranging a cozy L-shaped sofa, pink rug, and charming hamster plush, this guide covers every detail—including entertainment setup, plant placement, and decorative shelves—to create a balanced and peaceful room.
+      </p>
+    `,
   },
 
   {
@@ -188,7 +211,12 @@ export const levels1_20 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 6 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 6 Solution Walkthrough</h2>
+      <p>
+        Dreamy Room Level 6 Walkthroughs & Guide shows you how to craft a cozy, multi-level living space featuring a fish tank, work desk, and a comfy green armchair on the upper platform. Step-by-step instructions help you place each item perfectly—from the sleeping cat on the desk to the playful pet on the armchair—creating a warm and inviting atmosphere.
+      </p>
+    `,
   },
 
   {
@@ -221,7 +249,12 @@ export const levels1_20 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 7 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 7 Solution Walkthrough</h2>
+      <p>
+        Dreamy Room Level 7 Walkthroughs & Guide takes you step-by-step through creating a charming café scene. From installing the green accent walls and iconic coffee signs to arranging the barista bear, coffee machines, and cozy outdoor seating, this guide helps you build a warm, inviting space perfect for relaxing and socializing.
+      </p>
+    `,
   },
 
   {
@@ -254,7 +287,12 @@ export const levels1_20 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 8 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 8 Solution Walkthrough</h2>
+      <p>
+      Dreamy Room Level 8 Walkthroughs & Guide helps you transform a cluttered space into a neat, cozy dental clinic. From clearing debris and placing the dental chair to arranging supplies, characters, and decorative touches like plants and window blinds, this guide ensures each item is perfectly positioned for a complete and welcoming clinic environment.
+      </p>
+    `,
   },
 
   {
@@ -287,7 +325,12 @@ export const levels1_20 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 9 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 9 Solution Walkthrough</h2>
+      <p>
+      Dreamy Room Level 9 Walkthroughs & Guide walks you through creating a charming, whimsical dressing room. From laying a round pink rug and setting up a vine-adorned partition to arranging a vanity table, clothing racks, and cozy heart-shaped seating, this guide ensures every detail is perfectly placed for a warm and stylish space.
+      </p>
+    `,
   },
 
   {
@@ -320,7 +363,12 @@ export const levels1_20 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 10 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 10 Solution Walkthrough</h2>
+      <p>
+      Dreamy Room Level 10 Walkthroughs & Guide guides you in creating a cozy, pig-themed bedroom with precise placement of the bed, desk, and closet. From arranging pig plushies and a telescope to adding thoughtful details like a record player and mini garden, this guide helps you build a charming and inviting space.
+      </p>
+    `,
   },
 
   {
@@ -353,7 +401,12 @@ export const levels1_20 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 11 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 11 Solution Walkthrough</h2>
+      <p>
+        Dreamy Room Level 11 Walkthroughs & Guide walks you through creating a warm and inviting bakery scene. From placing the glass pastry display case and bread shelves to positioning the bear chef mascot and charming bird companions, this guide ensures every baked good and decorative detail is perfectly arranged to capture the cozy bakery atmosphere.
+      </p>
+    `,
   },
 
   {
@@ -386,7 +439,12 @@ export const levels1_20 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 12 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 12 Solution Walkthrough</h2>
+      <p>
+      Dreamy Room Level 12 Walkthroughs & Guide leads you through furnishing a charming two-story space with style and precision. From placing the cozy bed and creative workspace upstairs to arranging the dining area and kitchen accents downstairs, this guide helps you carefully position every item to bring warmth and character to the room. Attention to detail is key as you transform this empty shell into a lively, welcoming home.
+      </p>
+    `,
   },
 
   {
@@ -419,7 +477,12 @@ export const levels1_20 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 13 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 13 Solution Walkthrough</h2>
+      <p>
+      Dreamy Room Level 13 invites you to transform a quaint attic space into a vibrant, cozy retreat. Filled with colorful pillows, musical touches, and two charming bird characters, this level challenges you to place each item precisely to recreate its warm, inviting atmosphere. From arranging the bed and nightstand to positioning the telescope and decorative accents, this guide walks you through every detail to complete the scene perfectly.
+      </p>
+    `,
   },
 
   {
@@ -452,7 +515,12 @@ export const levels1_20 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 14 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 14 Solution Walkthrough</h2>
+      <p>
+        Dreamy Room Level 14 challenges you to create a lively tropical pool scene centered around a unique phone-shaped pool. From carefully placing palm trees and surfboards to arranging floats and charming characters, this level requires precise positioning to bring the vibrant “Dream Pool” atmosphere to life. Follow each step to transform the empty platform into a fun, relaxing seaside getaway.
+      </p>
+    `,
   },
 
   {
@@ -485,7 +553,12 @@ export const levels1_20 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 15 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 15 Solution Walkthrough</h2>
+      <p>
+      Dreamy Room Level 15 invites you to design a festive holiday room filled with vibrant decorations and cozy elements. From placing a blossoming pink tree and a comfy pink sofa near the window to arranging a round dining table with pastries and a sleeping cat’s bed, every detail brings warmth and celebration. The wooden cabinet adorned with festive items, colorful lanterns framing the doorway, and the lively teal lion dance figure complete this charming, joyful scene. Follow each step to capture the perfect festive atmosphere in Dreamy Room Level 15.
+      </p>
+    `,
   },
 
   {
@@ -518,7 +591,12 @@ export const levels1_20 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 16 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 16 Solution Walkthrough</h2>
+      <p>
+      Dreamy Room Level 16 presents a cozy reading nook featuring a distinctive book-shaped shelf with a wooden ladder, a large window framed by pink and teal curtains, and a charming green cat-shaped lounge chair resting on a round pink rug. A small side table with a pastel lamp and teacup adds warmth, while colorful books, a vintage radio, and a clock decorate the shelf. Completing the scene are a cute cat figurine and a potted plant, creating a tranquil, cat-themed relaxation area.
+      </p>
+    `,
   },
 
   {
@@ -551,7 +629,12 @@ export const levels1_20 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 17 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 17 Solution Walkthrough</h2>
+      <p>
+      Dreamy Room Level 17 transforms an empty space into a lively gym featuring a wooden staircase on the left leading to three treadmills aligned under the windows, with a motivational “No Pain No Gain” poster nearby. A bunny character and potted plant add charm next to the rightmost treadmill, while a stocked fruit rack emphasizes health behind them. On the lower floor, a purple yoga ball sits centrally near a bench press with organized weight plates. Nearby, three stationary bikes face a towel shelf, with dumbbells arranged behind. A vending machine and recycle bin by the staircase complete this well-equipped, motivating fitness center.
+      </p>
+    `,
   },
 
   {
@@ -584,7 +667,12 @@ export const levels1_20 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 18 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 18 Solution Walkthrough</h2>
+      <p>
+      Dreamy Room Level 18 transforms a bare space into an enchanting underwater world featuring coral-studded floors, a colorful stained glass window with a pink bench, a large pink seashell cushion, golden trident and banners, and a crowned frog decoration—creating a magical oceanic sanctuary.
+      </p>
+    `,
   },
 
   {
@@ -617,7 +705,12 @@ export const levels1_20 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 19 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 19 Solution Walkthrough</h2>
+      <p>
+Dreamy Room Level 19 transforms an empty room into a lively cat-themed bar featuring a central bar counter with stools, a cat bartender and customer, bottle shelf, neon signs, jukebox, keyboard and guitar for live music, plus cozy seating areas including a curved red couch and multiple small tables—creating a warm, playful café atmosphere.
+      </p>
+    `,
   },
 
   {
@@ -650,6 +743,11 @@ export const levels1_20 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 20 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 20 Solution Walkthrough</h2>
+      <p>
+      Dreamy Room Level 20 transforms an empty room into a festive holiday retreat featuring a central brick fireplace adorned with a wreath and seasonal decorations, a decorated Christmas tree with gifts in the back corner, a cozy red couch with a teddy bear, a coffee table set with teacups and pastries, pastel floor cushions, a welcoming pink mat at the entrance, window garland with a “24” sign, and complementary wall art and clock—creating a warm, cheerful holiday atmosphere.
+      </p>
+    `,
   },
 ]; 

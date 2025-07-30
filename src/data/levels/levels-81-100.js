@@ -29,7 +29,12 @@ export const levels81_100 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 81 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 81 Solution Walkthrough</h2>
+      <p>
+      Dreamy Room Level 81 features a dynamic two-level space blending sporty and cozy vibes. The lower level showcases a sleek red sports car in a garage nook, complemented by a gaming setup, treadmill, and punching bag for an active lifestyle. Upstairs, a comfortable pastel bedroom with a blue bed, wooden wardrobe, and computer desk creates a relaxing retreat. Decorative touches like framed sports posters, hanging vine planters, and a star-patterned rug tie the space together, offering a balanced mix of energy and comfort.
+      </p>
+    `,
   },
 
   {
@@ -62,7 +67,12 @@ export const levels81_100 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 82 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 82 Solution Walkthrough</h2>
+      <p>
+      Dreamy Room Level 82 features a cozy living space with a large patterned rug, a plush blue sofa, and a wooden coffee table. A tall bookshelf filled with books and decor balances the room. Soft lighting and green plants add warmth and life. A small writing desk completes this inviting, well-arranged space.
+      </p>
+    `,
   },
 
   {
@@ -95,7 +105,12 @@ export const levels81_100 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 83 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 83 Solution Walkthrough</h2>
+      <p>
+      Dreamy Room Level 83 transforms a two-tier sci-fi chamber into a cozy futuristic space. The lower level features a single bed, glowing bioreactor, and battery modules, while the upper level hosts a modular desk with monitors, a scanner, and a triple-monitor console. Warm lighting, an oval rug, and small personal items add comfort to the sleek design.
+      </p>
+    `,
   },
 
   {
@@ -128,7 +143,12 @@ export const levels81_100 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 84 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 84 Solution Walkthrough</h2>
+      <p>
+      Dreamy Room Level 84 transforms a two-story space into a cozy, pastel-themed room filled with detailed seating, chests, and soft decor upstairs. The lower level features a dining area with golden chairs, a warm fireplace, and charming accessories like pumpkins and flowers. Exterior touches include a vine-draped porch, flower pots, and a golden crystal on a pedestal. Every item is carefully placed to create a warm, inviting atmosphere.
+      </p>
+    `,
   },
 
   {
@@ -161,7 +181,12 @@ export const levels81_100 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 85 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 85 Solution Walkthrough</h2>
+      <p>
+      Dreamy Room Level 85 features a warm music-themed space. On the left sits a wooden cabinet with a record player and radio, while the center holds a synthesizer, drum set, and DJ booth. The right wall showcases a red star guitar and vinyl decorations. A cozy cat area, beanbags, and a coffee table complete the comfortable, creative vibe.
+      </p>
+    `,
   },
 
   {
@@ -194,7 +219,12 @@ export const levels81_100 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 86 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 86 Solution Walkthrough</h2>
+      <p>
+      Dreamy Room Level 86 features a futuristic workshop combined with a compact living area. A central hexagonal workbench hosts a prototype robot, tools, and a holographic display, while robotic arms assist nearby. The back wall holds lab shelves filled with test tubes, decorative robot figurines, and a blueprint poster. On the left are a sci‑fi door, sink, tool rack, and recycling bin. The right side includes a computer desk, monitor, control console, petri incubator, bookshelves, and cooler boxes, while a small bed and chair sit tucked in the back corner.
+      </p>
+    `,
   },
 
   {
@@ -227,7 +257,12 @@ export const levels81_100 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 87 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 87 Solution Walkthrough</h2>
+      <p>
+      Dreamy Room Level 87 features a pumpkin‑shaped kitchen with a cozy autumn vibe. A bookshelf holds décor items, a checkered rug centers a pumpkin coffee table with fruit and pastry, and a bread basket stool adds charm. The pastel fridge, green bin, and succulent shelf line the right wall, while a wraparound counter includes a sink, knife rack, garlic, and ghost tote bag. Under‑counter drawers, a pot of stew, and strawberries complete this warm seasonal kitchen.
+      </p>
+    `,
   },
 
   {
@@ -260,7 +295,12 @@ export const levels81_100 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 88 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 88 Solution Walkthrough</h2>
+      <p>
+      Dreamy Room Level 88 features a pastel wedding chapel with a yellow stage, arched windows, floral garlands, and draped pillars framing a red carpet aisle. Lavender pews, candles, and flower pots lead to the bear bride and groom at the altar, with a cake, champagne, balloons, and a “WEDDING” sign completing the romantic scene.
+      </p>
+    `,
   },
 
   {
@@ -293,7 +333,12 @@ export const levels81_100 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 89 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 89 Solution Walkthrough</h2>
+      <p>
+      Dreamy Room Level 89 features a cozy sushi café with wooden flooring, cream back wall, left pink‑trimmed wall, and right railing. A dark grey roof with greenery, pink noren curtains, and koi fish décor tops the scene. Inside, a wooden sushi counter holds a cat chef, prep items, plates, utensils, and a glass display case with cash register and loaves. A yellow “SUSHI” sign marks the bar. Lanterns and a wall calendar add charm, while patio tables, chairs, and bar stools host cat customers. A side oven, potted plant, and entrance A‑board sign complete this bustling sushi café design.
+      </p>
+    `,
   },
 
   {
@@ -326,7 +371,12 @@ export const levels81_100 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 90 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 90 Solution Walkthrough</h2>
+      <p>
+      Dreamy Room Level 90 Short Walkthrough: Place the white plush bunny on the van roof. Build the cream-colored railing with purple cushions on the veranda. Add the ivory piano and gray bear plush. Inside, set up the bookshelf and hydrangea. Arrange the washing machine, laundry basket, and bathtub in the corner. Install the staircase and second-floor railing. Furnish the upper floor with wardrobe, pink curtains, lamps, desk, and bed to complete the cozy mobile home.
+      </p>
+    `,
   },
 
   {
@@ -359,7 +409,12 @@ export const levels81_100 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 91 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 91 Solution Walkthrough</h2>
+      <p>
+      Dreamy Room Level 91 transforms an empty space into a cozy, detailed mobile home. The scene features a charming veranda with a piano and plush toys, a well-organized laundry and bathroom nook, and a comfortable upstairs bedroom and workspace. Careful placement of furniture, decor, and railings creates a warm, inviting atmosphere filled with playful and homey touches.
+      </p>
+    `,
   },
 
   {
@@ -392,7 +447,12 @@ export const levels81_100 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 92 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 92 Solution Walkthrough</h2>
+      <p>
+      Dreamy Room Level 92 transforms a bare attic into a cozy, modern workspace and lounge. The space features a glass-railed balcony with a coffee table and armchair, a multimedia shelf, a stereo setup beneath a TV, and a well-organized desk area with multiple monitors. Wall decorations and floor accessories add personality and warmth, creating a balanced, inviting attic perfect for work and relaxation.
+      </p>
+    `,
   },
 
   {
@@ -425,7 +485,12 @@ export const levels81_100 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 93 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 93 Solution Walkthrough</h2>
+      <p>
+      Dreamy Room Level 93 is a lively retro gaming room with neon lights, arcade machines, and cozy decor. It features colorful shelves, racing simulators, a central gaming console, plush toys, and decorative plants, creating a fun and nostalgic atmosphere.
+      </p>
+    `,
   },
 
   {
@@ -458,7 +523,12 @@ export const levels81_100 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 94 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 94 Solution Walkthrough</h2>
+      <p>
+      Dreamy Room Level 94 features a serene Asian-inspired space with bamboo hedges, a wooden tea table set, and a red folding screen creating a tranquil seating area. A curved wooden staircase leads to a cozy loft with a canopy bed and hot tub spa. Lanterns, scrolls, and delicate plants add warm, peaceful finishing touches for a harmonious atmosphere.
+      </p>
+    `,
   },
 
   {
@@ -491,7 +561,12 @@ export const levels81_100 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 95 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 95 Solution Walkthrough</h2>
+      <p>
+      Dreamy Room Level 95 features a burger café scene with a green foundation and sesame bun roof. It includes a café entrance, fries station, outdoor tables with umbrellas, a wooden bridge, and decorative plants. Final touches like a sauce pipe, frog figurine, and gold coin add charm.
+      </p>
+    `,
   },
 
   {
@@ -524,7 +599,12 @@ export const levels81_100 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 96 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 96 Solution Walkthrough</h2>
+      <p>
+      Dreamy Room Level 96 transforms an empty corner into a cozy three-level panda-themed retreat. The top floor features panda-ear walls, a green ruffled bed, pendant lamps, a desk with computer and chair, bookshelf, wardrobe, and decorative plants. The middle kitchen level includes a fridge, sink, stove, kitchen island, cookware, tea station, and a panda chef. The ground veranda offers a stone pond, panda figurines, seating with a swing bench and rocking chairs, creating a tranquil, charming space.
+      </p>
+    `,
   },
 
   {
@@ -557,7 +637,12 @@ export const levels81_100 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 97 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 97 Solution Walkthrough</h2>
+      <p>
+      Dreamy Room Level 97 features a peaceful lantern-lit pavilion with a cloud-shaped backdrop and glowing sun. The wooden pavilion has a curved roof, red drapes, and green vines. A lotus pond with floating lanterns sits in front, surrounded by cushioned chairs and snack trays. Warm lanterns hang along the wall, balancing the scene. A white rabbit in flowing robes adds a gentle, serene touch, completing this tranquil festival setting.
+      </p>
+    `,
   },
 
   {
@@ -590,7 +675,12 @@ export const levels81_100 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 98 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 98 Solution Walkthrough</h2>
+      <p>
+      Dreamy Room Level 98 depicts a charming dairy factory with a white fence, hay bales, and pastel cows in the feeding area. Crates, milk canisters, and a conveyor belt carry goods through the workspace, where bunny workers operate machinery. The back wall hosts vats and silos, while delivery trucks and vending machines complete the lively farm-industrial scene.
+      </p>
+    `,
   },
 
   {
@@ -623,7 +713,12 @@ export const levels81_100 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 99 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 99 Solution Walkthrough</h2>
+      <p>
+      Dreamy Room Level 99 transforms an empty space into a serene seaside sushi bar. A floating wooden platform anchors the scene, topped by a blue-tiled sushi bar with an airplane-shaped fish tank. Seating areas with benches, stools, and life ring cushions invite patrons. Purple lanterns and ocean-themed decorations create atmosphere, while a cat chef signpost and rowboat add charm. On the right, fishing gear and drying racks enhance the coastal vibe. Fresh sushi and ingredients line the counter, and playful cat characters bring the lively café to life.
+      </p>
+    `,
   },
 
   {
@@ -650,7 +745,12 @@ export const levels81_100 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 100 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 100 Solution Walkthrough</h2>
+      <p>
+      Dreamy Room Level 100 turns a pastel corner into a cozy playroom. Pink curtains and cheerful sky decals brighten the window wall. Shelves hold plush toys and books, while fun decals decorate the walls. A wardrobe with storage tins stands in the corner. On the floor, a pink slide, toy train, and plush animals create a lively scene. A bear with balloons and colorful blocks complete the warm, playful space.
+      </p>
+    `,
   },
 
 ]; 

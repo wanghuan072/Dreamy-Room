@@ -29,7 +29,12 @@ export const levels61_80 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 61 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 61 Solution Walkthrough</h2>
+      <p>
+      Dreamy Room Level 61 transforms an empty space into a whimsical seaside paradise. The centerpiece is a large shell structure surrounded by cozy beach umbrellas, picnic tables, and adorable green creatures enjoying a relaxing day. Playful beach toys, colorful coral, and seaweed complete the vibrant coastal atmosphere.
+      </p>
+    `,
   },
 
   {
@@ -62,7 +67,12 @@ export const levels61_80 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 62 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 62 Solution Walkthrough</h2>
+      <p>
+      Dreamy Room Level 62 transforms an empty space into a cozy, elegant boutique. Soft green curtains frame a large window, while colorful dresses hang on central racks. Display shelves showcase hats and handbags, complemented by a stylish mirror and lush plants. An elegant golden birdcage centerpiece and glass partitions add sophistication, creating a warm and inviting shopping atmosphere.
+      </p>
+    `,
   },
 
   {
@@ -95,7 +105,12 @@ export const levels61_80 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 63 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 63 Solution Walkthrough</h2>
+      <p>
+      Dreamy Room Level 63 invites you to craft a warm, stylish living space with a modern sofa, elegant coffee table, and a soft area rug at its heart. A tall bookshelf filled with books and trinkets lines the east wall, while a framed painting adorns the north wall. Thoughtful touches like a floor lamp, potted plant by the window, and a decorative mirror add light and depth. Carefully arranged small decor pieces complete the inviting and harmonious atmosphere of Dreamy Room Level 63.
+      </p>
+    `,
   },
 
   {
@@ -128,7 +143,12 @@ export const levels61_80 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 64 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 64 Solution Walkthrough</h2>
+      <p>
+      Dreamy Room Level 64 transforms an empty space into a cozy, nostalgic room. A vintage sofa faces a bright window, complemented by a wooden coffee table and soft lighting. Green plants, family photos, and a bookshelf with keepsakes add warmth. A patterned rug completes the inviting, balanced atmosphere.
+      </p>
+    `,
   },
 
   {
@@ -161,7 +181,12 @@ export const levels61_80 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 65 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 65 Solution Walkthrough</h2>
+      <p>
+      Dreamy Room Level 65 invites you to create a cozy, stylish living space. A textured rug anchors the room, with a plush sofa along the right wall and a sleek coffee table centered on the rug. An ornate mirror brightens the left wall, while a tall bookshelf filled with mementos stands in the upper left corner. Soft lighting from a floor lamp and a potted plant by the window add warmth and balance. Carefully placed decorative items complete the harmonious and inviting atmosphere.
+      </p>
+    `,
   },
 
   {
@@ -194,7 +219,12 @@ export const levels61_80 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 66 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 66 Solution Walkthrough</h2>
+      <p>
+      Dreamy Room Level 66 features a cozy sofa and coffee table as the centerpiece. A painting hangs above the sofa, with a bookshelf and floor lamp on the opposite side. A rug ties the room together, while a side table and potted plant add warmth and personality.
+      </p>
+    `,
   },
 
   {
@@ -227,7 +257,12 @@ export const levels61_80 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 67 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 67 Solution Walkthrough</h2>
+      <p>
+      Dreamy Room Level 67 features a vintage rug centered in the room with a plush sofa against the back wall. An antique coffee table sits in front, paired with a decorative armchair and vintage floor lamp in the left corner. A tall bookshelf lines the right wall, balanced by a lively potted plant near the window. Above the sofa hangs a serene painting, while an ornate mirror decorates the opposite wall. Cushions, vases, and small keepsakes add the final warm touches, creating a cozy, harmonious space.
+      </p>
+    `,
   },
 
   {
@@ -260,7 +295,12 @@ export const levels61_80 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 68 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 68 Solution Walkthrough</h2>
+      <p>
+      Dreamy Room Level 68 features a vintage rug, deep blue sofa, and rustic coffee table. A tall bookshelf and floor lamp add warmth, while a cozy armchair and side table create a relaxing nook. An ornate mirror and final decorative touches complete this charming, nostalgic space.
+      </p>
+    `,
   },
 
   {
@@ -293,7 +333,12 @@ export const levels61_80 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 69 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 69 Solution Walkthrough</h2>
+      <p>
+      Dreamy Room Level 69 transforms an empty room into a cozy, elegant space. Key pieces include a cream sofa and matching accent chair arranged with a round coffee table centered on a patterned rug. A vintage floor lamp adds warm lighting, while an abstract painting and sleek mirror decorate the walls. A wooden bookshelf filled with books and mementos adds charm, and a small potted succulent on the table brings natural freshness. Final touches like vases and throw pillows complete this balanced, inviting room.
+      </p>
+    `,
   },
 
   {
@@ -326,7 +371,12 @@ export const levels61_80 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 70 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 70 Solution Walkthrough</h2>
+      <p>
+      Dreamy Room Level 70 features a balanced and modern living space centered around a geometric area rug. A deep blue sofa sits against the left wall, paired with a sleek glass coffee table and a cozy armchair to create a comfortable seating area. A tall wooden bookshelf filled with books and keepsakes adds warmth and personality along the right wall, complemented by an arching floor lamp. Decorative touches like an abstract painting above the sofa, a framed mirror, potted succulents, sheer curtains, and subtle LED lighting complete the room’s elegant and inviting atmosphere.
+      </p>
+    `,
   },
 
   {
@@ -359,7 +409,12 @@ export const levels61_80 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 71 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 71 Solution Walkthrough</h2>
+      <p>
+      Dreamy Room Level 70 features a balanced and modern living space centered around a geometric area rug. A deep blue sofa sits against the left wall, paired with a sleek glass coffee table and a cozy armchair to create a comfortable seating area. A tall wooden bookshelf filled with books and keepsakes adds warmth and personality along the right wall, complemented by an arching floor lamp. Decorative touches like an abstract painting above the sofa, a framed mirror, potted succulents, sheer curtains, and subtle LED lighting complete the room’s elegant and inviting atmosphere.
+      </p>
+    `,
   },
 
   {
@@ -392,7 +447,12 @@ export const levels61_80 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 72 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 72 Solution Walkthrough</h2>
+      <p>
+      Dreamy Room Level 72 transforms an empty space into a cozy, balanced room centered around an antique bookshelf and a reading nook. A pastel rug anchors the area, complemented by a plush sofa and coffee table. Vintage mirror, framed photos, and a houseplant add warmth and personality. A desk by the window creates a functional corner, while a chandelier overhead provides elegant lighting, completing the serene atmosphere.
+      </p>
+    `,
   },
 
   {
@@ -425,7 +485,12 @@ export const levels61_80 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 73 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 73 Solution Walkthrough</h2>
+      <p>
+      Dreamy Room Level 73 invites you to create a warm, balanced living space. Centered around a vintage sofa and wooden coffee table, the room features a cozy patterned rug that ties the seating area together. Walls are decorated with classic art and personal photos, while lush plants add natural color. Layered lighting from a chandelier, floor lamp, and table lamp sets a cozy mood. Thoughtful decorative accents and symmetrical cushions complete the harmonious, inviting atmosphere.
+      </p>
+    `,
   },
 
   {
@@ -458,7 +523,12 @@ export const levels61_80 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 74 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 74 Solution Walkthrough</h2>
+      <p>
+      Dreamy Room Level 74 invites you to craft a warm, elegant space centered around a vintage-patterned rug and a cream sofa with blue pillows. Symmetrical grey armchairs and a round wooden coffee table create a cozy conversation area. Natural light highlights a tall potted plant near the window. Antique elements like a wooden bookshelf, decorative clock, and ornate mirror add timeless charm, while pastel abstract art and a soft floor lamp complete the serene, balanced atmosphere.
+      </p>
+    `,
   },
 
   {
@@ -491,7 +561,12 @@ export const levels61_80 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 75 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 75 Solution Walkthrough</h2>
+      <p>
+      Dreamy Room Level 75 transforms an empty space into a cozy, personalized retreat. Sheer curtains frame soft natural light, while a bold abstract painting creates a focal point. A vintage armchair and classic bookshelf add charm and character, complemented by a sleek glass coffee table atop a plush area rug. Functional touches like a vintage desk with a potted plant, wall sconces, and an elegant floor lamp enhance ambiance. Personal mementos, a decorative mirror, and subtle finishing details complete the balanced and inviting design.
+      </p>
+    `,
   },
 
   {
@@ -524,7 +599,12 @@ export const levels61_80 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 76 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 76 Solution Walkthrough</h2>
+      <p>
+      Dreamy Room Level 76 transforms into a warm, vintage-inspired living space. A wooden bookshelf lines the left wall, paired with a cozy armchair and soft floor lamp for a reading nook. At the center, a glass coffee table sits atop a Persian-style rug, balancing function and design. A framed family portrait above the fireplace adds sentiment, while soft curtains, fresh flowers, and a lush potted plant bring light and life. Decorative trinkets complete the inviting, personalized look of Dreamy Room Level 76.
+      </p>
+    `,
   },
 
   {
@@ -557,7 +637,12 @@ export const levels61_80 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 77 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 77 Solution Walkthrough</h2>
+      <p>
+      Dreamy Room Level 77 creates a cozy, nostalgic space: a light rug in the center, sofa and coffee table on the left, and a floor lamp adding warm lighting. A bookshelf with books and decor sits on the right, a plant on the windowsill, and a side table with a clock. Mirrors and wall art enhance brightness and depth, completing the balanced look.
+      </p>
+    `,
   },
 
   {
@@ -590,7 +675,12 @@ export const levels61_80 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 78 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 78 Solution Walkthrough</h2>
+      <p>
+      Dreamy Room Level 78 transforms a hexagonal space into a pastel boutique. A curved staircase and twin floral planters frame the entrance. A hat table, purse-and-shoe shelf, and jewelry display create a chic retail layout. The centerpiece dress mannequin sits on a round platform, while a right-side display counter and tufted bench add balance. Upstairs, a pink chaise lounge with tea table and ottoman creates a cozy corner, framed by balcony planters. A curtained alcove with mirror and hanging dress plus five pastel mannequins complete the boutique’s elegant, colorful look.
+      </p>
+    `,
   },
 
   {
@@ -623,7 +713,12 @@ export const levels61_80 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 79 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 79 Solution Walkthrough</h2>
+      <p>
+      Dreamy Room Level 79 creates a magical dome bedroom. A canopy bed with purple drapes, pink pillows, and rose vines sits under the glass dome. The right alcove features an arched vine entry, crystal orb stand, chandelier, bunny statue, and snake figurine table. A gold harp stands near the bed, while a mint‑green chaise lounge with cushion, tea set, and clover stools forms a cozy seating area. Wall sconces, picture frames, and a floor candelabra add ambience. Decorative books, candle, and a lily pond with frog accent the front platform. White railings, staircase, rose vines, and two crow statues complete this enchanted look.
+      </p>
+    `,
   },
 
   {
@@ -656,7 +751,12 @@ export const levels61_80 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 80 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 80 Solution Walkthrough</h2>
+      <p>
+      Dreamy Room Level 80 features a vibrant floating musical stage set on clouds. The space is decorated with colorful instruments like a drum kit, keyboard, and DJ turntables, framed by glowing bulbs and whimsical musical notes. Large speakers and playful details like a dancing mouse figurine and oversized headphones complete the lively, dreamy atmosphere.
+      </p>
+    `,
   },
-  
+
 ]; 

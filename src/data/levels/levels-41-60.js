@@ -29,9 +29,14 @@ export const levels41_60 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 41 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 41 Solution Walkthrough</h2>
+      <p>
+      Dreamy Room Level 41 guides you to create a cozy pastel-themed space with a bed in the bottom-left corner, a desk by the window, and a central sitting area featuring a sofa, armchair, coffee table, and rug. Add a bookshelf and wall decor above the sofa, a kitchen setup with fridge and stove on the right, plus a small dining table. Finish with plants and decorative touches for a warm, inviting room.
+      </p>
+    `,
   },
-  
+
   {
     id: 42,
     addressBar: 'level-42',
@@ -62,7 +67,12 @@ export const levels41_60 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 42 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 42 Solution Walkthrough</h2>
+      <p>
+      Dreamy Room Level 42 transforms an empty space into a stylish streaming room. Start by placing the gaming desk and chair in the right corner, set up dual monitors, webcam, microphone, and streaming gear. Add gaming collectibles on wall shelves and a snack fridge with extra cans. Illuminate the room with neon lights, position recording equipment, and add a cozy rug and side table behind the chair. Finish with a green plant, clock, and small accessories for a vibrant streaming setup.
+      </p>
+    `,
   },
 
   {
@@ -95,7 +105,12 @@ export const levels41_60 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 43 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 43 Solution Walkthrough</h2>
+      <p>
+      Here’s a simpler description for Dreamy Room Level 43: Turn the empty room cozy by placing a fireplace in the back-right corner and a kitchen shelf on the right wall. Add kitchen items on the counter and decorations by the fireplace. Put a comfy chair and small table with tea in the center-left. Set a dining table with seats in the front-left. Finish with a green plant to make the room warm and inviting. 
+      </p>
+    `,
   },
 
   {
@@ -128,7 +143,12 @@ export const levels41_60 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 44 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 44 Solution Walkthrough</h2>
+      <p>
+        Dreamy Room Level 44 features a cozy and vibrant kitchen filled with pastel colors and playful details. The space includes a charming refrigerator decorated with paw prints, a well-organized cooking area with a stove and pizza oven, and inviting dining tables surrounded by cute animal chairs. Outside, a bright front garden with colorful flowerbeds and a small fence welcomes visitors, creating a warm and lively atmosphere.
+      </p>
+    `,
   },
 
   {
@@ -161,7 +181,12 @@ export const levels41_60 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 45 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 45 Solution Walkthrough</h2>
+      <p>
+      Dreamy Room Level 45 is a cozy living space designed with a warm, welcoming vibe. It features a purple sofa and matching armchair forming a comfortable seating area, complemented by a round coffee table with decorative accents. A sleek entertainment corner with a TV, speakers, and gaming console adds a modern touch, while wall art, shelving with charming décor, and a standing lamp enhance the room’s atmosphere. A sunflower pot in the corner completes the cheerful, homely feel of this level.
+      </p>
+    `,
   },
 
   {
@@ -194,7 +219,12 @@ export const levels41_60 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 46 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 46 Solution Walkthrough</h2>
+      <p>
+      Dreamy Room Level 46 features a cozy and elegant layout with a bed tucked near the window, a warm fireplace on the opposite wall, and a plush red carpet leading to a comfy sofa and tea table setup. A tall cabinet with organized storage and decorative items enhances the space, while maroon curtains, wall art, potted plants, and soft accents like cushions and an ottoman create a warm, welcoming atmosphere.
+      </p>
+    `,
   },
 
   {
@@ -227,7 +257,12 @@ export const levels41_60 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 47 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 47 Solution Walkthrough</h2>
+      <p>
+      Dreamy Room Level 47 transforms a desert-inspired mobile home into a cozy retreat. The setup includes a rooftop pool and satellite dish, a comfy bedroom, a compact kitchen with dining space, and a small living area with vintage décor. Outdoor cacti, succulents, and patio furniture enhance the desert vibe, while small details like books, lamps, and teapots add warmth and personality.
+      </p>
+    `,
   },
 
   {
@@ -260,7 +295,12 @@ export const levels41_60 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 48 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 48 Solution Walkthrough</h2>
+      <p>
+        Dreamy Room Level 48 creates a playful and cozy bedroom with a rainbow-themed backdrop. A central bed with a dog-shaped pillow anchors the room, while a desk with a laptop and plushies adds a study nook. Whimsical touches include a green cat beanbag chair, dog house, elephant slide leading to a pet pool with a floating corgi, and a balloon-carrying dog. Colorful bunting and soft décor make the space lively and warm.
+      </p>
+    `,
   },
 
   {
@@ -293,7 +333,12 @@ export const levels41_60 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 49 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 49 Solution Walkthrough</h2>
+      <p>
+        Dreamy Room Level 49 transforms a pastel bowling alley into a lively and cozy hangout. It features two wooden bowling lanes with score screens, a shoe rack, and colorful bowling balls. A curved purple sofa lounge with drinks and a relaxed cat adds charm, while a snack counter and trophy shelf enhance the atmosphere. Characters enjoy bowling and cheering, creating a playful and welcoming vibe.
+      </p>
+    `,
   },
 
   {
@@ -326,7 +371,12 @@ export const levels41_60 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 50 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 50 Solution Walkthrough</h2>
+      <p>
+        Dreamy Room Level 50 turns a suitcase into a cozy mini home. It features a central bed with a golden blanket, a playful cat standing on it, and a hanging bubble seat holding a teddy bear. Bookshelves, a side table with a lamp, fruit tray, and extra pillows add comfort, while a gaming console creates a fun corner. A ladder and suitcase lock complete this charming, travel-inspired living space.
+      </p>
+    `,
   },
 
   {
@@ -359,7 +409,12 @@ export const levels41_60 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 51 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 51 Solution Walkthrough</h2>
+      <p>
+        Dreamy Room Level 51 turns a blank room into a nostalgic living space featuring a deep blue sofa, mid-century coffee table, vintage bookshelf filled with memorabilia, and the signature “Sunset Serenity” wall art. Warm lighting, a patterned rug, potted plants, and personal decorative accents create a cozy, memory-filled atmosphere perfect for relaxing and reminiscing.
+      </p>
+    `,
   },
 
   {
@@ -392,7 +447,12 @@ export const levels41_60 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 52 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 52 Solution Walkthrough</h2>
+      <p>
+        Dreamy Room Level 52 transforms an empty space into a warm, vintage-inspired bedroom. It features an ornate central bed, matching nightstands, a decorative mirror, and a cozy reading nook with an armchair and coffee table. A patterned rug, bookshelf with trinkets, potted plants, and framed photographs create a nostalgic yet elegant atmosphere, blending personal memories with balanced design.
+      </p>
+    `,
   },
 
   {
@@ -425,7 +485,12 @@ export const levels41_60 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 53 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 53 Solution Walkthrough</h2>
+      <p>
+        Dreamy Room Level 53 transforms into a cozy living space featuring a plush blue sofa, vintage wooden coffee table, and cream-colored area rug as the centerpiece. An ornate bookshelf with plants and memorabilia adds charm, while elegant curtains, a framed family portrait, and a decorative mirror enhance the room’s warmth. Fresh flowers and soft lighting complete the inviting, nostalgic atmosphere.
+      </p>
+    `,
   },
 
   {
@@ -458,7 +523,12 @@ export const levels41_60 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 54 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 54 Solution Walkthrough</h2>
+      <p>
+      Dreamy Room Level 54 turns into an Aqua Park paradise featuring a Ferris wheel, slides, and a central octopus fountain. Inflatable floaties, beach chairs, and a guitar-playing character create a lively vacation vibe, while an ice cream stand, vending machine, and playful decor add to the fun, water-themed atmosphere.
+      </p>
+    `,
   },
 
   {
@@ -491,7 +561,12 @@ export const levels41_60 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 55 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 55 Solution Walkthrough</h2>
+      <p>
+      Dreamy Room Level 55 transforms an empty space into a cozy retreat featuring a whimsical canopy bed, a warm stone fireplace, and soft seating cushions. Blue curtains with string lights, personal decorations, and a charming dining area add comfort and personality. Plush rugs, plants, and glowing star lights complete this inviting, magical atmosphere.
+      </p>
+    `,
   },
 
   {
@@ -524,7 +599,12 @@ export const levels41_60 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 56 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 56 Solution Walkthrough</h2>
+      <p>
+        Dreamy Room Level 56 transforms a dark cave into a dazzling treasure room filled with mystery and riches. The centerpiece is a golden lamp atop a purple pedestal, surrounded by stone statues guarding the entrance. Piles of gold coins, sparkling gems, and an overflowing treasure chest create a sense of wealth. Skeletal remains add an adventurous edge, while decorative items like crowns and golden cups enrich the scene. Flickering torch flames illuminate the space, casting a warm, magical glow throughout this secret trove.
+      </p>
+    `,
   },
 
   {
@@ -557,7 +637,12 @@ export const levels41_60 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 57 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 57 Solution Walkthrough</h2>
+      <p>
+        Dreamy Room Level 57 is a peaceful sanctuary featuring a water fountain, stone path, and flowers in one corner. It includes a yoga and meditation area, a cozy tea table with cushions, and a reading nook with shelves and plants. Simple decorations and soft lighting complete the calm, inviting space.
+      </p>
+    `,
   },
 
   {
@@ -590,7 +675,12 @@ export const levels41_60 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 58 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 58 Solution Walkthrough</h2>
+      <p>
+      Dreamy Room Level 58 centers on an elegant canopy bed flanked by a vanity and large window with pink curtains. A teal sofa and coffee table create a cozy lounge, while white shelves and a wardrobe line the right wall. The balcony features a cushioned chair and decorative railings, with final touches including lamps, cushions, and a playful cat to complete the warm, inviting space.
+      </p>
+    `,
   },
 
   {
@@ -623,7 +713,12 @@ export const levels41_60 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 59 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 59 Solution Walkthrough</h2>
+      <p>
+      Dreamy Room Level 59 is a gothic-themed space featuring a red coffin, glowing chandelier, and spooky decorations like skulls and bats. Plush red seating and mystical accents create a cozy yet mysterious atmosphere.
+      </p>
+    `,
   },
 
   {
@@ -656,7 +751,12 @@ export const levels41_60 = [
         }
       ]
     },
-    detailsHtml: '<h2>Dreamy Room Level 60 Solution Walkthrough</h2>',
+    detailsHtml: `
+      <h2>Dreamy Room Level 60 Solution Walkthrough</h2>
+      <p>
+      Dreamy Room Level 60 is a cozy music-themed space filled with instruments like a piano, drum kit, and guitar. The room features a creative entertainment center with speakers and a gaming setup, complemented by comfortable seating and warm decorative touches that create a welcoming atmosphere.
+      </p>
+    `,
   },
-  
+
 ]; 
