@@ -161,7 +161,6 @@ onMounted(() => {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 1rem;
-  min-height: 400px;
 }
 
 .level-card-simple {
