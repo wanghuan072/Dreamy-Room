@@ -13,63 +13,33 @@
           </div>
           <div class="level-video-card">
             <div v-if="!showVideo && level.imageSrc" class="video-mask">
-              <img
-                :src="level.imageSrc"
-                :alt="level.title"
-                class="video-mask-img"
-                loading="lazy"
-                width="300"
-                height="200"
-              />
+              <img :src="level.imageSrc" :alt="level.title" class="video-mask-img" loading="lazy" width="300"
+                height="200" />
               <button class="video-play-btn" @click="showVideo = true">
                 <span class="play-icon">▶</span>
               </button>
             </div>
-            <iframe
-              v-if="showVideo && level.iframeUrl"
-              :src="level.iframeUrl"
-              frameborder="0"
-              allowfullscreen
-              title="Level Video"
-            ></iframe>
+            <iframe v-if="showVideo && level.iframeUrl" :src="level.iframeUrl" frameborder="0" allowfullscreen
+              title="Level Video"></iframe>
           </div>
           <div class="level-details-card" v-html="level.detailsHtml"></div>
         </div>
         <aside class="sidebar compact">
           <div class="sidebar-img-wrap">
             <div class="sidebar-img-title">{{ level.imageAlt }}</div>
-            <img
-              :src="level.imageSrc"
-              :alt="level.imageAlt"
-              class="level-image"
-              loading="lazy"
-              width="300"
-              height="200"
-            />
+            <img :src="level.imageSrc" :alt="level.imageAlt" class="level-image" loading="lazy" width="300"
+              height="200" />
           </div>
-          <div
-            class="sidebar-featured"
-            v-if="
-              level.sidebarData && level.sidebarData.featured && level.sidebarData.featured.length
-            "
-          >
+          <div class="sidebar-featured" v-if="
+            level.sidebarData && level.sidebarData.featured && level.sidebarData.featured.length
+          ">
             <h3 class="sidebar-title"><span class="icon">🌟</span> Related Levels</h3>
             <div class="featured-list">
-              <router-link
-                v-for="item in level.sidebarData.featured"
-                :key="item.addressBar"
-                :to="{ name: 'level-detail', params: { addressBar: item.addressBar } }"
-                class="featured-card"
-                @click="handleRelatedLevelClick"
-              >
-                <img
-                  :src="item.imageUrl"
-                  :alt="item.imageAlt"
-                  class="featured-img"
-                  loading="lazy"
-                  width="40"
-                  height="40"
-                />
+              <router-link v-for="item in level.sidebarData.featured" :key="item.addressBar"
+                :to="{ name: 'level-detail', params: { addressBar: item.addressBar } }" class="featured-card"
+                @click="handleRelatedLevelClick">
+                <img :src="item.imageUrl" :alt="item.imageAlt" class="featured-img" loading="lazy" width="40"
+                  height="40" />
                 <div class="featured-title">{{ item.title }}</div>
               </router-link>
             </div>
@@ -122,6 +92,7 @@ function getLevelFile(addressBar) {
   if (levelNum >= 41 && levelNum <= 60) return 'levels-41-60.js'
   if (levelNum >= 61 && levelNum <= 80) return 'levels-61-80.js'
   if (levelNum >= 81 && levelNum <= 100) return 'levels-81-100.js'
+  if (levelNum >= 101 && levelNum <= 120) return 'levels-101-120.js'
 
   return null
 }
@@ -132,6 +103,7 @@ const levelModules = {
   'levels-41-60.js': () => import('../data/levels/levels-41-60.js'),
   'levels-61-80.js': () => import('../data/levels/levels-61-80.js'),
   'levels-81-100.js': () => import('../data/levels/levels-81-100.js'),
+  'levels-101-120.js': () => import('../data/levels/levels-101-120.js'),
 }
 
 async function findLevel(addressBar) {
@@ -213,12 +185,14 @@ onUnmounted(() => {
   min-height: 100vh;
   background: linear-gradient(135deg, #ffb6c1 0%, #e6e6fa 50%, #98fb98 100%);
 }
+
 .level-detail-layout {
   display: flex;
   gap: 32px;
   margin: 4rem 0 1rem 0;
   align-items: flex-start;
 }
+
 .main-content {
   flex: 2;
   background: #fff;
@@ -229,9 +203,11 @@ onUnmounted(() => {
   flex-direction: column;
   gap: 32px;
 }
+
 .title-block {
   margin-bottom: 8px;
 }
+
 .level-title {
   font-size: 2.5rem;
   color: #2d1b69;
@@ -240,6 +216,7 @@ onUnmounted(() => {
   text-align: left;
   text-shadow: 2px 2px 8px #fff, 0 2px 16px #e6e6fa, 0 0 2px #fff;
 }
+
 .level-meta {
   display: flex;
   gap: 18px;
@@ -247,6 +224,7 @@ onUnmounted(() => {
   font-size: 1rem;
   margin-bottom: 0;
 }
+
 .level-date {
   background: #e6e6fa;
   color: #6a1b9a;
@@ -256,12 +234,14 @@ onUnmounted(() => {
   font-weight: 600;
   box-shadow: 0 1px 4px #e6e6fa33;
 }
+
 .level-subtitle {
   color: #b39ddb;
   font-size: 1.05rem;
   font-weight: 500;
   margin-left: 8px;
 }
+
 .level-video-card {
   background: linear-gradient(135deg, #ffe4ec 0%, #f3e8ff 100%);
   border-radius: 18px;
@@ -274,6 +254,7 @@ onUnmounted(() => {
   position: relative;
   width: 100%;
 }
+
 .video-mask {
   position: relative;
   width: 100%;
@@ -285,6 +266,7 @@ onUnmounted(() => {
   overflow: hidden;
   box-shadow: 0 2px 8px #e6e6fa33;
 }
+
 .video-mask-img {
   width: 100%;
   height: 100%;
@@ -294,6 +276,7 @@ onUnmounted(() => {
   transition: filter 0.3s;
   aspect-ratio: 16/9;
 }
+
 .video-play-btn {
   position: absolute;
   left: 50%;
@@ -314,13 +297,16 @@ onUnmounted(() => {
   transition: background 0.2s, box-shadow 0.2s;
   z-index: 2;
 }
+
 .video-play-btn:hover {
   background: #ffe4ec;
   box-shadow: 0 4px 24px #ffb6c144;
 }
+
 .play-icon {
   margin-left: 6px;
 }
+
 .level-video-card iframe {
   width: 100%;
   aspect-ratio: 16/9;
@@ -330,6 +316,7 @@ onUnmounted(() => {
   box-shadow: 0 2px 8px #e6e6fa33;
   background: #fff;
 }
+
 .level-details-card {
   /* background: linear-gradient(135deg, #f3e8ff 0%, #e6e6fa 100%); */
   /* border-radius: 16px; */
@@ -340,6 +327,7 @@ onUnmounted(() => {
   line-height: 1.8; */
   min-height: 120px;
 }
+
 .sidebar.compact {
   width: 240px;
   background: #f3e8ff;
@@ -351,6 +339,7 @@ onUnmounted(() => {
   align-items: center;
   gap: 1rem;
 }
+
 .sidebar-img-wrap {
   width: 100%;
   display: flex;
@@ -359,6 +348,7 @@ onUnmounted(() => {
   margin-bottom: 8px;
   gap: 8px;
 }
+
 .sidebar-img-title {
   font-size: 1.05rem;
   color: #6a1b9a;
@@ -366,12 +356,14 @@ onUnmounted(() => {
   margin-bottom: 2px;
   text-align: center;
 }
+
 .level-image {
   width: 100%;
   border-radius: 10px;
   box-shadow: 0 2px 16px #b39ddb55, 0 0 0 4px #ffe4ec55;
   transition: box-shadow 0.3s, transform 0.3s;
 }
+
 .sidebar-title {
   font-size: 1.1rem;
   color: #2d1b69;
@@ -383,15 +375,18 @@ onUnmounted(() => {
   align-items: center;
   gap: 8px;
 }
+
 .sidebar-title .icon {
   font-size: 1.1rem;
 }
+
 .featured-list {
   display: flex;
   flex-direction: column;
   gap: 10px;
   width: 100%;
 }
+
 .featured-card {
   display: flex;
   align-items: center;
@@ -406,11 +401,13 @@ onUnmounted(() => {
   position: relative;
   z-index: 1;
 }
+
 .featured-card:hover {
   box-shadow: 0 6px 24px #ffb6c144;
   transform: translateY(-2px) scale(1.04);
   background: linear-gradient(90deg, #ffe4ec 0%, #f3e8ff 100%);
 }
+
 .featured-img {
   width: 40px;
   height: 40px;
@@ -418,23 +415,27 @@ onUnmounted(() => {
   border-radius: 8px;
   box-shadow: 0 1px 4px #e6e6fa22;
 }
+
 .featured-title {
   font-size: 0.98rem;
   color: #2d1b69;
   font-weight: 600;
 }
+
 .no-featured {
   color: #b39ddb;
   font-size: 0.95rem;
   margin-top: 16px;
   text-align: center;
 }
+
 .not-found {
   text-align: center;
   color: #b39ddb;
   font-size: 1.5rem;
   margin: 80px 0;
 }
+
 .level-list-bottom {
   margin-bottom: 4rem;
   padding: 20px 0;
@@ -442,6 +443,7 @@ onUnmounted(() => {
   border-radius: 22px;
   box-shadow: 0 4px 24px #e6e6fa77;
 }
+
 @media (max-width: 1024px) {
   .level-detail-layout {
     flex-direction: column;
@@ -449,12 +451,15 @@ onUnmounted(() => {
     max-width: 98vw;
     margin: 2rem 0 1rem 0;
   }
+
   .level-list-bottom {
     margin-bottom: 1rem;
   }
+
   .main-content {
     padding: 1rem;
   }
+
   .sidebar.compact {
     width: 100%;
     flex-direction: row;
@@ -463,17 +468,21 @@ onUnmounted(() => {
     margin-top: 12px;
   }
 }
+
 @media (max-width: 768px) {
   .level-detail-layout {
     gap: 1rem;
     margin: 1rem 0;
   }
+
   .level-title {
     font-size: 1.2rem;
   }
+
   .main-content {
     gap: 1rem;
   }
+
   .sidebar.compact {
     flex-direction: column;
     align-items: stretch;
@@ -481,11 +490,13 @@ onUnmounted(() => {
     padding: 0.5rem;
     width: 100%;
   }
+
   .sidebar-img-title {
     font-size: 0.95rem;
   }
+
   .level-image {
     border-radius: 6px;
   }
 }
-</style> 
+</style>

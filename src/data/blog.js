@@ -1,7 +1,7 @@
 export const blogPosts = [
   {
     id: 1,
-    addressBar: '/blog/dreamy-room-introduction',
+    addressBar: 'dreamy-room-introduction',
     title: 'Dreamy Room: Ultimate Puzzle Escape Adventure Guide',
     publishDate: '2024-07-25',
     imageSrc: '/images/blog/blog-1-1.webp',
@@ -54,7 +54,7 @@ export const blogPosts = [
       <p><strong>Dreamy Room</strong> successfully combines relaxing gameplay with mentally stimulating puzzles, providing an experience that appeals to casual and hardcore players alike. If you love escape rooms, logical challenges, or visually stunning puzzle games, <strong>Dreamy Room</strong> is a must-play. Download <strong>Dreamy Room</strong> today and begin your journey through one of the most atmospheric puzzle escape adventures available.</p>
     `
   }
-  
-  
-  
+
+
+
 ]; 
