@@ -275,7 +275,141 @@ export const levels101_120 = [
             Place the pale-blue bird on the left foliage cube and the pink bird on the right cube, both facing inward. Set the nest with three eggs on the topmost cube. Tuck a miniature fern cluster behind the blue house and a clover-like leaf element to the left of the grass. Finally, arrange the oversized mushroom trio, mini wooden stump seats, a hanging cauldron, a lily pad with a tiny frog, and a short wooden footbridge in the base area to complete the scene.
           </p>
         `
+  },
+
+  {
+    "id": 105,
+    "addressBar": "level-105",
+    "title": "Dreamy Room Level 105",
+    "pageSubtitle": "Charming Market Setup",
+    "publishDate": "2025-08-18",
+    "imageSrc": "/images/levels/level-105.webp",
+    "imageAlt": "Dreamy Room Level 105 Preview",
+    "iframeUrl": "https://www.youtube.com/embed/oxDPzrXYLok",
+    "seo": {
+      "title": "Dreamy Room Level 105 Walkthrough & Guide",
+      "description": "Step-by-step walkthrough for Dreamy Room Level 105, detailing all placement, decor, and finishing touches to create a charming market scene.",
+      "keywords": "dreamy room, level 105, walkthrough, guide, market, cozy scene"
+    },
+    "sidebarData": {
+      "featured": [
+        {
+          "title": "Dreamy Room Level 104",
+          "imageUrl": "/images/levels/level-104.webp",
+          "imageAlt": "Dreamy Room Level 104 Preview",
+          "addressBar": "level-104"
+        }
+      ]
+    },
+    "detailsHtml": `
+      <h2>Dreamy Room Level 105 Solution Walkthrough</h2>
+      <p>
+        Dreamy Room Level 105 invites you to craft a cozy marketplace scene. This guide details every step, from placing planters and crates to assembling the shop building and arranging interior items and characters.
+      </p>
+      <h3>Step 1: Place Front Planters on the Raised Platform</h3>
+      <p>
+        Begin by selecting two terra-cotta planters filled with bright white and yellow daisies. Position one on the far left and the other on the far right edge of the raised deck, leaving space in the center for steps. Slightly inset the planters to prevent petals from overlapping the edge. Adjust rotation to ensure a balanced look.
+      </p>
+      <h3>Step 2: Add Left Fence Segment and Cushion</h3>
+      <p>
+        Insert the small wooden fence piece with three vertical posts and two rails into the left-front corner. Place a sky-blue cushion snugly between the middle posts, forming a mini-bench. Use fine adjustments to align perfectly with the rails.
+      </p>
+      <h3>Step 3: Place the Signpost</h3>
+      <p>
+        Select the tall wooden signpost with two directional planks. Position it at the front-left corner of the lower green base. Ensure it stands vertically and flush with the platform, adjusting rotation and nudging as needed.
+      </p>
+      <h3>Step 4: Arrange Crate and Cardboard Boxes</h3>
+      <p>
+        Place the wooden crate filled with bottles and folded cloth at the deck’s center-front, slightly left of the steps. Stack three cardboard boxes to the right of the crate, spacing evenly. Rotate and nudge pieces for a neat arrangement.
+      </p>
+      <h3>Step 5: Position Hay Bales</h3>
+      <p>
+        Locate two golden hay bales and place one at the back-left corner and the other at the back-right corner of the deck. Adjust positioning so they rest naturally against the shop footprint without clipping nearby elements.
+      </p>
+      <h3>Step 6: Set the Shop Base</h3>
+      <p>
+        Place the pale wooden shop base in the center of the raised deck, aligning the floorboards with the deck edges. Use fine adjustments to ensure the building is balanced and flush with the platform.
+      </p>
+      <h3>Step 7: Add Roof and Sign</h3>
+      <p>
+        Attach the cow-patterned roof on top of the shop base, with the blue-trimmed front facing outward. Insert the round wooden window into its slot and mount the "Go Shop" sign above the entrance. Adjust carefully to eliminate gaps or overlaps.
+      </p>
+      <h3>Step 8: Place Awnings</h3>
+      <p>
+        Clip two blue-and-white striped semi-circular awnings: one above the entrance window and another above the bench area. Ensure consistent height and overhang for symmetry.
+      </p>
+      <h3>Step 9: Arrange Interior Shelving and Stock</h3>
+      <p>
+        Install three wooden shelves along the back wall: bottom for small boxes, middle for canned goods, top for baked items. Check that shelves are level and properly stocked.
+      </p>
+      <h3>Step 10: Place Chiller, Counter Items, and Characters</h3>
+      <p>
+        Position the glass-topped chiller flush against the front ledge. Add a pastry tray, jars, and folded cloth to the counter. Finally, place the cow attendant behind the counter, the bear visitor outside, and the frog companion on the bench under its awning. This completes the lively marketplace scene.
+      </p>
+    `
+  },
+
+  {
+    "id": 106,
+    "addressBar": "level-106",
+    "title": "Dreamy Room Level 106",
+    "pageSubtitle": "Airborne Hideaway Setup",
+    "publishDate": "2025-08-18",
+    "imageSrc": "/images/levels/level-106.webp",
+    "imageAlt": "Dreamy Room Level 106 Preview",
+    "iframeUrl": "https://www.youtube.com/embed/t03yy2_l4Hg",
+    "seo": {
+      "title": "Dreamy Room Level 106 Walkthrough & Guide",
+      "description": "Complete walkthrough for Dreamy Room Level 106, including placement of fuselage base, decks, balcony, slide, and finishing decorations for a whimsical airborne hideaway.",
+      "keywords": "dreamy room, level 106, walkthrough, guide, fuselage, balcony, slide, airborne hideaway"
+    },
+    "sidebarData": {
+      "featured": [
+        {
+          "title": "Dreamy Room Level 105",
+          "imageUrl": "/images/levels/level-105.webp",
+          "imageAlt": "Dreamy Room Level 105 Preview",
+          "addressBar": "level-105"
+        }
+      ]
+    },
+    "detailsHtml": `
+      <h2>Dreamy Room Level 106 Solution Walkthrough</h2>
+      <p>
+        Dreamy Room Level 106 transforms your space into a whimsical airborne hideaway. This guide covers every step, from the central fuselage to rooftop turret, including decks, swing, slide, and decorative details.
+      </p>
+      <h3>Step 1: Place the Airplane Fuselage Base</h3>
+      <p>
+        Begin by selecting the pastel purple fuselage cylinder decorated with five golden-yellow stars. Drag it into the precise center of the room to anchor all subsequent elements. Centering the fuselage ensures symmetry and balance for the decks, platforms, and accessories.
+      </p>
+      <h3>Step 2: Add Landing Gear and Wheels</h3>
+      <p>
+        Position the metallic landing gear struts beneath the fuselage, three on each side angled downward. Attach two dark gray stubby wheels, one at the tail and one beneath the nose. Proper alignment ensures stability for all upper layers.
+      </p>
+      <h3>Step 3: Place Bottom Deck, Bamboo Grove, and Swing</h3>
+      <p>
+        Install the irregular grassy green platform along the fuselage’s length. Place five segmented bamboo stalks in the left-rear corner and attach the light wooden A-frame swing at the front-center edge, ensuring ropes hang taut and avoid overlapping bamboo or struts.
+      </p>
+      <h3>Step 4: Add Middle-Level Balcony and Side Platforms</h3>
+      <p>
+        Position the L-shaped pastel peach-pink balcony wrapping around the upper fuselage, leaving the front corner open for the slide. Attach two small side ledges adjacent to the bamboo cluster and front-right potted greenery. Align railings outward and ensure ledges nest flush without intersecting the lower deck.
+      </p>
+      <h3>Step 5: Furnish Middle-Level Balcony</h3>
+      <p>
+        Place a compact wooden bench with powder-blue cushion on the left section, a pastel yellow side door with circular window on the right, and a low coffee table at the open front corner with two pale blue floor cushions beside it, including a small fox figurine. Add three terra-cotta pots on the wall shelf above the door and one potted plant on the right-side balcony floor.
+      </p>
+      <h3>Step 6: Install Slide and Under-Deck Features</h3>
+      <p>
+        Attach the whimsical yellow slide from the middle balcony down to the grassy bottom deck. Place a bright yellow mat at the slide’s base, a round potted plant beneath the right side, and a teal countertop unit under the deck with a wicker basket, stacked plates, and tiny mixer to complete the lived-in feel.
+      </p>
+      <h3>Step 7: Place Top-Level Turret and Finishing Touches</h3>
+      <p>
+        Set the pale blue circular turret on the fuselage midsection, surround it with a curved salmon railing, and insert the peach-colored arched window with pastel-blue awning. Affix a small white flag on top, place a pink tripod telescope on the left rim, and attach two decorative yellow stars to the front slope of the turret roof, completing your sky-high hideaway.
+      </p>
+    `
   }
+
+
 
 
 ]
