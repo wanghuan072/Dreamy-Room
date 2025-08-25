@@ -407,7 +407,161 @@ export const levels101_120 = [
         Set the pale blue circular turret on the fuselage midsection, surround it with a curved salmon railing, and insert the peach-colored arched window with pastel-blue awning. Affix a small white flag on top, place a pink tripod telescope on the left rim, and attach two decorative yellow stars to the front slope of the turret roof, completing your sky-high hideaway.
       </p>
     `
+  },
+
+  {
+    "id": 107,
+    "addressBar": "level-107",
+    "title": "Dreamy Room Level 107",
+    "pageSubtitle": "Neon KTV Lounge Setup",
+    "publishDate": "2025-08-25",
+    "imageSrc": "/images/levels/level-107.webp",
+    "imageAlt": "Dreamy Room Level 107 Preview",
+    "iframeUrl": "https://www.youtube.com/embed/bMiA4oLYYZs",
+    "seo": {
+      "title": "Dreamy Room Level 107 Walkthrough & Guide",
+      "description": "Complete walkthrough for Dreamy Room Level 107, including placement of neon LED floor border, arrow lights, KTV marquee, stage, speakers, screens, couch, tables, lamps, and character figurines for a vibrant neon lounge.",
+      "keywords": "dreamy room, level 107, walkthrough, guide, neon, KTV, lounge, stage, marquee, LED floor border"
+    },
+    "sidebarData": {
+      "featured": [
+        {
+          "title": "Dreamy Room Level 106",
+          "imageUrl": "/images/levels/level-106.webp",
+          "imageAlt": "Dreamy Room Level 106 Preview",
+          "addressBar": "level-106"
+        }
+      ]
+    },
+    "detailsHtml": `
+      <h2>Dreamy Room Level 107 Solution Walkthrough</h2>
+      <p>
+        Dreamy Room Level 107 brings your space to life as a vibrant neon KTV lounge. This walkthrough covers every element from LED floor borders to character figurines, ensuring a fully immersive experience.
+      </p>
+      <h3>Step 1: Place the Neon Pink LED Floor Border</h3>
+      <p>
+        Begin by selecting the long curved neon pink LED strip from the lighting category. Drag it along the front edge of the checkered floor and rotate to snap perfectly along the curved back and side walls. Zoom in on corners and use grid snapping for precision. This border defines the color palette and the playable area for Dreamy Room Level 107.
+      </p>
+      <h3>Step 2: Install the Neon Arrow Stripe Lights on the Curved Back Wall</h3>
+      <p>
+        Select the neon arrow stripe asset from the decorations menu. Place two stripes framing each side of the curved back wall, roughly one meter from each corner, with tips angled inward toward the marquee. Use duplication and grid snapping to ensure symmetry and consistent alignment in Dreamy Room Level 107.
+      </p>
+      <h3>Step 3: Mount the KTV Marquee Sign with Star and Microphone atop the Stage Area</h3>
+      <p>
+        From the signage tab, select the KTV neon sign with light blue lettering on black backing. Position it at the upper-left arc of the curved wall, just above eye level. Add the yellow star background behind it and center the microphone atop the star, slightly angled forward to catch the spotlights. Verify glow and positioning for Dreamy Room Level 107.
+      </p>
+      <h3>Step 4: Position the Stage Platform and Arrange Overhead Spotlights</h3>
+      <p>
+        Select the red-carpeted stage platform and snap it into the left corner where the curved and side walls meet. Choose golden spotlight fixtures and place four evenly spaced: two above the platform on the curved wall and two on the side wall. Adjust angles so beams converge at the stage center. Fine-tune rotation and zoom for natural spotlight effects in Dreamy Room Level 107.
+      </p>
+      <h3>Step 5: Place the Large Speakers and Compact Purple Monitors</h3>
+      <p>
+        Select two tall black floor speakers, positioning one on each side of the stage equidistant from the edges. Then, select two small purple cube monitors and place them against the curved and side walls flanking the platform. Angle speaker grills slightly inward and use grid view to verify height and spacing for optimal sound in Dreamy Room Level 107.
+      </p>
+      <h3>Step 6: Add Game Screens, Hazard Stripe Backdrop, and Vertical Neon Panels</h3>
+      <p>
+        Place horizontal flat screens above the left and right areas of the stage, securing them to the walls. Add a black and pink diagonal hazard stripe board behind the right screen for contrast. Finally, install two tall yellow vertical neon panels on each side wall to frame the seating area. Align each element upright using rotation tools to maintain visual clarity in Dreamy Room Level 107.
+      </p>
+      <h3>Step 7: Place the Plush Red Tufted Couch along the Right Wall</h3>
+      <p>
+        Select the red tufted sectional sofa and drag it into the right corner, aligning back cushions with the wall seams. Use fine movement controls to nudge and avoid clipping the neon floor border. This couch anchors the seating area and ensures comfortable lounge flow in Dreamy Room Level 107.
+      </p>
+      <h3>Step 8: Add Tables, Purple Lamps, and Refreshments</h3>
+      <p>
+        Position a black rectangular coffee table centrally in front of the couch, with wooden side tables at each sofa end. Place translucent purple cylinder lamps atop the side tables. Finally, add a bowl of fruit, bottles, and cocktail glasses on the coffee table for a balanced and inviting social setup in Dreamy Room Level 107.
+      </p>
+      <h3>Step 9: Position Character Figurines and Mount the Deer Head Decor</h3>
+      <p>
+        Place the singing white bunny figurine at the center of the stage. Arrange the pink tutu bunny and relaxed raccoon along the right armrest of the couch, and the orange fox at the left edge for balance. Mount the stylized deer head sculpture above the right seating area. Verify alignment and spacing to finalize the personalized decor in Dreamy Room Level 107.
+      </p>
+    `
+  },
+
+  {
+    "id": 108,
+    "addressBar": "level-108",
+    "title": "Dreamy Room Level 108",
+    "pageSubtitle": "Winter Wonderland Snow Globe Setup",
+    "publishDate": "2025-08-25",
+    "imageSrc": "/images/levels/level-108.webp",
+    "imageAlt": "Dreamy Room Level 108 Preview",
+    "iframeUrl": "https://www.youtube.com/embed/wyGbOV_rUks",
+    "seo": {
+      "title": "Dreamy Room Level 108 Walkthrough & Guide",
+      "description": "Complete walkthrough for Dreamy Room Level 108, including placement of red base platform, snow cap, glass dome, pine trees, campsite, market stall, winter figurines, and decorative details for a cozy snow globe scene.",
+      "keywords": "dreamy room, level 108, walkthrough, guide, winter, snow globe, campsite, market stall, snowman, penguin, reindeer"
+    },
+    "sidebarData": {
+      "featured": [
+        {
+          "title": "Dreamy Room Level 107",
+          "imageUrl": "/images/levels/level-107.webp",
+          "imageAlt": "Dreamy Room Level 107 Preview",
+          "addressBar": "level-107"
+        }
+      ]
+    },
+    "detailsHtml": `
+      <h2>Dreamy Room Level 108 Solution Walkthrough</h2>
+      <p>
+        Dreamy Room Level 108 transforms your space into a cozy winter wonderland snow globe. This walkthrough details each tier, from the central red base platform to whimsical winter decorations across the top, middle, and lower layers.
+      </p>
+      <h3>Step 1: Place the Red Base Platform in the Center</h3>
+      <p>
+        Begin by laying down the large circular red base platform with golden snowflake patterns at the exact center of the scene. Ensure it sits flush with the bottom edge of the screen to create a stable foundation for all subsequent elements in Dreamy Room Level 108. Adjust positioning carefully for balance.
+      </p>
+      <h3>Step 2: Add the White Drippy Snow Cap</h3>
+      <p>
+        Place the sculpted white drippy snow cap atop the red base, aligning each icicle-like drip around the circumference. Ensure a seamless connection between the snow and base, reinforcing the realistic winter effect in Dreamy Room Level 108.
+      </p>
+      <h3>Step 3: Seal the Scene with the Transparent Glass Dome</h3>
+      <p>
+        Lower the clear glass dome over the base and snow cap, ensuring the rim seats flush without tilting. The dome’s bluish tint and subtle snowflake etchings encapsulate the winter scene, maintaining symmetry in Dreamy Room Level 108.
+      </p>
+      <h3>Step 4: Arrange Snowy Pine Trees and Log Pile on the Top Tier</h3>
+      <p>
+        Place three snow-covered evergreen pine trees in a semicircular pattern at the rear of the top tier. Position a small stack of logs to the left of the center tree, creating a cohesive winter forest backdrop for Dreamy Room Level 108.
+      </p>
+      <h3>Step 5: Set Up the Campsite Tent, Tripod Cauldron, and Nearby Bucket</h3>
+      <p>
+        Position a small wooden A-frame tent in front of the pine trees. Add a tripod cooking stand with hanging cauldron to the right, including a tiny campfire icon beneath. Place a yellow bucket to the left, arranging all items to form a realistic campsite vignette in Dreamy Room Level 108.
+      </p>
+      <h3>Step 6: Ignite the Campfire and Add Lanterns</h3>
+      <p>
+        Activate the campfire directly in front of the cooking area. Place a pair of lanterns on either side to create a soft amber glow, carefully adjusting angles to maintain clear separation and enhance the cozy atmosphere in Dreamy Room Level 108.
+      </p>
+      <h3>Step 7: Place the Wooden Signpost and Top-Tier Snowman</h3>
+      <p>
+        Insert a slender wooden signpost slightly angled toward the front next to the tent. Position a three-tiered snowman at the far right of the top tier, adding a tiny red hat and coal buttons to complete the whimsical upper vignette in Dreamy Room Level 108.
+      </p>
+      <h3>Step 8: Position the Decorative Stall Base and Railing on the Middle Tier</h3>
+      <p>
+        Place the rectangular wooden market stall with red-and-white striped awning centrally on the middle tier. Add short wooden railing posts around the perimeter, spacing evenly to create a protective border, maintaining symmetry and scale in Dreamy Room Level 108.
+      </p>
+      <h3>Step 9: Add the Grill, Teapot, and Colorful Mugs to the Market Stall</h3>
+      <p>
+        Place a miniature metal grill at the center of the stall. Add a rounded teapot slightly off-center and two or three colorful mugs along the front edge, ensuring each piece stands independently for clarity in Dreamy Room Level 108.
+      </p>
+      <h3>Step 10: Place Wooden Chairs and Connecting Ladder on the Middle Tier</h3>
+      <p>
+        Position two folding wooden chairs on either side of the grill, angled slightly inward. Add a tall wooden ladder linking the middle tier to the top campsite, ensuring the base rests firmly on the snow layer. Maintain alignment for immersive gameplay in Dreamy Room Level 108.
+      </p>
+      <h3>Step 11: Add the Skiing Penguin Figure on the Middle-Right Slope</h3>
+      <p>
+        Place the penguin figurine with purple beanie on skis along the middle-right snow ramp, facing forward and positioned just below the ladder midpoint. Adjust angles to avoid overlapping railings or grill elements in Dreamy Room Level 108.
+      </p>
+      <h3>Step 12: Position the Bench, Reindeer, and Sleigh on the Lower Tier</h3>
+      <p>
+        Place a slender wooden bench on the left side of the lower tier. Situate a small reindeer figure in front, slightly turned toward center. Position a deep red sleigh behind the reindeer with runners touching the snow, ensuring spacing feels balanced in Dreamy Room Level 108.
+      </p>
+      <h3>Step 13: Add Snowmen, Polar Bear, Decorative Bush, Lamp Post, and Anchor</h3>
+      <p>
+        Place two snowmen: one wearing a purple hat near the bench, another reclining with a blue cap in the middle. Add a white polar bear with blue beret beside the second snowman, a small pine bush behind it, and finally a twin-lantern lamp post with metal anchor on the far right. Verify natural placement to complete Dreamy Room Level 108.
+      </p>
+    `
   }
+
+
 
 
 
