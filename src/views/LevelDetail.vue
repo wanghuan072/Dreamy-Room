@@ -62,7 +62,7 @@ import { useRoute } from 'vue-router'
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
 import LevelsList from '@/components/LevelsList.vue'
-import { setSEO } from '@/utils/seo.js'
+import { setPageSEO, setSocialTags, generateStructuredData, generateBreadcrumbSchema } from '@/config/seo.js'
 
 function formatDateToEnglish(dateStr) {
   if (!dateStr) return ''
@@ -126,22 +126,35 @@ async function loadLevelData(addressBar) {
 
   if (level.value && level.value.seo) {
     const url = window.location.origin + `/levels/${addressBar}`
-    setSEO({
+
+    // 设置页面SEO
+    setPageSEO({
       title: level.value.seo.title,
       description: level.value.seo.description,
-      keywords: level.value.seo.keywords,
-      og: {
-        title: level.value.seo.title,
+      keywords: level.value.seo.keywords
+    }, url)
+
+    // 设置社交媒体标签
+    setSocialTags({
+      title: level.value.seo.title,
+      description: level.value.seo.description,
+      image: level.value.imageSrc || '/og-image.jpg',
+      type: 'video.other'
+    })
+
+    // 生成结构化数据
+    const schemas = [
+      generateStructuredData({
+        title: level.value.title,
         description: level.value.seo.description,
-        type: 'video.other',
-        url,
-        image: level.value.imageSrc || '',
-      },
-      twitter: {
-        card: 'summary_large_image',
-      },
-      canonical: url,
-      jsonld: {
+        url: url
+      }),
+      generateBreadcrumbSchema([
+        { name: 'Home', url: '/' },
+        { name: 'Levels', url: '/levels' },
+        { name: level.value.title, url: url }
+      ]),
+      {
         '@context': 'https://schema.org',
         '@type': 'VideoObject',
         name: level.value.title,
@@ -150,7 +163,19 @@ async function loadLevelData(addressBar) {
         uploadDate: level.value.publishDate,
         contentUrl: level.value.iframeUrl || url,
         embedUrl: level.value.iframeUrl || url,
-      },
+      }
+    ]
+
+    // 移除旧的JSON-LD脚本
+    const oldScripts = document.querySelectorAll('script[type="application/ld+json"]')
+    oldScripts.forEach(script => script.remove())
+
+    // 添加新的结构化数据
+    schemas.forEach(schema => {
+      const script = document.createElement('script')
+      script.type = 'application/ld+json'
+      script.textContent = JSON.stringify(schema)
+      document.head.appendChild(script)
     })
   }
 }

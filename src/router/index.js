@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import { setPageSEO, setSocialTags, generateStructuredData, generateBreadcrumbSchema, generateArticleSchema, generateWebsiteSchema, generateOrganizationSchema } from '@/config/seo.js'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -123,27 +124,7 @@ const router = createRouter({
         keywords: 'dreamy room, contact us, support, feedback, help'
       }
     },
-    {
-      path: '/admin/sitemap',
-      name: 'sitemap-manager',
-      component: () => import('../views/SitemapManagerView.vue'),
-      meta: {
-        title: 'Dreamy Room - Sitemap Manager',
-        description: 'Manage and monitor the website sitemap.',
-        keywords: 'dreamy room, sitemap, admin, management'
-      }
-    },
 
-    {
-      path: '/simple-test',
-      name: 'simple-test',
-      component: () => import('../views/SimpleTestView.vue'),
-      meta: {
-        title: 'Simple Test',
-        description: 'Simple test page.',
-        keywords: 'test'
-      }
-    },
     {
       path: '/:pathMatch(.*)*',
       name: 'notfound',
@@ -157,66 +138,67 @@ const router = createRouter({
   ],
 })
 
-// 全局路由钩子，自动设置TDK和OG、Twitter、Canonical
+// 全局路由钩子，使用新的SEO配置系统
 router.afterEach((to) => {
   // 详情页（dynamicTDK）不在此设置TDK，交由页面组件自己设置
   if (to.meta && to.meta.dynamicTDK) {
     return
   }
-  const tdk = to.meta
+
+  const seo = to.meta
   const url = window.location.origin + to.fullPath
-  if (tdk && tdk.title) {
-    document.title = tdk.title
+
+  // 设置页面SEO
+  if (seo && (seo.title || seo.description || seo.keywords)) {
+    setPageSEO(seo, url)
   }
-  if (tdk && tdk.description) {
-    let desc = document.querySelector('meta[name="description"]')
-    if (!desc) {
-      desc = document.createElement('meta')
-      desc.name = 'description'
-      document.head.appendChild(desc)
-    }
-    desc.content = tdk.description
+
+  // 设置社交媒体标签
+  if (seo) {
+    setSocialTags({
+      title: seo.title,
+      description: seo.description,
+      image: seo.image || '/og-image.jpg'
+    })
   }
-  if (tdk && tdk.keywords) {
-    let keywords = document.querySelector('meta[name="keywords"]')
-    if (!keywords) {
-      keywords = document.createElement('meta')
-      keywords.name = 'keywords'
-      document.head.appendChild(keywords)
-    }
-    keywords.content = tdk.keywords
+
+  // 生成结构化数据
+  const schemas = [generateWebsiteSchema(), generateOrganizationSchema()]
+
+  // 根据路由类型添加特定的结构化数据
+  if (to.name === 'blog-detail' && to.params?.addressBar) {
+    // 博客详情页 - 添加面包屑和文章结构化数据
+    schemas.push(
+      generateBreadcrumbSchema([
+        { name: 'Home', url: '/' },
+        { name: 'Blog', url: '/blog' },
+        { name: seo?.title || 'Blog Post', url: url }
+      ])
+    )
   }
-  // Open Graph
-  function setMeta(property, content) {
-    let el = document.querySelector(`meta[property='${property}']`)
-    if (!el) {
-      el = document.createElement('meta')
-      el.setAttribute('property', property)
-      document.head.appendChild(el)
-    }
-    el.setAttribute('content', content)
+
+  if (to.name === 'level-detail' && to.params?.addressBar) {
+    // 关卡详情页 - 添加面包屑和游戏结构化数据
+    schemas.push(
+      generateBreadcrumbSchema([
+        { name: 'Home', url: '/' },
+        { name: 'Levels', url: '/levels' },
+        { name: `Level ${to.params.addressBar}`, url: url }
+      ])
+    )
   }
-  setMeta('og:title', tdk.title || '')
-  setMeta('og:description', tdk.description || '')
-  setMeta('og:type', 'website')
-  setMeta('og:url', url)
-  // 可选：可在meta中加og:image字段
-  // Twitter Card
-  let tw = document.querySelector('meta[name="twitter:card"]')
-  if (!tw) {
-    tw = document.createElement('meta')
-    tw.setAttribute('name', 'twitter:card')
-    document.head.appendChild(tw)
-  }
-  tw.setAttribute('content', 'summary_large_image')
-  // Canonical
-  let canonical = document.querySelector('link[rel="canonical"]')
-  if (!canonical) {
-    canonical = document.createElement('link')
-    canonical.setAttribute('rel', 'canonical')
-    document.head.appendChild(canonical)
-  }
-  canonical.setAttribute('href', url)
+
+  // 移除旧的JSON-LD脚本
+  const oldScripts = document.querySelectorAll('script[type="application/ld+json"]')
+  oldScripts.forEach(script => script.remove())
+
+  // 添加新的结构化数据
+  schemas.forEach(schema => {
+    const script = document.createElement('script')
+    script.type = 'application/ld+json'
+    script.textContent = JSON.stringify(schema)
+    document.head.appendChild(script)
+  })
 })
 
 export default router

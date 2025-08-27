@@ -5,7 +5,6 @@
         <!-- Dreamy Room Game Guides Section -->
         <div class="footer-column">
           <h3 class="footer-title">
-            <span class="icon">📚</span>
             Dreamy Room Game Guides
           </h3>
           <p class="footer-description">
@@ -13,21 +12,25 @@
             that transforms houses into homes.
           </p>
           <div class="social-icons">
-            <div class="social-icon twitter">
-              <div class="icon-shape"></div>
-            </div>
-            <div class="social-icon facebook">
-              <div class="icon-shape"></div>
-            </div>
-            <div class="social-icon instagram">
-              <div class="icon-shape"></div>
-            </div>
+            <a href="https://facebook.com/dreamyroom" target="_blank" rel="noopener noreferrer"
+              class="social-icon facebook">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+              </svg>
+            </a>
+            <a href="https://x.com/wenyong964203/status/1960543876881768510" target="_blank" rel="noopener noreferrer"
+              class="social-icon x-twitter">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
+            </a>
           </div>
         </div>
         <!-- Quick Links Section -->
         <div class="footer-column">
           <h3 class="footer-title">
-            <span class="icon">🔗</span>
             Quick Links
           </h3>
           <ul class="footer-links">
@@ -40,41 +43,29 @@
         <!-- Levels Section -->
         <div class="footer-column">
           <h3 class="footer-title">
-            <span class="icon">🎮</span>
             Levels
           </h3>
           <ul class="footer-links">
             <li>
-              <router-link to="/levels/level-15" class="footer-link"
-                >Dreamy Room Level 15</router-link
-              >
+              <router-link to="/levels/level-15" class="footer-link">Dreamy Room Level 15</router-link>
             </li>
             <li>
-              <router-link to="/levels/level-16" class="footer-link"
-                >Dreamy Room Level 16</router-link
-              >
+              <router-link to="/levels/level-16" class="footer-link">Dreamy Room Level 16</router-link>
             </li>
             <li>
-              <router-link to="/levels/level-22" class="footer-link"
-                >Dreamy Room Level 22</router-link
-              >
+              <router-link to="/levels/level-22" class="footer-link">Dreamy Room Level 22</router-link>
             </li>
             <li>
-              <router-link to="/levels/level-25" class="footer-link"
-                >Dreamy Room Level 25</router-link
-              >
+              <router-link to="/levels/level-25" class="footer-link">Dreamy Room Level 25</router-link>
             </li>
             <li>
-              <router-link to="/levels/level-50" class="footer-link"
-                >Dreamy Room Level 50</router-link
-              >
+              <router-link to="/levels/level-50" class="footer-link">Dreamy Room Level 50</router-link>
             </li>
           </ul>
         </div>
         <!-- Legal Section -->
         <div class="footer-column">
           <h3 class="footer-title">
-            <span class="icon">📄</span>
             Legal
           </h3>
           <ul class="footer-links">
@@ -142,10 +133,6 @@
   -webkit-text-stroke: 1px #fff;
 }
 
-.icon {
-  font-size: 1.1rem;
-}
-
 .footer-description {
   font-size: 0.9rem;
   color: #4a4a4a;
@@ -188,8 +175,8 @@
 }
 
 .social-icon {
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.2);
   display: flex;
@@ -197,58 +184,35 @@
   justify-content: center;
   cursor: pointer;
   transition: all 0.3s ease;
-  position: relative;
+  text-decoration: none;
+  color: #2d1b69;
 }
 
 .social-icon:hover {
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.4);
   transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(45, 27, 105, 0.2);
 }
 
-.icon-shape {
-  width: 20px;
-  height: 20px;
-  background: white;
-  border-radius: 2px;
-  position: relative;
+.social-icon.twitter:hover {
+  background: rgba(29, 155, 240, 0.2);
+  color: #1d9bf0;
 }
 
-.twitter .icon-shape::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 12px;
-  height: 8px;
-  border: 2px solid #1da1f2;
-  border-radius: 10px 10px 0 0;
-  border-bottom: none;
+.social-icon.facebook:hover {
+  background: rgba(24, 119, 242, 0.2);
+  color: #1877f2;
 }
 
-.facebook .icon-shape::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 8px;
-  height: 12px;
-  background: #1877f2;
-  border-radius: 2px;
+.social-icon.x-twitter:hover {
+  background: rgba(0, 0, 0, 0.2);
+  color: #000000;
 }
 
-.instagram .icon-shape::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 12px;
-  height: 12px;
-  border: 2px solid #e4405f;
-  border-radius: 50%;
+.social-icon svg {
+  transition: all 0.3s ease;
 }
+
 
 .copyright-section {
   text-align: center;
@@ -278,15 +242,18 @@
   .footer {
     padding: 20px 0 10px 0;
   }
+
   .footer-content {
     grid-template-columns: 1fr;
     gap: 10px;
   }
+
   .footer-title {
     font-size: 1.1rem;
   }
+
   .social-icons {
     justify-content: center;
   }
 }
-</style> 
+</style>

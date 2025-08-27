@@ -18,7 +18,7 @@ import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
 import LevelsList from '@/components/LevelsList.vue'
 import { onMounted } from 'vue'
-import { setSEO } from '@/utils/seo.js'
+
 
 onMounted(() => {
   // const url = window.location.origin + '/levels'

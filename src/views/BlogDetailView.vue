@@ -13,13 +13,7 @@
           </div>
 
           <div class="article-image">
-            <img
-              :src="post.imageSrc"
-              :alt="post.imageAlt"
-              loading="lazy"
-              width="400"
-              height="250"
-            />
+            <img :src="post.imageSrc" :alt="post.imageAlt" loading="lazy" width="400" height="250" />
           </div>
 
           <div class="article-content" v-html="post.content"></div>
@@ -37,7 +31,7 @@ import { useRoute, useRouter } from 'vue-router'
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
 import { blogPosts } from '@/data/blog.js'
-import { setSEO } from '@/utils/seo.js'
+import { setPageSEO, setSocialTags, generateStructuredData, generateBreadcrumbSchema, generateArticleSchema } from '@/config/seo.js'
 
 const route = useRoute()
 const router = useRouter()
@@ -65,30 +59,52 @@ onMounted(() => {
 
   if (post.value.seo) {
     const url = window.location.origin + `/blog/${addressBar}`
-    setSEO({
+
+    // 设置页面SEO
+    setPageSEO({
       title: post.value.seo.title,
       description: post.value.seo.description,
-      keywords: post.value.seo.keywords,
-      og: {
-        title: post.value.seo.title,
+      keywords: post.value.seo.keywords
+    }, url)
+
+    // 设置社交媒体标签
+    setSocialTags({
+      title: post.value.seo.title,
+      description: post.value.seo.description,
+      image: post.value.imageSrc || '/og-image.jpg',
+      type: 'article'
+    })
+
+    // 生成结构化数据
+    const schemas = [
+      generateStructuredData({
+        title: post.value.title,
         description: post.value.seo.description,
-        type: 'article',
-        url,
-        image: post.value.imageSrc || '',
-      },
-      twitter: {
-        card: 'summary_large_image',
-      },
-      canonical: url,
-      jsonld: {
-        '@context': 'https://schema.org',
-        '@type': 'BlogPosting',
-        headline: post.value.title,
-        image: post.value.imageSrc,
-        author: post.value.seo.author || 'Dreamy Room Team',
-        datePublished: post.value.publishDate,
+        url: url
+      }),
+      generateBreadcrumbSchema([
+        { name: 'Home', url: '/' },
+        { name: 'Blog', url: '/blog' },
+        { name: post.value.title, url: url }
+      ]),
+      generateArticleSchema({
+        title: post.value.title,
         description: post.value.seo.description,
-      },
+        imageSrc: post.value.imageSrc,
+        publishDate: post.value.publishDate
+      })
+    ]
+
+    // 移除旧的JSON-LD脚本
+    const oldScripts = document.querySelectorAll('script[type="application/ld+json"]')
+    oldScripts.forEach(script => script.remove())
+
+    // 添加新的结构化数据
+    schemas.forEach(schema => {
+      const script = document.createElement('script')
+      script.type = 'application/ld+json'
+      script.textContent = JSON.stringify(schema)
+      document.head.appendChild(script)
     })
   }
 })
@@ -207,28 +223,35 @@ onUnmounted(() => {
   .container {
     padding: 0 10px;
   }
+
   .blog-article {
     padding: 28px;
   }
+
   .article-title {
     font-size: 2rem;
   }
+
   .article-image img {
     max-height: 260px;
   }
 }
+
 @media (max-width: 768px) {
   .container {
     padding: 0 6px;
   }
+
   .blog-article {
     padding: 12px;
   }
+
   .article-title {
     font-size: 1.2rem;
   }
+
   .article-image img {
     max-height: 140px;
   }
 }
-</style> 
+</style>

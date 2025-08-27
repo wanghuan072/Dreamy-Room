@@ -9,7 +9,7 @@
     "preview": "vite preview",
     "lint": "eslint . --fix",
     "format": "prettier --write src/",
-    "sitemap": "node scripts/generate-sitemap.js"
+    "sitemap": "npm run build"
   },
   "dependencies": {
     "pinia": "^3.0.3",
@@ -26,6 +26,7 @@
     "globals": "^16.2.0",
     "prettier": "3.5.3",
     "vite": "^7.0.0",
+    "vite-plugin-sitemap": "^0.8.2",
     "vite-plugin-vue-devtools": "^7.7.7"
   }
 }
