@@ -11,7 +11,7 @@ export const siteConfig = {
     themeColor: '#ff69b4',
     contact: {
         email: 'support@dreamy-room.net',
-        twitter: 'https://twitter.com/dreamyroom',
+        twitter: 'https://x.com/wenyong964203/status/1960543876881768510',
         facebook: 'https://facebook.com/dreamyroom'
     }
 }
