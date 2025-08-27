@@ -60,7 +60,7 @@ export const blogPosts = [
     addressBar: 'dreamy-room-cozy-adventure',
     title: 'Welcome to Dreamy Room: A Cozy Puzzle Adventure',
     publishDate: '2025-08-27',
-    imageSrc: '/images/blog/blog-1-1.webp',
+    imageSrc: '/images/blog/blog-2-1.webp',
     imageAlt: 'Cozy Dreamy Room puzzle adventure experience',
     seo: {
       title: 'Welcome to Dreamy Room: A Cozy Puzzle Adventure - Heartfelt Gaming Experience',
