@@ -15,8 +15,24 @@ function getAllRoutes() {
   const routes = []
 
   try {
-    // 添加博客路由
-    routes.push('/blog/dreamy-room-introduction')
+    // 自动扫描博客数据文件，动态检测博客文章
+    const blogDataPath = join(__dirname, 'src/data/blog.js')
+    const blogContent = readFileSync(blogDataPath, 'utf-8')
+
+    // 提取博客文章的addressBar
+    const blogMatches = blogContent.match(/addressBar:\s*'([^']+)'|addressBar:\s*"([^"]+)"/g)
+    if (blogMatches) {
+      blogMatches.forEach(match => {
+        // 提取addressBar值
+        const addressBarMatch = match.match(/addressBar:\s*'([^']+)'/) || match.match(/addressBar:\s*"([^"]+)"/)
+        if (addressBarMatch) {
+          const addressBar = addressBarMatch[1]
+          routes.push(`/blog/${addressBar}`)
+        }
+      })
+    }
+
+    console.log(`✅ 自动检测到 ${blogMatches ? blogMatches.length : 0} 篇博客文章`)
 
     // 自动扫描关卡数据文件，动态检测关卡数量
     const levelsDir = join(__dirname, 'src/data/levels')
@@ -56,7 +72,7 @@ function getAllRoutes() {
     console.log(`✅ 自动检测到 ${sortedLevelIds.length} 个关卡: ${sortedLevelIds.join(', ')}`)
 
   } catch (error) {
-    console.warn('Warning: Could not auto-detect levels, using fallback:', error.message)
+    console.warn('Warning: Could not auto-detect data, using fallback:', error.message)
 
     // 备用方案：使用硬编码的路由
     routes.push('/blog/dreamy-room-introduction')
