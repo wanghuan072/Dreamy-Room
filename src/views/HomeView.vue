@@ -127,6 +127,29 @@
       </div>
     </section>
 
+    <!-- PC顶部横幅广告位 -->
+    <aside class="ads-wrapper" v-if="!isMobile">
+      <ins class="eas6a97888e2" data-zoneid="5711324"></ins>
+    </aside>
+
+    <!-- 左侧粘性横幅广告 -->
+    <aside v-if="!isMobile">
+      <ins class="eas6a97888e17" data-zoneid="5711330"></ins>
+    </aside>
+
+    <!-- 右侧粘性横幅广告 -->
+    <aside v-if="!isMobile">
+      <ins class="eas6a97888e17" data-zoneid="5711332"></ins>
+    </aside>
+
+
+
+    <!-- 移动横幅广告位 -->
+    <aside class="ads-wrapper" v-if="isMobile">
+      <ins class="eas6a97888e10" data-zoneid="5711342"></ins>
+    </aside>
+
+
     <!-- Levels Section -->
     <section class="levels-section">
       <h2 class="section-title">Level Walkthroughs</h2>
@@ -389,6 +412,12 @@
         </div>
       </div>
     </section>
+
+
+    <!-- 移动原生广告位2 -->
+    <aside v-if="isMobile">
+      <ins class="eas6a97888e20" data-zoneid="5711340"></ins>
+    </aside>
 
     <!-- Game Features Section -->
     <section class="features-section">
@@ -723,6 +752,7 @@
         </div>
       </div>
     </section>
+
   </div>
 
   <!-- Footer Component -->
@@ -730,11 +760,15 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
 import LevelsList from '@/components/LevelsList.vue'
 import SearchLevel from '@/components/SearchLevel.vue'
+
+import { useDeviceDetection } from '@/utils/useDeviceDetection.js'
+
+const { isMobile } = useDeviceDetection()
 
 // FAQ data
 const faqItems = ref([
@@ -771,6 +805,20 @@ const faqItems = ref([
     answer: "Absolutely! Each level comes with unique themes and decorative elements. As you progress, you'll unlock more furniture styles, color schemes, and room decorations to personalize your spaces."
   }
 ])
+
+// 广告代码执行
+onMounted(() => {
+  // 等待一小段时间确保 DOM 完全渲染
+  setTimeout(() => {
+    if (window.AdProvider) {
+      // 初始化所有广告
+      window.AdProvider.push({ "serve": {} })
+      console.log('广告已初始化')
+    } else {
+      console.log('AdProvider 未找到，请检查广告脚本是否正确加载')
+    }
+  }, 100)
+})
 </script>
 
 <style scoped>
@@ -1551,6 +1599,27 @@ const faqItems = ref([
   text-shadow: 1px 1px 4px #fff;
 }
 
+/* Advertisement Section */
+.ad-section {
+  background: linear-gradient(135deg, #f0f8ff 0%, #e6f3ff 100%);
+  padding: 60px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.ad-section .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 250px;
+}
+
+.ad-section ins {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+
 /* FAQ Section */
 .faq-section {
   background: linear-gradient(135deg, #ffe4ec 0%, #fff8fb 100%);
@@ -2064,6 +2133,15 @@ const faqItems = ref([
     font-size: 0.9rem;
   }
 
+}
 
+.ads-wrapper {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.ads-wrapper ins {
+  display: block;
+  text-align: center;
 }
 </style>
