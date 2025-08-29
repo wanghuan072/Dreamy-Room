@@ -127,29 +127,6 @@
       </div>
     </section>
 
-    <!-- PC顶部横幅广告位 -->
-    <aside class="ads-wrapper" v-if="!isMobile">
-      <ins class="eas6a97888e2" data-zoneid="5711324"></ins>
-    </aside>
-
-    <!-- 左侧粘性横幅广告 -->
-    <aside v-if="!isMobile">
-      <ins class="eas6a97888e17" data-zoneid="5711330"></ins>
-    </aside>
-
-    <!-- 右侧粘性横幅广告 -->
-    <aside v-if="!isMobile">
-      <ins class="eas6a97888e17" data-zoneid="5711332"></ins>
-    </aside>
-
-
-
-    <!-- 移动横幅广告位 -->
-    <aside class="ads-wrapper" v-if="isMobile">
-      <ins class="eas6a97888e10" data-zoneid="5711342"></ins>
-    </aside>
-
-
     <!-- Levels Section -->
     <section class="levels-section">
       <h2 class="section-title">Level Walkthroughs</h2>
