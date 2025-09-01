@@ -559,7 +559,200 @@ export const levels101_120 = [
         Place two snowmen: one wearing a purple hat near the bench, another reclining with a blue cap in the middle. Add a white polar bear with blue beret beside the second snowman, a small pine bush behind it, and finally a twin-lantern lamp post with metal anchor on the far right. Verify natural placement to complete Dreamy Room Level 108.
       </p>
     `
+  },
+
+  {
+    "id": 109,
+    "addressBar": "level-109",
+    "title": "Dreamy Room Level 109",
+    "pageSubtitle": "Cozy Bedroom & Secondary Room Setup",
+    "publishDate": "2025-09-01",
+    "imageSrc": "/images/levels/level-109.webp",
+    "imageAlt": "Dreamy Room Level 109 Preview",
+    "iframeUrl": "https://www.youtube.com/embed/-tzsDPtoKVs",
+    "seo": {
+      "title": "Dreamy Room Level 109 Walkthrough & Guide",
+      "description": "Complete walkthrough for Dreamy Room Level 109: step-by-step placement of the canopy bed, nightstand, umbrella stand, ottomans, wooden divider, vanity, wall trims, curtains, secondary room furniture, bookcase, and final finishing touches — plus notes and pro tips to guarantee correct snaps.",
+      "keywords": "dreamy room, level 109, walkthrough, guide, canopy bed, vanity, bookcase, bedroom setup, placement tips"
+    },
+    "sidebarData": {
+      "featured": [
+        {
+          "title": "Dreamy Room Level 108",
+          "imageUrl": "/images/levels/level-108.webp",
+          "imageAlt": "Dreamy Room Level 108 Preview",
+          "addressBar": "level-108"
+        }
+      ]
+    },
+    "detailsHtml": `
+      <h2>Dreamy Room Level 109 Solution Walkthrough</h2>
+      <p>
+        Dreamy Room Level 109 tasks you with creating a warm, layered bedroom scene plus a tidy secondary room. Follow each step carefully — precise grid alignment and the correct placement order are key to registering each item in the game’s placement logic.
+      </p>
+  
+      <h3>Step 1: Place the canopy bed frame in the left corner</h3>
+      <p>
+        In Dreamy Room Level 109, you begin by selecting the dark wood four-poster canopy bed frame from your inventory. Position it so that the back legs sit flush against the left wall and the headboard is centered under the patterned border trim. Be sure the canopy’s posts align perfectly with the room’s grid so the posts don’t overlap the baseboard. Once the frame snaps into place, slide the mattress inside the frame until it clicks. Finally, lay the green fitted sheet over the mattress, smoothing out any wrinkles. Drape the brown throw over the foot of the bed and set the matching green pillow against the headboard. This precise alignment is crucial in Dreamy Room Level 109 because even a one-pixel shift can prevent subsequent items from snapping correctly.
+      </p>
+  
+      <h3>Step 2: Place the nightstand and table lamp beside the bed</h3>
+      <p>
+        Next in Dreamy Room Level 109, select the small square wooden nightstand and place it directly to the left of the bed frame. Leave just enough room so the nightstand’s back edge is roughly one inch from the wall, allowing the lamp cord to tuck discreetly behind. Once you see the snap indicator, rotate the nightstand if necessary to ensure its front face is parallel with the bed. Now choose the soft-glow table lamp and set it on the nightstand’s surface, positioning it slightly toward the back so it doesn’t block incoming light from the window. Finally, pick up the petite succulent and place it on the front corner of the nightstand for an added touch of greenery. Paying attention to these details will help you clear the placement criteria.
+      </p>
+  
+      <h3>Step 3: Place the umbrella stand and cube ottomans at the foot of the bed</h3>
+      <p>
+        In Dreamy Room Level 109, outfit the foot of the bed next. Grab the tall umbrella stand and snap it at the center of the bed’s foot rail, making sure the stand’s back aligns with the bed frame so it doesn’t interfere with the wall tiles. Next, select the three brown cube ottomans and arrange them side by side directly in front of the umbrella stand, leaving a narrow gap so the player character can still walk by. Finally, choose the pastel-hued umbrellas from your item list and insert them into the stand; adjust their tilt so they fan out slightly, creating a welcoming display. This grouping anchors the bottom of the scene and establishes the warm color palette that defines the level.
+      </p>
+  
+      <h3>Step 4: Place the wooden screen divider and vanity station</h3>
+      <p>
+        Now in Dreamy Room Level 109, select the intricately carved wooden room divider and snap it in front of the bed, aligned two grid squares away from the left wall. Make sure the divider’s angled panels face toward the center of the room. With that in place, locate the vanity desk and position it directly behind the divider so that its legs rest on the same grid. Attach the arched mirror on top of the desk, ensuring its base slots into the back rail of the vanity. Place the cushioned stool under the desk opening, centered beneath the mirror. Lastly, arrange the cosmetics—perfume bottles, lipstick tubes, and brushes—on the right-hand corner of the vanity. Each cosmetic must lay flat to register as correctly placed in Dreamy Room Level 109.
+      </p>
+  
+      <h3>Step 5: Decorate walls with trim, sconces, and picture frames</h3>
+      <p>
+        In Dreamy Room Level 109, decorate the walls to bring the space to life. First, apply the green-patterned border trim around the top perimeter by selecting each segment and snapping it into the groove just below the ceiling. Next, place the single brass wall sconce on the left wall above the nightstand, rotating it so the light bulb points downward. Now choose the three small rectangular picture frames and arrange them in a vertical row on the left inner wall beside the bed; adjust the spacing until they’re evenly aligned. Finally, on the divider’s visible face, snap the three hexagonal frames into a cluster; rotate each to keep the bottom edges parallel with the floor. Careful alignment ensures these accents register correctly.
+      </p>
+  
+      <h3>Step 6: Hang curtains and add the potted plant by the window</h3>
+      <p>
+        For Dreamy Room Level 109, move to the secondary room’s window on the back wall. Select the beige curtains and snap the rod just above the window frame; be sure the panels drape evenly on both sides. Next, choose the medium-size potted plant with broad green leaves and position it in the corner to the right of the window, allowing the leaves to brush against the curtain’s edge without overlapping. Confirm the plant’s pot base sits flush with the floor grid. This pairing of soft fabric and organic form balances the interior and helps unlock the next placement.
+      </p>
+  
+      <h3>Step 7: Position the writing desk and green-cushioned chair in the secondary room</h3>
+      <p>
+        In the secondary room, select the simple wood writing desk and place it against the dividing wall, centered between the window and the back wall. Rotate the desk so its drawer handles face outward, ensuring the desktop is parallel with the floorboards. Next, pick the green-cushioned chair and snap it directly in front of the desk; adjust its angle so it sits at a comfortable distance from the desk. Finally, place a single pastel painting on the desk surface, leaning it gently against the divider. This cozy workspace must be perfectly oriented to satisfy the placement requirements.
+      </p>
+  
+      <h3>Step 8: Install the large bookcase cabinet against the back wall of the secondary room</h3>
+      <p>
+        Continuing in Dreamy Room Level 109, grab the tall bookcase cabinet and position it flush against the center of the back wall in the smaller room. Make sure the back panel aligns with the wall tile to avoid overlap. Fill the top shelf with colorful books, then place the white orb lamp and a trailing potted plant on the flat surface above the shelves. On the lower cabinet, snap the two drawers closed, then set a small stack of books on the right side of the top drawer. This substantial piece anchors the secondary room and moves the scene toward completion.
+      </p>
+  
+      <h3>Step 9: Add the small bookshelf, hexagon wall frames, and entrance runner</h3>
+      <p>
+        Finally, select the narrow side bookshelf and position it to the right of the writing desk in the secondary room, leaving a small gap to display the trailing vine plant draped over its upper edge. Snap a few books onto its lower shelves. Then, place the remaining three hexagonal wall frames on the adjacent wall, forming a neat horizontal line. Lastly, choose the patterned runner rug and lay it along the entrance floor strip that connects both rooms. Ensure the runner’s long edge aligns exactly with the wall baseboards. These final touches complete the layout and clear Dreamy Room Level 109’s placement challenge.
+      </p>
+  
+      <h3>Notes and Precautions</h3>
+      <ul>
+        <li><strong>Grid Alignment Matters:</strong> Every object in Dreamy Room Level 109 uses a hidden grid. If an item doesn’t snap, slightly rotate or nudge it one grid square at a time until it registers.</li>
+        <li><strong>Layer Order:</strong> Larger furniture pieces must go in before decorative accents. If you place frames before the divider, they may end up behind it and not register.</li>
+        <li><strong>No Timers:</strong> This level gives you unlimited time, so focus on precision rather than speed.</li>
+        <li><strong>Collision Avoidance:</strong> Items that overlap even slightly will refuse to snap. Keep at least half a grid square of clearance between different pieces.</li>
+        <li><strong>Inventory Management:</strong> Some decorative objects share similar color palettes—double-check you’ve selected the correct item before placement.</li>
+      </ul>
+  
+      <h3>Tips and Tricks from Top Players</h3>
+      <ul>
+        <li>Place all major furniture first, then add small accents. This “big to small” approach minimizes re-positioning.</li>
+        <li>Use the rotation preview (hold the rotate button) to see each object’s snap zone outline before dropping it; this saves time in trial and error.</li>
+        <li>Save your layout by taking a screenshot once you’ve placed half the items correctly; if you accidentally move something, you can quickly revert to your screenshot reference.</li>
+        <li>Memorize the wall panel sequence for decorative trims and frames; repeating the same order ensures you avoid misplacing identical pieces.</li>
+        <li>When adding plants, always place the tallest items first; shorter plants will nestle around them without conflict.</li>
+      </ul>
+    `
+  },
+
+  {
+    "id": 110,
+    "addressBar": "level-110",
+    "title": "Dreamy Room Level 110",
+    "pageSubtitle": "Cozy Garden Greenhouse Setup",
+    "publishDate": "2025-09-01",
+    "imageSrc": "/images/levels/level-110.webp",
+    "imageAlt": "Dreamy Room Level 110 Preview",
+    "iframeUrl": "https://www.youtube.com/embed/NV_50Mh5G4E",
+    "seo": {
+      "title": "Dreamy Room Level 110 Walkthrough & Guide",
+      "description": "Complete walkthrough for Dreamy Room Level 110, including placement of hedge borders, lattice panels, greenhouse, swing, teddy bears, seating area, tools, and floral decorations for a charming garden scene.",
+      "keywords": "dreamy room, level 110, walkthrough, guide, garden, greenhouse, swing, teddy bear, tea table, rose planters"
+    },
+    "sidebarData": {
+      "featured": [
+        {
+          "title": "Dreamy Room Level 109",
+          "imageUrl": "/images/levels/level-109.webp",
+          "imageAlt": "Dreamy Room Level 109 Preview",
+          "addressBar": "level-109"
+        }
+      ]
+    },
+    "detailsHtml": `
+      <h2>Dreamy Room Level 110 Solution Walkthrough</h2>
+      <p>
+        Dreamy Room Level 110 transforms the play space into a lush greenhouse garden retreat. This walkthrough details how to build the hedge boundary, install the glass greenhouse, set up cozy seating, and layer plants, tools, and accents to perfect the tranquil design.
+      </p>
+  
+      <h3>Step 1: Place the Soft Green Hedge Segments</h3>
+      <p>
+        Start by laying out the emerald-green hedge segments along the left and front edges of the canvas. Use two hedge pieces for each wall, making sure they align perfectly with the grid. Add three stepping stones at the center of the front hedge to mark the entrance path. This creates the essential garden border in Dreamy Room Level 110.
+      </p>
+  
+      <h3>Step 2: Install Wooden Lattice Panels with Vines</h3>
+      <p>
+        Attach lattice panels to the left and right walls, aligned with the top of the hedge. Once set, decorate each panel with climbing vines: leafy greenery on the left and heart-shaped leaves on the right. This frames the greenhouse with vertical garden accents in Dreamy Room Level 110.
+      </p>
+  
+      <h3>Step 3: Set Up the Wooden Swing with Teddy Bear</h3>
+      <p>
+        Place the wooden swing frame in the left corner, ensuring the legs align with the hedge. Hang the swing seat and seat the pink teddy bear on it. Scatter daisy blooms around the swing base to highlight the playful charm of Dreamy Room Level 110.
+      </p>
+  
+      <h3>Step 4: Add Potted Plants Along the Back Wall</h3>
+      <p>
+        Place a tall leafy plant in a lavender pot against the back wall’s left section. On the back shelf, set a blue lily in a matching pot and tuck a small gourd beside it. These accents peek above the greenhouse structure in Dreamy Room Level 110 for layered depth.
+      </p>
+  
+      <h3>Step 5: Assemble the Central Glass Greenhouse</h3>
+      <p>
+        Position the greenhouse base in the center. Attach four glass wall panels and lock in the two transparent roof panels. Ensure the front door panel faces the entrance at a welcoming angle. This forms the centerpiece of Dreamy Room Level 110.
+      </p>
+  
+      <h3>Step 6: Furnish the Greenhouse Interior</h3>
+      <p>
+        Inside, place a workbench with seedling pots and a spray bottle on the left. On the right, set a potting table with trays of young plants and pruning shears. Add a watering can on the floor and hang a spool of twine overhead. This arrangement gives Dreamy Room Level 110 its working greenhouse feel.
+      </p>
+  
+      <h3>Step 7: Arrange Purple Rose Planters</h3>
+      <p>
+        Place one rectangular rose planter on the back wall shelf and another on the front roof ledge of the greenhouse. Adjust until the cascading petals drape naturally without blocking the entrance. These roses crown Dreamy Room Level 110 with romantic charm.
+      </p>
+  
+      <h3>Step 8: Create a Cozy Seating Area</h3>
+      <p>
+        On the right side, align two benches facing inward with a round tea table between them. Add a pink teapot on the table. Place yellow armchairs on each side, seating a second pink teddy bear in the right chair. This nook balances the greenhouse scene in Dreamy Room Level 110.
+      </p>
+  
+      <h3>Step 9: Add Tools, Watering Cans, and Decorative Accents</h3>
+      <p>
+        Hang a watering can, fork, and trowel on the right lattice panel. Place a ceramic watering can on the ground inside the hedge corner. Add a wooden stump nearby with bee figurines and a birdhouse-shaped gourd. These finishing touches bring Dreamy Room Level 110 to life.
+      </p>
+  
+      <h3>Notes and Precautions</h3>
+      <ul>
+        <li>Use grid alignment carefully—hedge or greenhouse misplacements cascade into later issues.</li>
+        <li>Center the greenhouse perfectly to avoid clipping.</li>
+        <li>Hang vines and tools with care to prevent overlap glitches.</li>
+        <li>Keep tea table and chairs equidistant for visual balance.</li>
+        <li>Use inventory to reselect misplaced items, and reload if glitches occur.</li>
+      </ul>
+  
+      <h3>Tips and Tricks from Top Players</h3>
+      <ul>
+        <li>Work in zones: hedge, walls, greenhouse, seating, and accents.</li>
+        <li>Place large elements first, then smaller ones to avoid clipping.</li>
+        <li>Hold placement key longer to fine-tune vines or tools.</li>
+        <li>Use undo liberally to experiment without penalty.</li>
+        <li>Toggle camera angle to preview overlaps before finalizing.</li>
+        <li>Mirror symmetrical objects for harmony, and vary plant colors for contrast.</li>
+      </ul>
+    `
   }
+
+
 
 
 
