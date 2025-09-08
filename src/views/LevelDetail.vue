@@ -35,9 +35,8 @@
           ">
             <h3 class="sidebar-title"><span class="icon">🌟</span> Related Levels</h3>
             <div class="featured-list">
-              <a href="item in level.sidebarData.featured" :key="item.addressBar"
-                :to="{ name: 'level-detail', params: { addressBar: item.addressBar } }" class="featured-card"
-                @click="handleRelatedLevelClick">
+              <a v-for="item in level.sidebarData.featured" :key="item.addressBar" :href="`/levels/${item.addressBar}`"
+                class="featured-card" @click="handleRelatedLevelClick">
                 <img :src="item.imageUrl" :alt="item.imageAlt" class="featured-img" loading="lazy" width="40"
                   height="40" />
                 <div class="featured-title">{{ item.title }}</div>

@@ -70,14 +70,14 @@
           </h3>
           <ul class="footer-links">
             <li>
-              <router-link to="/privacy-policy" class="footer-link">Privacy Policy</router-link>
+              <a href="/privacy-policy" class="footer-link">Privacy Policy</a>
             </li>
             <li>
-              <router-link to="/terms-of-service" class="footer-link">Terms of Service</router-link>
+              <a href="/terms-of-service" class="footer-link">Terms of Service</a>
             </li>
-            <li><router-link to="/copyright" class="footer-link">Copyright</router-link></li>
-            <li><router-link to="/about-us" class="footer-link">About Us</router-link></li>
-            <li><router-link to="/contact-us" class="footer-link">Contact Us</router-link></li>
+            <li><a href="/copyright" class="footer-link">Copyright</a></li>
+            <li><a href="/about-us" class="footer-link">About Us</a></li>
+            <li><a href="/contact-us" class="footer-link">Contact Us</a></li>
           </ul>
         </div>
       </div>

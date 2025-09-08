@@ -89,14 +89,14 @@
                 <SearchLevel />
               </div>
               <div class="action-buttons">
-                <router-link to="/levels" class="action-btn primary-btn">
+                <a href="/levels" class="action-btn primary-btn">
                   <span>Browse All Level Guides</span>
                   <span class="btn-icon">→</span>
-                </router-link>
-                <router-link to="/download" class="action-btn secondary-btn">
+                </a>
+                <a href="/download" class="action-btn secondary-btn">
                   <span>Download Game</span>
                   <span class="btn-icon">↓</span>
-                </router-link>
+                </a>
               </div>
               <!-- <div class="play-directly">
                 <div class="play-icon">🎮</div>
