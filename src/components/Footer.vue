@@ -34,10 +34,10 @@
             Quick Links
           </h3>
           <ul class="footer-links">
-            <li><router-link to="/" class="footer-link">Home</router-link></li>
-            <li><router-link to="/levels" class="footer-link">Game Guides</router-link></li>
-            <li><router-link to="/blog" class="footer-link">Blog</router-link></li>
-            <li><router-link to="/download" class="footer-link">Download</router-link></li>
+            <li><a href="/" class="footer-link">Home</a></li>
+            <li><a href="/levels" class="footer-link">Game Guides</a></li>
+            <li><a href="/blog" class="footer-link">Blog</a></li>
+            <li><a href="/download" class="footer-link">Download</a></li>
           </ul>
         </div>
         <!-- Levels Section -->
@@ -47,19 +47,19 @@
           </h3>
           <ul class="footer-links">
             <li>
-              <router-link to="/levels/level-15" class="footer-link">Dreamy Room Level 15</router-link>
+              <a href="/levels/level-15" class="footer-link">Dreamy Room Level 15</a>
             </li>
             <li>
-              <router-link to="/levels/level-16" class="footer-link">Dreamy Room Level 16</router-link>
+              <a href="/levels/level-16" class="footer-link">Dreamy Room Level 16</a>
             </li>
             <li>
-              <router-link to="/levels/level-22" class="footer-link">Dreamy Room Level 22</router-link>
+              <a href="/levels/level-22" class="footer-link">Dreamy Room Level 22</a>
             </li>
             <li>
-              <router-link to="/levels/level-25" class="footer-link">Dreamy Room Level 25</router-link>
+              <a href="/levels/level-25" class="footer-link">Dreamy Room Level 25</a>
             </li>
             <li>
-              <router-link to="/levels/level-50" class="footer-link">Dreamy Room Level 50</router-link>
+              <a href="/levels/level-50" class="footer-link">Dreamy Room Level 50</a>
             </li>
           </ul>
         </div>

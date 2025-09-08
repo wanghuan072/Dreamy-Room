@@ -35,13 +35,13 @@
           ">
             <h3 class="sidebar-title"><span class="icon">🌟</span> Related Levels</h3>
             <div class="featured-list">
-              <router-link v-for="item in level.sidebarData.featured" :key="item.addressBar"
+              <a href="item in level.sidebarData.featured" :key="item.addressBar"
                 :to="{ name: 'level-detail', params: { addressBar: item.addressBar } }" class="featured-card"
                 @click="handleRelatedLevelClick">
                 <img :src="item.imageUrl" :alt="item.imageAlt" class="featured-img" loading="lazy" width="40"
                   height="40" />
                 <div class="featured-title">{{ item.title }}</div>
-              </router-link>
+              </a>
             </div>
           </div>
           <div v-else class="no-featured">No related levels.</div>

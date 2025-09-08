@@ -19,8 +19,8 @@
 
       <!-- 实际内容 -->
       <template v-else-if="displayedLevels.length > 0">
-        <router-link v-for="level in displayedLevels" :key="level.id"
-          :to="{ name: 'level-detail', params: { addressBar: level.addressBar } }" class="level-card-simple">
+        <a v-for="level in displayedLevels" :key="level.id" :href="`/levels/${level.addressBar}`"
+          class="level-card-simple">
           <div class="level-thumb-container">
             <img :src="level.imageSrc" :alt="level.title" class="level-thumb-simple" loading="lazy"
               @load="onImageLoad(level.id)" @error="onImageError(level.id)" />
@@ -29,7 +29,7 @@
             </div>
           </div>
           <div class="level-title-simple">{{ level.title }}</div>
-        </router-link>
+        </a>
       </template>
       <template v-else>
         <div class="no-levels-tip">No levels available for this range.</div>

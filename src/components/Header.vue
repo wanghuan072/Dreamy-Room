@@ -6,10 +6,10 @@
         <span class="site-title">Dreamy Room</span>
       </div>
       <nav class="navigation" v-if="!showMobileMenu">
-        <router-link to="/" class="nav-link">Home</router-link>
-        <router-link to="/levels" class="nav-link">Levels</router-link>
-        <router-link to="/download" class="nav-link">Download</router-link>
-        <router-link to="/blog" class="nav-link">Blog</router-link>
+        <a href="/" class="nav-link">Home</a>
+        <a href="/levels" class="nav-link">Levels</a>
+        <a href="/download" class="nav-link">Download</a>
+        <a href="/blog" class="nav-link">Blog</a>
       </nav>
       <button class="menu-btn" @click="showMobileMenu = true" v-if="isMobile && !showMobileMenu">
         <span class="menu-icon">☰</span>
@@ -19,12 +19,10 @@
       <div class="mobile-menu" v-if="showMobileMenu">
         <button class="close-btn" @click="showMobileMenu = false">×</button>
         <nav class="mobile-nav">
-          <router-link to="/" class="mobile-nav-link" @click="closeMenu">Home</router-link>
-          <router-link to="/levels" class="mobile-nav-link" @click="closeMenu">Levels</router-link>
-          <router-link to="/download" class="mobile-nav-link" @click="closeMenu"
-            >Download</router-link
-          >
-          <router-link to="/blog" class="mobile-nav-link" @click="closeMenu">Blog</router-link>
+          <a href="/" class="mobile-nav-link" @click="closeMenu">Home</a>
+          <a href="/levels" class="mobile-nav-link" @click="closeMenu">Levels</a>
+          <a href="/download" class="mobile-nav-link" @click="closeMenu">Download</a>
+          <a href="/blog" class="mobile-nav-link" @click="closeMenu">Blog</a>
         </nav>
       </div>
     </transition>
@@ -181,6 +179,7 @@ onUnmounted(() => {
   cursor: pointer;
   z-index: 201;
 }
+
 .menu-icon {
   font-size: 2.2rem;
 }
@@ -189,9 +188,11 @@ onUnmounted(() => {
   .header {
     padding: 10px 0;
   }
+
   .site-title {
     font-size: 1.4rem;
   }
+
   .header-container {
     flex-direction: row;
     justify-content: space-between;
@@ -199,15 +200,19 @@ onUnmounted(() => {
     gap: 0;
     padding: 0 10px;
   }
+
   .navigation {
     display: none;
   }
+
   .menu-btn {
     display: block;
   }
+
   .header {
     transition: height 0.3s;
   }
+
   .header.menu-open {
     position: fixed;
     top: 0;
@@ -217,6 +222,7 @@ onUnmounted(() => {
     z-index: 201;
     background: linear-gradient(135deg, #e6e6fa 0%, #dda0dd 100%);
   }
+
   .nav-link {
     font-size: 0.9rem;
     padding: 6px 10px;
@@ -237,6 +243,7 @@ onUnmounted(() => {
   justify-content: center;
   animation: fadeIn 0.3s;
 }
+
 .close-btn {
   position: absolute;
   top: 30px;
@@ -247,12 +254,14 @@ onUnmounted(() => {
   color: #2d1b69;
   cursor: pointer;
 }
+
 .mobile-nav {
   display: flex;
   flex-direction: column;
   gap: 40px;
   align-items: center;
 }
+
 .mobile-nav-link {
   font-size: 2rem;
   color: #2d1b69;
@@ -261,23 +270,28 @@ onUnmounted(() => {
   transition: color 0.2s;
   text-shadow: 1px 1px 4px #fff;
 }
+
 .mobile-nav-link:hover {
   color: #6a1b9a;
 }
+
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.3s;
 }
+
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
 }
+
 @keyframes fadeIn {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
 }
-</style> 
+</style>
