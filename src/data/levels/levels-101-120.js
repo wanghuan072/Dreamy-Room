@@ -750,7 +750,179 @@ export const levels101_120 = [
         <li>Mirror symmetrical objects for harmony, and vary plant colors for contrast.</li>
       </ul>
     `
+  },
+
+  {
+    "id": 111,
+    "addressBar": "level-111",
+    "title": "Dreamy Room Level 111",
+    "pageSubtitle": "Factory Loft Assembly Setup",
+    "publishDate": "2025-09-05",
+    "imageSrc": "/images/levels/level-111.webp",
+    "imageAlt": "Dreamy Room Level 111 Preview",
+    "iframeUrl": "https://www.youtube.com/embed/CMDPAP6cu98",
+    "seo": {
+      "title": "Dreamy Room Level 111 Walkthrough & Guide",
+      "description": "Complete walkthrough for Dreamy Room Level 111. Learn how to place the sliding door, elevated walkway, robotic arms, packing zone, glass control booth, and bunny workers to create a whimsical factory loft.",
+      "keywords": "dreamy room, level 111, walkthrough, guide, factory, glass booth, conveyor, bunny, robotic arm, control room"
+    },
+    "sidebarData": {
+      "featured": [
+        {
+          "title": "Dreamy Room Level 110",
+          "imageUrl": "/images/levels/level-110.webp",
+          "imageAlt": "Dreamy Room Level 110 Preview",
+          "addressBar": "level-110"
+        }
+      ]
+    },
+    "detailsHtml": `
+      <h2>Dreamy Room Level 111 Solution Walkthrough</h2>
+      <p>
+        Welcome to the complete walkthrough for <strong>Dreamy Room Level 111</strong>! This level transforms your empty room into a lively industrial loft buzzing with bunny engineers and mechanical wonders. The primary challenge of <strong>Dreamy Room Level 111</strong> lies in aligning each item precisely on the invisible grid while maintaining a coherent factory flow. Follow this detailed guide to master every placement and complete the whimsical production line.
+      </p>
+  
+      <h3>Step 1: Install the Sliding Door on the Left Wall</h3>
+      <p>
+        Begin <strong>Dreamy Room Level 111</strong> by selecting the sliding door from the furniture tab. Drag it toward the left wall and position it so its base perfectly touches the floor tile line. Make sure the door panel locks into the recessed section of the wall. If placed correctly, you’ll see a faint alignment glow—this confirms that <strong>Dreamy Room Level 111</strong> recognizes the correct grid orientation. A misaligned door may later block movement or item snapping, so take your time during this first placement.
+      </p>
+  
+      <h3>Step 2: Construct the Elevated Walkway and Conveyor Area</h3>
+      <p>
+        Next, shift focus to the room’s rear zone. In <strong>Dreamy Room Level 111</strong>, select the metal walkway platform and snap it against the back wall at one tile above the ground. Extend it to the right using the narrow bridge connector until you form a stable catwalk. Once the frame is complete, add four blue conveyor crates evenly spaced along the walkway rails. When properly positioned in <strong>Dreamy Room Level 111</strong>, the crates will glow faintly blue and snap securely in place, ensuring perfect conveyor symmetry.
+      </p>
+  
+      <h3>Step 3: Add the Delivery Van and Bunny Worker</h3>
+      <p>
+        To the left of the floor area, spawn the white delivery van object and align it beside the sliding door. Make sure its tires rest flat on the dark tile lines. Then open the character palette and drag the green bunny worker onto the van’s rear platform. When correctly aligned in <strong>Dreamy Room Level 111</strong>, the bunny’s paws should hover above the stacked crate behind the van. If the model flickers or rotates, reposition it slightly until it locks into its working stance.
+      </p>
+  
+      <h3>Step 4: Assemble the Robotic Arms and Bunny Mech Core</h3>
+      <p>
+        The heart of <strong>Dreamy Room Level 111</strong> lies in the central assembly zone. Select two robotic arm units from the machinery tab and plant them on the paired white circular bases printed on the floor grid. Rotate the joints outward to form a balanced V shape. Then pick the green bunny mech torso and slot it precisely between the two arms, ensuring that the claws appear to grip its shoulders. Proper alignment will trigger a satisfying snap animation, signifying success in <strong>Dreamy Room Level 111</strong>.
+      </p>
+  
+      <h3>Step 5: Build the Packing Station and Assign the Packer Bunny</h3>
+      <p>
+        Move to the right-hand area of <strong>Dreamy Room Level 111</strong> and select the packing table from the industrial decor menu. Place it against the floor grid, its back legs flush with the wall base. Add the cyan crate or basket atop the table, then bring in another green bunny character to serve as the packer. Align the bunny so its paws rest just above the crate opening. Complete this zone by mounting a small console screen on the wall above, making the entire corner feel alive and purposeful in <strong>Dreamy Room Level 111</strong>.
+      </p>
+  
+      <h3>Step 6: Assemble the Glass Control Booth and Supervisor Setup</h3>
+      <p>
+        For the final build sequence of <strong>Dreamy Room Level 111</strong>, move your focus upward to the walkway. Select the transparent booth base and connect its four pillars onto the metal platform sockets. Once it snaps in place, install the glass walls and top roof panel. Inside, arrange the blue desk, computer monitor set, printer, paper stack, and coffee mug in tidy order. Finally, seat the bespectacled bunny supervisor in the swivel chair behind the desk. With this step, the entire management section of <strong>Dreamy Room Level 111</strong> comes to life.
+      </p>
+  
+      <h3>Notes and Precautions</h3>
+      <ul>
+        <li>Always activate grid snapping in <strong>Dreamy Room Level 111</strong> before placing items to ensure perfect alignment.</li>
+        <li>Misplaced objects can block interaction zones; reposition them carefully or reload if needed.</li>
+        <li>Avoid overlapping transparent parts like glass or railings to prevent rendering errors in <strong>Dreamy Room Level 111</strong>.</li>
+        <li>Rotate the camera slightly to confirm symmetry between the left and right sections.</li>
+        <li>Save your progress after completing each section to avoid losing alignment data in <strong>Dreamy Room Level 111</strong>.</li>
+      </ul>
+  
+      <h3>Tips and Tricks from Top Players</h3>
+      <ul>
+        <li>Start with structural elements—door, walkway, and booth—before placing movable parts in <strong>Dreamy Room Level 111</strong>.</li>
+        <li>Use arrow keys for micro-adjustments after snapping large machinery.</li>
+        <li>Zoom in fully when aligning characters to avoid offset misplacement in <strong>Dreamy Room Level 111</strong>.</li>
+        <li>Use color grouping—blue crates, green bunnies, silver machinery—to track work zones visually.</li>
+        <li>Capture screenshots at key stages to help fine-tune your layout for future reference in <strong>Dreamy Room Level 111</strong>.</li>
+      </ul>
+  
+      <h3>Final Scene Description of Dreamy Room Level 111</h3>
+      <p>
+        The completed <strong>Dreamy Room Level 111</strong> scene captures a two-tier industrial loft glowing with mechanical rhythm. Below, a delivery van parks beside a cheerful bunny loading crates. In the center, dual robotic arms assemble a vibrant green mech under soft factory lights. To the right, another bunny diligently packs items at the workstation while a glowing screen monitors the progress. Overhead, a glass control booth oversees the floor, housing a desk cluttered with coffee, monitors, and documents—its supervisor bunny watching the production below. The finished <strong>Dreamy Room Level 111</strong> balances playful charm and mechanical precision, making it one of the most dynamic scenes in the Dreamy Room series.
+      </p>
+    `
+  },
+
+  {
+    "id": 112,
+    "addressBar": "level-112",
+    "title": "Dreamy Room Level 112",
+    "pageSubtitle": "Vault Chamber Treasure Loft",
+    "publishDate": "2025-09-10",
+    "imageSrc": "/images/levels/level-112.webp",
+    "imageAlt": "Dreamy Room Level 112 Preview",
+    "iframeUrl": "https://www.youtube.com/embed/FBlVBbDN1so",
+    "seo": {
+      "title": "Dreamy Room Level 112 Walkthrough & Guide",
+      "description": "Complete Dreamy Room Level 112 walkthrough and solution guide with step-by-step instructions for placing vault door, weapon stand, deer trophy, statue, jewelry display, treasure chests, and study nook.",
+      "keywords": "dreamy room, level 112, walkthrough, guide, vault, treasure room, statue, jewelry display, coins, barrels, rocking chair"
+    },
+    "sidebarData": {
+      "featured": [
+        {
+          "title": "Dreamy Room Level 111",
+          "imageUrl": "/images/levels/level-111.webp",
+          "imageAlt": "Dreamy Room Level 111 Preview",
+          "addressBar": "level-111"
+        }
+      ]
+    },
+    "detailsHtml": `
+      <h2>Dreamy Room Level 112 Solution Walkthrough</h2>
+      <p>
+        Dreamy Room Level 112 transforms an empty stone chamber into a mysterious treasure vault and scholar’s retreat. This walkthrough will guide you through every placement—from the heavy vault door to the gleaming jewelry displays and secret study corner—ensuring every detail fits perfectly into Dreamy Room Level 112.
+      </p>
+  
+      <h3>Step 1: Place the Vault Door, Gear Panel, and Lever</h3>
+      <p>
+        Begin Dreamy Room Level 112 by anchoring the large circular vault door on the left wall. Align it evenly with the grid, leaving a small gap above the floor line. Next, attach the small metallic gear panel to the right of the vault door and adjust the screws so they line up neatly. Finally, place the red-handled lever beside the panel, keeping the crimson knob raised at a 45-degree angle. This trio defines the mechanical heart of Dreamy Room Level 112, introducing an industrial tone that underpins the level’s narrative.
+      </p>
+  
+      <h3>Step 2: Install the Weapon Stand and Display the Axe and Musket</h3>
+      <p>
+        Move to the space under the upper railing and position the purple weapon stand directly beneath it. Once secured, set the double-bladed axe into the left notch, ensuring its silver edges face outward. Then, mount the classic musket on the right slot with its barrel pointing diagonally. In Dreamy Room Level 112, make fine adjustments so both weapons appear balanced, forming a subtle homage to exploration and defense.
+      </p>
+  
+      <h3>Step 3: Decorate the Walls with Trophy, Shelf, Mirror, Lantern, Door, and Hooks</h3>
+      <p>
+        Dreamy Room Level 112 emphasizes atmospheric layering on the upper walls. Start by mounting the deer head trophy above the floating wooden shelf, placing the mirror beside it to reflect ambient light from the lantern sconce. Position the lantern close enough to cast soft illumination without glare. Next, install the arched wooden door along the right wall, ensuring its hinges match the curve of the stair. Finally, add three small hooks below the door for accessories or imagined tools. The result is a cohesive vertical balance that enriches the Dreamy Room Level 112 environment.
+      </p>
+  
+      <h3>Step 4: Position the Draped Statue and Purple Chest under the Staircase</h3>
+      <p>
+        Focus on the alcove below the staircase. Place the veiled statue holding the glowing purple orb near the back wall so it captures the lantern’s shimmer. Then slide the plush purple chest under the lowest stair riser, keeping its lid accessible. Dreamy Room Level 112 rewards subtle adjustments here—shift the statue slightly inward until the orb glows evenly and ensure the chest doesn’t clip the stair frame. This duo creates an aura of mysticism in the corner space.
+      </p>
+  
+      <h3>Step 5: Assemble the Central Jewelry Display with Gems, Scrolls, and Rugs</h3>
+      <p>
+        At the room’s center, set the long wooden table covered with a crimson runner cloth. In Dreamy Room Level 112, place the golden jewelry bust at the table’s midpoint and drape the pearl necklace gracefully around its shoulders. On the right side, set the shimmering sapphire gem; on the left, arrange the scroll cases and rustic mug for contrast. Lean the rolled rugs—purple, blue, and cream—against the back edge of the table, and position a barrel beside the right leg. Adjust until every element forms a well-composed centerpiece that radiates wealth and wonder.
+      </p>
+  
+      <h3>Step 6: Arrange Treasure, Study Furniture, and Finishing Details</h3>
+      <p>
+        Now populate the lower floor with treasures and signs of life. Place the open chest of coins beside its closed counterpart in the left corner. Scatter some gold on the floor and rest a decorative sword across the pile. Stack three barrels nearby for texture. Then shift to the right alcove—position the round side table topped with an open book, three tomes, a mug, and a golden key. Pull up the rocking chair so it faces the table slightly at an angle. Dreamy Room Level 112 completes itself through these human touches, blending adventure and intellect.
+      </p>
+  
+      <h3>Notes and Precautions</h3>
+      <ul>
+        <li>Always verify object snap before locking placements in Dreamy Room Level 112.</li>
+        <li>Avoid overlap near stairs and railing edges to prevent visual clipping.</li>
+        <li>When positioning reflective surfaces, ensure light sources don’t cause glare.</li>
+        <li>Fine-tune using arrow keys for precise spacing between décor elements.</li>
+        <li>Dreamy Room Level 112 saves automatically—reload if large misalignments occur.</li>
+      </ul>
+  
+      <h3>Tips and Tricks from Top Players</h3>
+      <ul>
+        <li>Enable grid view to simplify alignment for walls and floor items.</li>
+        <li>Start with large structures first (vault door, staircase zone) before adding décor.</li>
+        <li>Use zoom for delicate props like the orb and key to avoid offset placement.</li>
+        <li>Group related objects—vault, treasure, study—for balanced storytelling.</li>
+        <li>Capture a screenshot after completion to reference layouts for later levels.</li>
+      </ul>
+  
+      <h3>Final Scene Description</h3>
+      <p>
+        Upon completion, Dreamy Room Level 112 becomes a sanctuary of hidden riches and quiet intellect. The left wall gleams with the metallic vault door and its lever mechanism, while below it rests a display of ancient weaponry. Above, a mounted deer head, glowing lantern, and arched door evoke the grandeur of an explorer’s hall. In the center, the jewelry table glows with gems and scrolls under a crimson cloth, guarded by barrels and scattered gold. To the right, the statue’s purple orb emits an ethereal radiance beside the plush chest, while the cozy study nook—complete with books, mug, and rocking chair—adds a peaceful counterpoint. Every detail in Dreamy Room Level 112 harmonizes function and fantasy, transforming the vault into a living diorama of wealth, wonder, and mystery.
+      </p>
+    `
   }
+
+
 
 
 

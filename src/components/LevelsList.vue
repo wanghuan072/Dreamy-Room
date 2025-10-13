@@ -182,7 +182,7 @@ onMounted(() => {
 .level-thumb-container {
   position: relative;
   width: 100%;
-  aspect-ratio: 16/9;
+  aspect-ratio: 1/1;
   border-radius: 10px;
   overflow: hidden;
   margin-bottom: 10px;
