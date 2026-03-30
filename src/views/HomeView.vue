@@ -131,6 +131,10 @@
     <section class="levels-section">
       <h2 class="section-title">Level Walkthroughs</h2>
       <div class="container">
+
+        <!-- GAM广告-PC-banner-1 -->
+        <div ref="gptBannerRoot" id='div-gpt-ad-1774863565550-0' style='min-width: 970px; min-height: 90px;'></div>
+
         <LevelsList />
       </div>
     </section>
@@ -737,7 +741,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, nextTick } from 'vue'
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
 import LevelsList from '@/components/LevelsList.vue'
@@ -783,6 +787,21 @@ const faqItems = ref([
   }
 ])
 
+// ---------- GAM 广告位 1（独立：不共用函数/常量，与位 2 互不影响）----------
+const gptBannerRoot = ref(null)
+
+const GamPCBanner1 = () => {
+  const root = gptBannerRoot.value
+  if (!root || root.querySelector('script[data-gam-slot="ban1"]')) return
+  const s = document.createElement('script')
+  s.setAttribute('data-gam-slot', 'ban1')
+  s.textContent =
+    "googletag.cmd.push(function () { googletag.display('div-gpt-ad-1774863565550-0'); });"
+  root.appendChild(s)
+}
+
+
+
 // 广告代码执行
 onMounted(() => {
   // 等待一小段时间确保 DOM 完全渲染
@@ -795,7 +814,14 @@ onMounted(() => {
       console.log('AdProvider 未找到，请检查广告脚本是否正确加载')
     }
   }, 100)
+
+  // GAM：两个版位各自注入 body 脚本，互不调用同一封装
+  nextTick(() => {
+    GamPCBanner1()
+  })
 })
+
+
 </script>
 
 <style scoped>
